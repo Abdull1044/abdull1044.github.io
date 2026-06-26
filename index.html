@@ -65,16 +65,16 @@
           <span class="stat-label">Years Exp.</span>
         </div>
         <div class="stat">
-          <span class="stat-num">5</span>
+          <span class="stat-num">6</span>
           <span class="stat-label">Projects Built</span>
         </div>
         <div class="stat">
-          <span class="stat-num">100+</span>
-          <span class="stat-label">Active Users</span>
+          <span class="stat-num">20M+</span>
+          <span class="stat-label">Shop Records</span>
         </div>
         <div class="stat">
-          <span class="stat-num">3</span>
-          <span class="stat-label">Companies</span>
+          <span class="stat-num">7</span>
+          <span class="stat-label">Countries</span>
         </div>
       </div>
 
@@ -113,16 +113,16 @@
             <span class="m-label">Years</span>
           </div>
           <div class="metric-pill">
-            <span class="m-val cyan">5</span>
+            <span class="m-val cyan">6</span>
             <span class="m-label">Projects</span>
           </div>
           <div class="metric-pill">
-            <span class="m-val green">100+</span>
-            <span class="m-label">Users</span>
+            <span class="m-val green">20M+</span>
+            <span class="m-label">Records</span>
           </div>
           <div class="metric-pill">
-            <span class="m-val amber">3</span>
-            <span class="m-label">Companies</span>
+            <span class="m-val amber">7</span>
+            <span class="m-label">Countries</span>
           </div>
         </div>
 
@@ -151,7 +151,7 @@
     <div class="bento-grid">
       <div class="bento-card bc-bio" data-animate>
         <p>I'm a full-stack software engineer with <strong>8+ years</strong> of experience designing and shipping production-grade web applications. I focus on performance, reliability, and clean architecture.</p>
-        <p>Currently building <strong>PixelEDU</strong> — a multi-tenant SaaS procurement portal — and the <strong>AET Management Portal</strong>, a unified ERP system covering sales, procurement, inventory, and real-time asset tracking. Previously at <strong>SurveyAuto</strong>, I led development of platforms serving 100+ concurrent users with WebSocket real-time features and Redis-powered caching.</p>
+        <p>Currently building <strong>PixelEDU</strong> — a multi-tenant SaaS procurement portal — and the <strong>AET Management Portal</strong>, a unified ERP system. At <strong>SurveyAuto</strong>, I lead development of the <strong>RTM platform</strong> — a geospatial field intelligence system handling <strong>20M+ shop records</strong> across 7 countries for BAT and other FMCG enterprise clients, with real-time sync pipelines, Google Maps dashboards, and CloudFront CDN per-tenant deployments.</p>
         <p>I care deeply about the <strong>developer experience</strong> and building systems that are as maintainable as they are fast.</p>
       </div>
 
@@ -241,13 +241,15 @@
             </div>
           </div>
           <ul class="tl-bullets">
-            <li>Built RTM Admin Portal — comprehensive tools for user permission management, report configuration, and multi-tenant data visibility control.</li>
-            <li>Developed RTM User Portal serving 100+ active users with interactive route mapping, sales analytics, and geographic heat maps.</li>
-            <li>Created Census Validator: automated data quality platform for field-collected shop data with custom filtering and comparison tools.</li>
-            <li>Integrated Redis caching and optimized MongoDB queries to handle high-concurrency scenarios reliably.</li>
+            <li>Built the RTM geospatial field intelligence platform for BAT and other FMCG enterprise clients — handling <strong>20M+ shop records</strong> across 7 countries (Malaysia, UK, Switzerland, Bangladesh, US, Pakistan, Tennessee).</li>
+            <li>Engineered interactive Google Maps dashboards with polygon territory layers, heatmaps, custom boundary drawing, and deck.gl overlays for outlet and census data visualization.</li>
+            <li>Designed a real-time MongoDB → PostgreSQL sync pipeline with live WebSocket progress tracking and Bull job queues for async processing.</li>
+            <li>Built a store scoring engine (Population, SEC, Channel, Size, Footfall weights), promoter scheduling, DTD deep-dive analysis, and brand sentiment dashboards.</li>
+            <li>Implemented Redis-cached precomputed area aggregations (daily TTL), AWS S3 + GCS bulk geospatial data transfer, and CloudFront CDN per-tenant deployments.</li>
+            <li>Created Census Validator — automated data quality platform for field-collected shop data with comparison tools, error detection, and analytics.</li>
           </ul>
           <div class="tl-pills">
-            <span>React.js</span><span>Node.js</span><span>MongoDB</span><span>Redis</span><span>Ant Design</span><span>AWS</span>
+            <span>React 18</span><span>NestJS</span><span>MongoDB</span><span>PostgreSQL+PostGIS</span><span>Redis</span><span>Google Maps</span><span>deck.gl</span><span>AWS S3</span><span>GCS</span><span>Socket.io</span><span>Bull</span>
           </div>
         </div>
       </div>
@@ -399,57 +401,89 @@
 
     </div>
 
-    <!-- Smaller 3-column grid -->
-    <div class="proj-grid">
-
-      <div class="proj-mini" data-animate>
-        <div class="proj-num">03</div>
-        <div class="proj-label">Admin Portal · SurveyAuto · Jul 2022–Present</div>
-        <h3>RTM Admin Portal</h3>
-        <p>Comprehensive admin tools for controlling user access, configuring system settings, and customizing reporting features across multiple tenants.</p>
-        <ul class="proj-feats">
-          <li><span class="fi">🔐</span> User permission management</li>
-          <li><span class="fi">📊</span> Report configuration & customization</li>
-          <li><span class="fi">👁️</span> Column & data visibility control</li>
-          <li><span class="fi">🔽</span> Filter management for user roles</li>
-        </ul>
-        <div class="proj-stack" style="margin-top:.75rem">
-          <span>React.js</span><span>Node.js</span><span>MongoDB</span><span>Redis</span><span>Ant Design</span>
+    <!-- RTM — Full-width featured -->
+    <div class="proj-card" data-animate style="margin-top:1.5rem">
+      <div class="proj-card-top-accent" style="background:linear-gradient(90deg,var(--green),var(--cyan),var(--accent2))"></div>
+      <div class="proj-inner">
+        <div class="proj-info">
+          <div class="proj-num">03 / FEATURED · ENTERPRISE</div>
+          <div class="proj-label">Geospatial Field Intelligence Platform · SurveyAuto · Jun 2022 – Present · Built for BAT &amp; FMCG clients</div>
+          <h3>RTM — Retail Territory Management</h3>
+          <p>An enterprise-grade geospatial intelligence platform used by retail territory managers, field agents, and supervisors across <strong>7 countries</strong> to visualize, filter, and analyze <strong>20M+ shop records</strong>. Enables territory planning, outlet validation, brand analysis, and distributor performance tracking at scale for British American Tobacco and other FMCG clients.</p>
+          <ul class="proj-feats">
+            <li><span class="fi">🗺️</span> Interactive Google Maps dashboard — polygon territory layers, heatmaps, deck.gl overlays, custom boundary drawing</li>
+            <li><span class="fi">🔍</span> Dynamic multi-level filtering across 20+ attributes — territory, distributor, area type, SEC, channel</li>
+            <li><span class="fi">🔄</span> Real-time MongoDB → PostgreSQL/PostGIS sync pipeline with live WebSocket progress tracking &amp; Bull job queues</li>
+            <li><span class="fi">🏪</span> Store scoring engine — weighted Population, SEC, Channel, Size &amp; Footfall scores</li>
+            <li><span class="fi">📊</span> Promoter scheduling, DTD deep-dive analysis, brand sentiment dashboards, Excel/PDF report generation</li>
+            <li><span class="fi">🌍</span> Multi-tenant CloudFront CDN per deployment (Malaysia, UK, Switzerland, Bangladesh, US, Pakistan)</li>
+            <li><span class="fi">⚡</span> Redis-cached precomputed area aggregations (daily TTL) + AWS S3 / GCS compressed geospatial data</li>
+            <li><span class="fi">🔐</span> Role-based access (Admin / Field / Supervisor / RTM Admin) with JWT + Passport + AWS Cognito</li>
+          </ul>
+          <div class="proj-stack">
+            <span>React 18</span><span>NestJS</span><span>TypeScript</span><span>Google Maps</span><span>deck.gl</span><span>MongoDB Atlas</span><span>PostgreSQL+PostGIS</span><span>Redis</span><span>Socket.io</span><span>Bull</span><span>AWS S3</span><span>CloudFront</span><span>GCS</span><span>Ant Design</span>
+          </div>
+        </div>
+        <div class="proj-visual">
+          <div class="browser">
+            <div class="b-bar">
+              <div class="b-dots"><span></span><span></span><span></span></div>
+              <div class="b-url">rtm.surveyauto.com/dashboard</div>
+            </div>
+            <div class="b-body">
+              <div class="dash">
+                <div class="dash-sidebar">
+                  <div class="si active"></div><div class="si"></div><div class="si"></div><div class="si"></div><div class="si"></div>
+                </div>
+                <div class="dash-main">
+                  <div class="d-topbar"></div>
+                  <div class="d-stats">
+                    <div class="d-stat"><div class="d-val g" style="font-size:.65rem">20M+</div><div class="d-lbl">Shops</div></div>
+                    <div class="d-stat"><div class="d-val c">7</div><div class="d-lbl">Countries</div></div>
+                    <div class="d-stat"><div class="d-val i">4</div><div class="d-lbl">Roles</div></div>
+                  </div>
+                  <!-- Map mock -->
+                  <div style="background:rgba(16,185,129,.05);border:1px solid rgba(16,185,129,.12);border-radius:8px;padding:.75rem;margin-top:.5rem;position:relative;overflow:hidden;height:90px">
+                    <div style="position:absolute;inset:0;background:radial-gradient(circle at 60% 45%,rgba(34,211,238,.12),transparent 60%),radial-gradient(circle at 30% 60%,rgba(16,185,129,.1),transparent 50%)"></div>
+                    <!-- Territory polygons -->
+                    <svg viewBox="0 0 200 80" style="width:100%;height:100%;position:absolute;inset:0;opacity:.5">
+                      <polygon points="20,10 80,5 90,40 50,55 15,35" fill="none" stroke="rgba(34,211,238,.6)" stroke-width="1.5"/>
+                      <polygon points="85,8 150,12 155,50 100,58 88,42" fill="none" stroke="rgba(99,102,241,.6)" stroke-width="1.5"/>
+                      <polygon points="148,15 190,20 185,60 145,55 140,35" fill="none" stroke="rgba(245,158,11,.5)" stroke-width="1.5"/>
+                      <circle cx="55" cy="30" r="3" fill="rgba(34,211,238,.8)"/>
+                      <circle cx="120" cy="35" r="3" fill="rgba(99,102,241,.8)"/>
+                      <circle cx="165" cy="38" r="3" fill="rgba(245,158,11,.8)"/>
+                      <circle cx="40" cy="48" r="2" fill="rgba(16,185,129,.7)"/>
+                      <circle cx="100" cy="25" r="2" fill="rgba(16,185,129,.7)"/>
+                      <circle cx="170" cy="28" r="2" fill="rgba(16,185,129,.7)"/>
+                    </svg>
+                    <div style="position:absolute;bottom:.4rem;right:.5rem;font-size:.55rem;color:rgba(34,211,238,.7);font-weight:700">TERRITORY MAP · LIVE</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+    </div>
 
+    <!-- Census mini -->
+    <div class="proj-grid" style="grid-template-columns:1fr;margin-top:1rem">
       <div class="proj-mini" data-animate>
         <div class="proj-num">04</div>
-        <div class="proj-label">User Portal · SurveyAuto · Jul 2022–Present · 100+ Users</div>
-        <h3>RTM User Portal</h3>
-        <p>Empowers businesses with route optimization, outlet visualization, and real-time sales performance analytics to maximize field efficiency.</p>
-        <ul class="proj-feats">
-          <li><span class="fi">🗺️</span> Interactive route mapping</li>
-          <li><span class="fi">📈</span> Sales performance analytics</li>
-          <li><span class="fi">🏪</span> Outlet management & filtering</li>
-          <li><span class="fi">🌡️</span> Geographic heat maps</li>
-        </ul>
-        <div class="proj-stack" style="margin-top:.75rem">
-          <span>React.js</span><span>Node.js</span><span>MongoDB</span><span>Redis</span><span>Ant Design</span>
-        </div>
-      </div>
-
-      <div class="proj-mini" data-animate>
-        <div class="proj-num">05</div>
-        <div class="proj-label">Data Platform · SurveyAuto · Feb 2022–Present</div>
+        <div class="proj-label">Data Quality Platform · SurveyAuto · Feb 2022 – Present</div>
         <h3>Census Validator</h3>
-        <p>Data validation platform ensuring field-collected shop data is accurate and complete, with automated error detection and visual analytics.</p>
+        <p>Validates shop data submitted by SurveyAuto field users — ensuring accuracy and completeness of field-collected records with automated checks, comparison tools, and analytics dashboards.</p>
         <ul class="proj-feats">
-          <li><span class="fi">🔍</span> Custom search & filtering</li>
-          <li><span class="fi">⚖️</span> Data comparison tools</li>
-          <li><span class="fi">🤖</span> Automated error detection</li>
-          <li><span class="fi">📉</span> Data visualization & analytics</li>
+          <li><span class="fi">🔍</span> Custom search &amp; advanced filtering</li>
+          <li><span class="fi">⚖️</span> Side-by-side data comparison tools</li>
+          <li><span class="fi">🤖</span> Automated error detection &amp; flagging</li>
+          <li><span class="fi">📉</span> Data visualization &amp; quality analytics</li>
         </ul>
         <div class="proj-stack" style="margin-top:.75rem">
           <span>React.js</span><span>Node.js</span><span>MongoDB</span><span>Ant Design</span><span>AWS</span>
         </div>
       </div>
-
     </div>
   </div>
 </section>
@@ -495,6 +529,7 @@
           <div class="s-chip"><span class="ci">🍃</span> MongoDB</div>
           <div class="s-chip"><span class="ci">🔴</span> Redis</div>
           <div class="s-chip"><span class="ci">🗂️</span> TypeORM</div>
+          <div class="s-chip"><span class="ci">📐</span> PostGIS</div>
         </div>
       </div>
       <div class="skill-group" data-animate>
@@ -504,6 +539,9 @@
           <div class="s-chip"><span class="ci">💳</span> Stripe</div>
           <div class="s-chip"><span class="ci">🔐</span> NextAuth v5</div>
           <div class="s-chip"><span class="ci">🐙</span> Git / GitHub</div>
+          <div class="s-chip"><span class="ci">🗺️</span> Google Maps</div>
+          <div class="s-chip"><span class="ci">🌐</span> deck.gl</div>
+          <div class="s-chip"><span class="ci">☁️</span> Google Cloud</div>
           <div class="s-chip"><span class="ci">🔄</span> CI/CD</div>
         </div>
       </div>
