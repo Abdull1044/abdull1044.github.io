@@ -266,7 +266,7 @@
     <div class="r-job">
       <div class="r-job-head">
         <div class="r-job-left">
-          <span class="r-job-title">Full-Stack Web Platform Developer</span>
+          <span class="r-job-title">Full-Stack Software Engineer</span>
           <span class="sep">·</span>
           <span class="r-job-company">Archangel Technology (AET)</span>
           <span class="sep">·</span>
@@ -275,11 +275,17 @@
         <span class="r-job-date">Jan 2024 – Present</span>
       </div>
       <ul class="r-bullets">
-        <li>Built <strong>AET Management Portal</strong> — enterprise ERP unifying sales, procurement, inventory, accounting, IT ticketing, asset tracking, and reporting into a single platform; implemented recurring lease automation and Stripe invoice payment workflows with webhook-driven status sync.</li>
-        <li>Developed <strong>PixelEDU</strong> — multi-tenant SaaS procurement portal for educational institutions; 3-tier role approval workflow (Requestor → Approver → Admin) with per-campus routing, price snapshot validation, ERP auto-sync (Sales Quote on submit → Sales Order on approval), SSO via Google &amp; Microsoft Entra ID (NextAuth v5), and streaming batched CSV export.</li>
-        <li>Engineered real-time WebSocket notification systems; deployed all applications on AWS (S3, RDS, CloudFront) with PostgreSQL and Redis caching layers.</li>
+        <li>Built and maintained <strong>AET — Archangel Equipment Tracker</strong>, a production B2B ERP with <strong>153 NestJS modules</strong>, <strong>238 PostgreSQL entities</strong>, <strong>832 migrations</strong>, and <strong>815 GraphQL operations</strong> (477 queries + 338 mutations) covering the complete order-to-cash cycle — sales quotes → orders → warehouse fulfillment → invoices → payments — with state machines, inventory locking, and device/serial validation (largest service: 11,823 lines).</li>
+        <li>Implemented <strong>59 REQUEST-scoped DataLoaders</strong> eliminating N+1 across all resolver fields; designed a <strong>distributed Redis cron-lock system</strong> (@RedisCronLock) protecting <strong>49 scheduled jobs</strong> from duplicate execution across multi-instance ECS Fargate deployments — covering billing cycles, bank sync, customer credit monitoring, lease reminders, and AI spec backfill.</li>
+        <li>Engineered a <strong>multi-source weighted-average cost engine</strong> proportionally blending PO costs across partial receipts and supplier adjustments — feeding invoice line items, AR aging, and P&amp;L reporting; implemented a <strong>4-tier tax jurisdiction engine</strong> (city/county/district/state) with shipping taxability flags wired into Stripe checkout and invoice generation.</li>
+        <li>Integrated <strong>Stripe</strong> (374 usage sites — card/ACH, checkout sessions, webhook retry cron) and <strong>Plaid</strong> (294 usage sites — bank linking, daily transaction sync, auto-categorization) with Akoya open-banking as fallback; <strong>ShipEngine</strong> for carrier rate shopping, label generation, and tracking; DocuSign e-sign envelope lifecycle in the quote workflow; QuickBooks OAuth for GL sync.</li>
+        <li>Delivered <strong>equipment leasing</strong> (amortization schedules, principal/interest split, FMV/dollar-buyout, recurring billing engine), <strong>warranty &amp; repairs</strong> (multi-step claim pipeline: CREATED → QA → CLOSED with SOP checklists, parts tracking, QA sign-off), and <strong>customer credit monitoring</strong> (6 cron jobs: over-exposure flagging, payment status checks, year-end account-manager swap).</li>
+        <li>Delivered a <strong>733-file React admin frontend</strong> across 14 lazy-loaded domain roots with 99-constant RBAC enforced at route and component level; built a 1,501-line multi-step sales quote creator with dynamic pricing, multi-discount layering, inline PDF preview, and e-signature integration.</li>
+        <li>Architected <strong>9 GitHub Actions CI/CD workflows</strong> — 3 independently deployable services (NestJS on ECS Fargate, React on S3/CloudFront, Next.js on ECS Fargate) with OIDC auth, per-service semver tagging, manual prod gates, Playwright E2E (9 test suites), and AWS Secrets Manager injection (50+ keys) keeping credentials out of Docker images.</li>
+        <li>Built <strong>GHFS — Green Homes For Sale</strong> (<a href="https://www.greenhomesforsale.com">greenhomesforsale.com</a>) — Next.js 14 App Router green real estate marketplace (40 DB models, 122 components); OpenAI gpt-4o-mini listing moderation pipeline; Stripe recurring billing with cron renewal &amp; auto-downgrade; denormalized 13-table search architecture for sub-100ms queries; dual-CDN image pipeline (Cloudinary → DigitalOcean Spaces).</li>
+        <li>Developed <strong>PixelEDU</strong> — multi-tenant SaaS procurement portal; 3-tier approval workflow, per-campus routing, ERP auto-sync, SSO via Google &amp; Microsoft Entra ID (NextAuth v5), price snapshot validation, and streaming CSV export.</li>
       </ul>
-      <p class="r-stack"><strong>Stack:</strong> React.js · Next.js 16 · TypeScript · NestJS 10 · Apollo GraphQL · PostgreSQL · Redis · AWS · Stripe API · NextAuth v5 · Tailwind v4 · TypeORM</p>
+      <p class="r-stack"><strong>Stack:</strong> NestJS 10 · Apollo GraphQL · TypeORM 0.2 · PostgreSQL · Redis · BullMQ · React 17 · Redux Toolkit · Ant Design 4 · Next.js 14/16 · TypeScript 5 · AWS ECS Fargate/ECR/RDS/S3/CloudFront/Secrets Manager · Stripe · Plaid · Akoya · ShipEngine · DocuSign · QuickBooks · OpenAI · SendGrid · Sentry · Microsoft Clarity · GitHub Actions OIDC</p>
     </div>
 
     <!-- SurveyAuto -->
@@ -373,17 +379,34 @@
         </ul>
       </div>
 
+      <!-- GHFS -->
+      <div class="r-proj">
+        <div class="r-proj-head">
+          <span class="r-proj-name">GHFS — Green Homes For Sale</span>
+          <span class="r-proj-meta">AET · Live ↗</span>
+        </div>
+        <p class="r-proj-client"><a href="https://www.greenhomesforsale.com">greenhomesforsale.com</a> · Archangel Technology · Next.js 14 green real estate marketplace</p>
+        <p class="r-proj-desc">Full-stack marketplace for eco-certified homes with AI moderation, recurring billing, and denormalized search — 40 DB models, 122 React components, 31 App Router pages.</p>
+        <ul class="r-proj-feats">
+          <li>OpenAI gpt-4o-mini pipeline: analyzes listing text + 5 property images → auto-approve/reject eco-certification; admin override queue</li>
+          <li>Stripe recurring billing: cron renewal · failed-payment recovery · auto-downgrade featured→standard · Slack alerts</li>
+          <li>Denormalized search: 13 green-feature join tables mirrored to flat Listing fields → sub-100ms marketplace queries</li>
+          <li>Dual-CDN: Cloudinary primary → DigitalOcean Spaces fallback · per-image progress · HEIC conversion · 6-cron expiry lifecycle</li>
+        </ul>
+      </div>
+
       <!-- AET Portal -->
       <div class="r-proj">
         <div class="r-proj-head">
-          <span class="r-proj-name">AET Management Portal</span>
+          <span class="r-proj-name">AET — Archangel Equipment Tracker (ERP)</span>
           <span class="r-proj-meta">Jan 2024 – Present</span>
         </div>
-        <p class="r-proj-client">Archangel Technology (AET)</p>
-        <p class="r-proj-desc">Enterprise ERP portal unifying sales, procurement, inventory, accounting, IT ticketing, and asset tracking.</p>
+        <p class="r-proj-client">Archangel Technology · Full-stack B2B ERP · EdTech hardware reseller</p>
+        <p class="r-proj-desc">Production ERP: <strong>153 NestJS modules · 238 entities · 832 migrations · 815 GraphQL ops · 59 DataLoaders · 49 Redis-locked crons · 733 frontend files · 99-constant RBAC</strong>. Order-to-cash pipeline across sales, warehouse, accounting, leasing, warranty &amp; repairs on AWS ECS Fargate.</p>
         <ul class="r-proj-feats">
-          <li>Recurring lease automation · Stripe invoice payments with webhook sync · real-time WebSocket notifications</li>
-          <li>IT ticketing &amp; asset lifecycle tracking · AWS deployment (S3, RDS, CloudFront)</li>
+          <li>Weighted-average cost engine · 4-tier tax jurisdiction · double-entry GL · QuickBooks sync · AR/AP aging · P&amp;L</li>
+          <li>Stripe (374 refs) + Plaid (294 refs) · ShipEngine label gen · DocuSign e-sign · Akoya open-banking · OpenAI spec backfill</li>
+          <li>Distributed Redis cron-lock across 49 jobs · BullMQ async queues · 9 GitHub Actions workflows (OIDC, semver, Playwright E2E)</li>
         </ul>
       </div>
 
