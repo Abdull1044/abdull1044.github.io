@@ -295,12 +295,11 @@
             <div class="proj-num">01 / FEATURED · ENTERPRISE ERP</div>
             <div class="proj-label">Full-Stack B2B ERP · Archangel Tablets · Jan 2024 – Present</div>
             <h3>AAT — Archangel Tablets ERP</h3>
-            <p>Production internal ERP for an EdTech hardware reseller covering the full business cycle — quoting, order management, warehouse fulfillment, invoicing, accounting, leasing, warranty, and repairs. Built as a TypeScript monorepo with <strong>153 NestJS modules</strong>, <strong>238 DB entities</strong>, <strong>815 GraphQL operations</strong>, and a <strong>733-file React admin frontend</strong> deployed on AWS ECS Fargate.</p>
+            <p>Archangel Tablets sells hardware to educational institutions and was managing quotes, orders, invoices, and warehouse ops across disconnected spreadsheets and tools. I built them a unified internal ERP that handles their entire business — from the moment a sales rep creates a quote to the day a device gets returned under warranty.</p>
             <ul class="proj-feats">
-              <li><span class="fi">🔄</span> Complete order-to-cash pipeline with state machines, inventory reservation, device/serial tracking, and automated invoicing</li>
-              <li><span class="fi">💳</span> Stripe + Plaid + ShipEngine + DocuSign + QuickBooks — payments, bank sync, shipping, e-signatures, and accounting all integrated</li>
-              <li><span class="fi">🏛️</span> Double-entry accounting engine with GL, AR/AP aging, 4-tier tax jurisdiction, and OpenAI-powered product catalog enrichment</li>
-              <li><span class="fi">☁️</span> 3 independently deployable services on AWS with 9 CI/CD pipelines, Playwright E2E tests, and Redis-locked distributed cron infrastructure</li>
+              <li><span class="fi">📦</span> Sales reps quote and close deals; warehouse teams pick, pack, and ship; finance tracks payments, lease schedules, and accounting — all in one system</li>
+              <li><span class="fi">💳</span> Payments via Stripe, bank reconciliation via Plaid, shipping labels via ShipEngine, contracts via DocuSign, and accounting synced to QuickBooks</li>
+              <li><span class="fi">☁️</span> Three independently deployed services on AWS, with automated CI/CD pipelines and role-based access for every team</li>
             </ul>
             <div class="proj-stack">
               <span>NestJS 10</span><span>Apollo GraphQL</span><span>TypeORM</span><span>PostgreSQL</span><span>Redis</span><span>BullMQ</span><span>React 17</span><span>Apollo Client</span><span>Redux Toolkit</span><span>Ant Design 4</span><span>TypeScript</span><span>AWS ECS Fargate</span><span>Stripe</span><span>Plaid</span><span>ShipEngine</span><span>OpenAI</span><span>DocuSign</span><span>QuickBooks</span><span>SendGrid</span><span>Sentry</span>
@@ -379,15 +378,11 @@
             <div class="proj-num">02 / FEATURED</div>
             <div class="proj-label">Multi-Tenant SaaS · AET · 2025</div>
             <h3>PixelEDU — Procurement Portal</h3>
-            <p>Multi-tenant SaaS portal for educational institutions to run hardware procurement approval workflows, fully integrated with an internal ERP. Each campus operates in isolation with custom catalogs, pricing, and approver routing.</p>
+            <p>School campuses were raising hardware purchase requests over email, causing delays, lost approvals, and no visibility into order status. I built PixelEDU — a multi-tenant SaaS portal where each campus manages its own procurement workflow, fully wired into the internal ERP so approved orders flow automatically into the sales system.</p>
             <ul class="proj-feats">
-              <li><span class="fi">🏫</span> Three-tier roles (Requestor / Approver / Admin) with per-campus auto-assignment</li>
-              <li><span class="fi">🔄</span> Full lifecycle: Draft → Submitted → Approved / Denied / Returned + email notifications</li>
-              <li><span class="fi">🛒</span> Per-tenant catalog with margin-based pricing, real-time stock & price-change alerts</li>
-              <li><span class="fi">🔗</span> ERP integration: auto-creates Sales Quote on submit, Sales Order on approval</li>
-              <li><span class="fi">🔐</span> SSO via Google & Microsoft Entra ID + native auth (NextAuth v5)</li>
-              <li><span class="fi">💰</span> Price snapshot validation before approvers can confirm</li>
-              <li><span class="fi">📤</span> Streaming batched CSV export; isolated per-session cart</li>
+              <li><span class="fi">🏫</span> Requestors browse the catalog and submit orders; Approvers review and sign off; Admins manage campus settings — each role sees only what they need</li>
+              <li><span class="fi">🔗</span> Approved requests auto-create Sales Quotes and Orders in the ERP — no manual re-entry</li>
+              <li><span class="fi">🔐</span> Staff sign in with their existing Google or Microsoft accounts via SSO — no new passwords to manage</li>
             </ul>
             <div class="proj-stack">
               <span>Next.js 16</span><span>TypeScript</span><span>NestJS 10</span><span>GraphQL</span><span>PostgreSQL</span><span>Redis</span><span>Tailwind v4</span><span>NextAuth v5</span>
@@ -435,12 +430,11 @@
             <div class="proj-num">03 / FEATURED · LIVE</div>
             <div class="proj-label">Green Real Estate Marketplace · AET · Next.js 14 · <a href="https://www.greenhomesforsale.com/" target="_blank" rel="noopener" style="color:var(--cyan)">greenhomesforsale.com ↗</a></div>
             <h3>GHFS — Green Homes For Sale</h3>
-            <p>Live green real estate marketplace where sellers list eco-certified homes and buyers discover them by green feature type. Built with Next.js 14 App Router across 40 database models and 31 routes — handling listing creation, AI-powered moderation, subscription billing, and agent onboarding.</p>
+            <p>Eco-conscious homebuyers had no dedicated place to search for properties by green features like solar panels, insulation type, or energy certifications. I built a full marketplace where sellers list eco-certified homes and buyers filter by 13 green feature categories — live at <a href="https://www.greenhomesforsale.com" target="_blank" rel="noopener" style="color:var(--cyan)">greenhomesforsale.com</a>.</p>
             <ul class="proj-feats">
-              <li><span class="fi">🤖</span> AI moderation — OpenAI analyzes listing text and property photos for eco-certification compliance, auto-approving valid listings</li>
-              <li><span class="fi">💳</span> Stripe subscription billing with automated renewal, failed-payment recovery, and listing tier downgrade</li>
-              <li><span class="fi">🖼️</span> Dual-CDN image pipeline — Cloudinary primary with DigitalOcean Spaces fallback and real-time upload progress</li>
-              <li><span class="fi">📊</span> New Relic APM monitoring Core Web Vitals (LCP, CLS, TTFB) in production</li>
+              <li><span class="fi">🤖</span> Every listing goes through an AI review — OpenAI reads the description and scans the photos to verify eco-certification claims before the listing goes live</li>
+              <li><span class="fi">💳</span> Sellers subscribe to featured or standard plans; billing renews automatically and listings downgrade gracefully if payment fails</li>
+              <li><span class="fi">🖼️</span> Property photos upload to Cloudinary with a fallback to DigitalOcean Spaces — fast delivery regardless of which CDN responds first</li>
             </ul>
             <div class="proj-stack">
               <span>Next.js 14</span><span>React 18</span><span>TypeScript</span><span>Sequelize</span><span>MySQL</span><span>OpenAI GPT-4o</span><span>Stripe</span><span>Cloudinary</span><span>DigitalOcean Spaces</span><span>NextAuth v4</span><span>Zustand</span><span>SendGrid</span><span>New Relic</span><span>AWS SDK</span><span>Zod</span>
@@ -459,12 +453,11 @@
           <div class="proj-num">04 / FEATURED · ENTERPRISE</div>
           <div class="proj-label">Geospatial Field Intelligence Platform · SurveyAuto · Jun 2022 – Present · Built for BAT &amp; FMCG clients</div>
           <h3>RTM — Retail Territory Management</h3>
-          <p>Enterprise geospatial field intelligence platform used by British American Tobacco and FMCG clients across <strong>7 countries</strong> to plan sales territories, validate retail outlets, and track distributor performance against <strong>20M+ shop records</strong>.</p>
+          <p>British American Tobacco and their FMCG peers operate field sales teams across multiple countries, each managing thousands of retail shops. Their managers had no reliable way to visualize territory coverage, spot gaps, or validate that shops were being visited. I built RTM — a geospatial intelligence platform that gives territory managers a live map view of every shop, route, and sales rep across <strong>7 countries</strong>.</p>
           <ul class="proj-feats">
-            <li><span class="fi">🗺️</span> Interactive Google Maps territory dashboards with polygon layers, heatmaps, deck.gl overlays, and 20+ dynamic attribute filters</li>
-            <li><span class="fi">🔄</span> Real-time MongoDB → PostGIS sync pipeline with WebSocket progress, Bull job queues, and Redis-cached area aggregations</li>
-            <li><span class="fi">📊</span> Store scoring engine, promoter scheduling, brand sentiment dashboards, and Excel/PDF report generation</li>
-            <li><span class="fi">🌍</span> Per-tenant CloudFront CDN deployments across Malaysia, UK, Switzerland, Bangladesh, US &amp; Pakistan</li>
+            <li><span class="fi">🗺️</span> Managers draw and adjust territory boundaries on Google Maps, filter shops by 20+ attributes, and instantly see coverage gaps and performance heatmaps</li>
+            <li><span class="fi">🔄</span> Shop data syncs in real-time from the field survey system into a geospatial database — managers always see current ground truth, not stale exports</li>
+            <li><span class="fi">📊</span> Each country runs on its own isolated deployment — BAT Malaysia sees different data than BAT UK, with branded dashboards and region-specific reporting</li>
           </ul>
           <div class="proj-stack">
             <span>React 18</span><span>NestJS</span><span>TypeScript</span><span>Google Maps</span><span>deck.gl</span><span>MongoDB Atlas</span><span>PostgreSQL+PostGIS</span><span>Redis</span><span>Socket.io</span><span>Bull</span><span>AWS S3</span><span>CloudFront</span><span>GCS</span><span>Ant Design</span>
@@ -521,11 +514,10 @@
         <div class="proj-num">05</div>
         <div class="proj-label">Backend Automation · SurveyAuto · Apr 2024 – May 2026</div>
         <h3>RTM Tenant Onboarding Backend</h3>
-        <p>Automated backend system that provisions new RTM client tenants at scale — ingesting bulk geographic data (KML/Excel/ZIP), assigning shops to sales routes via geospatial processing, and setting up multi-role field teams in a single pipeline run.</p>
+        <p>Onboarding a new country into RTM used to take weeks of manual data wrangling. I built an automated backend that takes a client's raw data files — maps, shop lists, route plans — and provisions their entire RTM environment in one pipeline run.</p>
         <ul class="proj-feats">
-          <li><span class="fi">📦</span> Bulk data ingestion — KML, Excel, CSV, ZIP → areas, routes, shops &amp; users provisioned automatically</li>
-          <li><span class="fi">📍</span> Geospatial shop-to-route assignment using Turf.js point-in-polygon queries</li>
-          <li><span class="fi">⚡</span> Real-time Socket.IO progress updates during long-running ingestion jobs</li>
+          <li><span class="fi">📦</span> Upload KML maps, Excel shop lists, and ZIP route files — the system parses, validates, and loads everything automatically</li>
+          <li><span class="fi">📍</span> Each shop is automatically assigned to the correct sales route based on its GPS coordinates and territory boundaries</li>
         </ul>
         <div class="proj-stack" style="margin-top:.75rem">
           <span>Node.js</span><span>Express</span><span>MongoDB</span><span>PostgreSQL</span><span>Socket.IO</span><span>Turf.js</span><span>AWS S3</span><span>Secrets Manager</span><span>ExcelJS</span><span>JWT</span>
@@ -536,11 +528,10 @@
         <div class="proj-num">06</div>
         <div class="proj-label">Field Survey Validation Portal · SurveyAuto · Mar 2022 – Jun 2026</div>
         <h3>Census Validator Portal</h3>
-        <p>Web portal for field survey teams to review and validate shop and POI data collected during census campaigns — classifying records as matched, partially matched, or unmatched against existing datasets.</p>
+        <p>When field agents survey thousands of shops, the collected data needs to be verified against existing records before it can be used. I built a portal where validation teams review each submission, classify shops as matched or new discoveries, and flag discrepancies — keeping the RTM database accurate.</p>
         <ul class="proj-feats">
-          <li><span class="fi">🗂️</span> Classification workflows for matched / unmatched / new POI discovery with Google Maps location validation</li>
-          <li><span class="fi">📊</span> Analytics dashboards with D3 tree views, stats panels, and field visit tracking</li>
-          <li><span class="fi">🏢</span> Tenant-wise client views with submission previews and multi-environment AWS S3 deployment</li>
+          <li><span class="fi">🗂️</span> Reviewers see each shop side-by-side with the existing record and classify it — matched, partial match, or a newly found location</li>
+          <li><span class="fi">🗺️</span> Every shop opens on Google Maps so reviewers can visually confirm the location before approving</li>
         </ul>
         <div class="proj-stack" style="margin-top:.75rem">
           <span>React 17</span><span>React Router v5</span><span>Ant Design</span><span>Ant Design Charts</span><span>React D3 Tree</span><span>Google Maps React</span><span>Firebase Auth</span><span>Axios</span><span>Bootstrap</span><span>AWS S3</span>
