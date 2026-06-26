@@ -280,9 +280,10 @@
         <li>Built <strong>double-entry accounting</strong> — GL, AR/AP aging, Plaid bank transaction sync with auto-matching (cursor-based), Akoya open-banking OAuth, Stripe tax calculation &amp; recurring autopay; commission engine with tier-snapshot at order time, virtual SO splits, and hold logic.</li>
         <li>Delivered <strong>leasing</strong> (amortization schedules, FMV/dollar-buyout, cron payment reminders via Stripe autopay) and <strong>warranty &amp; repairs</strong> (claim lifecycle, labour+parts budgets, coverage reminders, asset depreciation tracker).</li>
         <li>Integrated Stripe · DocuSign · ShipEngine · Plaid · Akoya · SendGrid · AWS S3 · IngramMicro / D&amp;H / TDSynnex supplier pricing pulls; deployed on <strong>AWS ECS (Fargate)</strong> with ECR, RDS, CloudFront/S3 SPA, and GitHub Actions CI/CD (path-scoped dev + manual prod). System runs <strong>44 DataLoaders</strong> and Redis-locked distributed crons across multi-pod deployment.</li>
+        <li>Built <strong>GHFS — Green Homes For Sale</strong> (<a href="https://www.greenhomesforsale.com">greenhomesforsale.com</a>) — full-stack green real estate marketplace; Next.js 14 App Router, 40 DB models, 122 components; engineered OpenAI gpt-4o-mini moderation pipeline analyzing listing text + property images for eco-certification compliance with auto-publish; Stripe recurring billing engine with cron renewal, failed-payment recovery &amp; auto-downgrade; denormalized search architecture (13 green-feature tables → flat fields) for sub-100ms queries; dual-CDN image pipeline (Cloudinary → DigitalOcean Spaces fallback); 6 coordinated cron endpoints for listing expiry lifecycle; New Relic APM with Core Web Vitals tracking.</li>
         <li>Developed <strong>PixelEDU</strong> — multi-tenant SaaS procurement portal; 3-tier approval workflow, per-campus routing, ERP auto-sync, SSO via Google &amp; Microsoft Entra ID (NextAuth v5), price snapshot validation, and streaming CSV export.</li>
       </ul>
-      <p class="r-stack"><strong>Stack:</strong> NestJS 10 · Apollo GraphQL · TypeORM 0.2 · PostgreSQL · Redis · React 17 · Redux Toolkit · Ant Design 4 · Next.js 16 · TypeScript · AWS ECS/Fargate · Stripe · DocuSign · ShipEngine · Plaid · Akoya · SendGrid · GitHub Actions</p>
+      <p class="r-stack"><strong>Stack:</strong> NestJS 10 · Apollo GraphQL · TypeORM 0.2 · PostgreSQL · Redis · React 17/18 · Redux Toolkit · Ant Design 4 · Next.js 14/16 · TypeScript · Sequelize · MySQL · OpenAI SDK · Stripe · Cloudinary · DigitalOcean Spaces · NextAuth v4/v5 · Zustand · SendGrid · New Relic · AWS ECS/Fargate · DocuSign · ShipEngine · Plaid · Akoya · GitHub Actions</p>
     </div>
 
     <!-- SurveyAuto -->
@@ -373,6 +374,22 @@
           <li>3-tier approval (Requestor / Approver / Admin) · per-campus auto-routing · price snapshot validation</li>
           <li>ERP sync: Sales Quote on submit → Sales Order on approval · daily catalog price/stock sync</li>
           <li>SSO (Google + Microsoft Entra ID via NextAuth v5) · streaming CSV export · isolated cart via localStorage</li>
+        </ul>
+      </div>
+
+      <!-- GHFS -->
+      <div class="r-proj">
+        <div class="r-proj-head">
+          <span class="r-proj-name">GHFS — Green Homes For Sale</span>
+          <span class="r-proj-meta">AET · Live ↗</span>
+        </div>
+        <p class="r-proj-client"><a href="https://www.greenhomesforsale.com">greenhomesforsale.com</a> · Archangel Technology · Next.js 14 green real estate marketplace</p>
+        <p class="r-proj-desc">Full-stack marketplace for eco-certified homes with AI moderation, recurring billing, and denormalized search — 40 DB models, 122 React components, 31 App Router pages.</p>
+        <ul class="r-proj-feats">
+          <li>OpenAI gpt-4o-mini pipeline: analyzes listing text + 5 property images → auto-approve/reject eco-certification; admin override queue</li>
+          <li>Stripe recurring billing: cron renewal · failed-payment recovery · auto-downgrade featured→standard · Slack alerts</li>
+          <li>Denormalized search: 13 green-feature join tables mirrored to flat Listing fields → sub-100ms marketplace queries</li>
+          <li>Dual-CDN: Cloudinary primary → DigitalOcean Spaces fallback · per-image progress · HEIC conversion · 6-cron expiry lifecycle</li>
         </ul>
       </div>
 

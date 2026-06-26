@@ -65,7 +65,7 @@
           <span class="stat-label">Years Exp.</span>
         </div>
         <div class="stat">
-          <span class="stat-num">7</span>
+          <span class="stat-num">8</span>
           <span class="stat-label">Projects Built</span>
         </div>
         <div class="stat">
@@ -113,7 +113,7 @@
             <span class="m-label">Years</span>
           </div>
           <div class="metric-pill">
-            <span class="m-val cyan">7</span>
+            <span class="m-val cyan">8</span>
             <span class="m-label">Projects</span>
           </div>
           <div class="metric-pill">
@@ -404,6 +404,63 @@
         </div>
       </div>
 
+    <!-- GHFS -->
+      <div class="proj-card" data-animate>
+        <div class="proj-card-top-accent" style="background: linear-gradient(90deg, var(--green), #16a34a, var(--cyan))"></div>
+        <div class="proj-inner reverse">
+          <div class="proj-visual">
+            <div class="browser">
+              <div class="b-bar">
+                <div class="b-dots"><span></span><span></span><span></span></div>
+                <div class="b-url">greenhomesforsale.com</div>
+              </div>
+              <div class="b-body">
+                <div class="dash">
+                  <div class="dash-sidebar">
+                    <div class="si active"></div><div class="si"></div><div class="si"></div><div class="si"></div><div class="si"></div>
+                  </div>
+                  <div class="dash-main">
+                    <div class="d-topbar"></div>
+                    <div class="d-stats">
+                      <div class="d-stat"><div class="d-val g" style="font-size:.6rem">AI ✓</div><div class="d-lbl">Moderated</div></div>
+                      <div class="d-stat"><div class="d-val c">13</div><div class="d-lbl">Eco Types</div></div>
+                      <div class="d-stat"><div class="d-val i">40</div><div class="d-lbl">DB Models</div></div>
+                    </div>
+                    <div class="d-chart">
+                      <div class="d-pie" style="background:conic-gradient(var(--green) 0% 40%,var(--cyan) 40% 70%,var(--amber) 70% 85%,rgba(255,255,255,.1) 85% 100%)"></div>
+                      <div class="d-legend">
+                        <div class="d-leg-row"><div class="d-leg-dot" style="background:var(--green)"></div><div class="d-leg-text">Solar/Wind 40%</div></div>
+                        <div class="d-leg-row"><div class="d-leg-dot" style="background:var(--cyan)"></div><div class="d-leg-text">Certified 30%</div></div>
+                        <div class="d-leg-row"><div class="d-leg-dot" style="background:var(--amber)"></div><div class="d-leg-text">Insulation 15%</div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="proj-info">
+            <div class="proj-num">03 / FEATURED · LIVE</div>
+            <div class="proj-label">Green Real Estate Marketplace · AET · Next.js 14 · <a href="https://www.greenhomesforsale.com/" target="_blank" rel="noopener" style="color:var(--cyan)">greenhomesforsale.com ↗</a></div>
+            <h3>GHFS — Green Homes For Sale</h3>
+            <p>Full-stack green real estate marketplace built with Next.js 14 App Router — 40 database models, 122 components, and 31 routes serving listing discovery, AI-powered eco-certification moderation, agent onboarding, and subscription billing. Captures 13 specialized eco-feature types (energy sources, insulation, certifications, materials, heating/cooling) with per-feature image galleries.</p>
+            <ul class="proj-feats">
+              <li><span class="fi">🤖</span> AI moderation pipeline — OpenAI gpt-4o-mini analyzes listing text + up to 5 property images for green compliance; auto-approves/rejects with admin override</li>
+              <li><span class="fi">💳</span> Stripe recurring billing engine — cron-triggered renewal, failed-payment recovery, auto-downgrade featured→standard, Slack failure alerts</li>
+              <li><span class="fi">⚡</span> Denormalized search architecture — 13 green-feature join tables mirrored into flat fields on Listing model for sub-100ms marketplace queries</li>
+              <li><span class="fi">🖼️</span> Dual-CDN image pipeline — Cloudinary primary → DigitalOcean Spaces fallback with per-image progress tracking &amp; HEIC conversion</li>
+              <li><span class="fi">🔍</span> SEO slug routing — <code>country_state_city_zip_id</code> URLs with reverse-parsing helpers; no raw IDs exposed</li>
+              <li><span class="fi">📋</span> Multi-step listing form — Zustand-backed 6-tab flow with cross-tab dependencies, currency auto-format &amp; tab enable/disable logic</li>
+              <li><span class="fi">🗂️</span> 6 coordinated cron endpoints — 7-day warning → 1-day warning → expire → renew → downgrade lifecycle</li>
+              <li><span class="fi">📊</span> New Relic APM — CLS, LCP, TTFB, INP Core Web Vitals tracking in production</li>
+            </ul>
+            <div class="proj-stack">
+              <span>Next.js 14</span><span>React 18</span><span>TypeScript</span><span>Sequelize</span><span>MySQL</span><span>OpenAI GPT-4o</span><span>Stripe</span><span>Cloudinary</span><span>DigitalOcean Spaces</span><span>NextAuth v4</span><span>Zustand</span><span>SendGrid</span><span>New Relic</span><span>AWS SDK</span><span>Zod</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
 
     <!-- RTM — Full-width featured -->
@@ -411,7 +468,7 @@
       <div class="proj-card-top-accent" style="background:linear-gradient(90deg,var(--green),var(--cyan),var(--accent2))"></div>
       <div class="proj-inner">
         <div class="proj-info">
-          <div class="proj-num">03 / FEATURED · ENTERPRISE</div>
+          <div class="proj-num">04 / FEATURED · ENTERPRISE</div>
           <div class="proj-label">Geospatial Field Intelligence Platform · SurveyAuto · Jun 2022 – Present · Built for BAT &amp; FMCG clients</div>
           <h3>RTM — Retail Territory Management</h3>
           <p>An enterprise-grade geospatial intelligence platform used by retail territory managers, field agents, and supervisors across <strong>7 countries</strong> to visualize, filter, and analyze <strong>20M+ shop records</strong>. Enables territory planning, outlet validation, brand analysis, and distributor performance tracking at scale for British American Tobacco and other FMCG clients.</p>
@@ -477,7 +534,7 @@
 
       <!-- RTM Tenant Onboarding -->
       <div class="proj-mini" data-animate>
-        <div class="proj-num">04</div>
+        <div class="proj-num">05</div>
         <div class="proj-label">Backend Automation · SurveyAuto · Apr 2024 – May 2026</div>
         <h3>RTM Tenant Onboarding Backend</h3>
         <p>Backend automation system for provisioning RTM tenants at scale — ingesting bulk geographic &amp; shop data, assigning sales routes via geospatial processing, and provisioning multi-role users for field sales operations.</p>
@@ -495,7 +552,7 @@
       </div>
 
       <div class="proj-mini" data-animate>
-        <div class="proj-num">05</div>
+        <div class="proj-num">06</div>
         <div class="proj-label">Field Survey Validation Portal · SurveyAuto · Mar 2022 – Jun 2026</div>
         <h3>Census Validator Portal</h3>
         <p>Web-based portal for validating and managing census/field survey data — enabling teams to review, verify, and categorize POIs and shop data collected from field surveys. Reconciles matched, partially matched, unmatched, and newly discovered locations against existing records.</p>
