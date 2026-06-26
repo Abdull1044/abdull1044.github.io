@@ -8,315 +8,421 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
-    /* ===== RESET ===== */
+    /* ============================
+       RESET
+    ============================ */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     a { color: inherit; text-decoration: none; }
     ul { list-style: none; }
 
-    /* ===== SCREEN WRAPPER ===== */
+    /* ============================
+       SCREEN CHROME
+    ============================ */
+    :root {
+      --ink:     #0f172a;
+      --ink2:    #1e293b;
+      --muted:   #475569;
+      --muted2:  #94a3b8;
+      --accent:  #4338ca;   /* indigo-700 */
+      --accent2: #6366f1;   /* indigo-500 */
+      --rule:    #e2e8f0;
+      --tag-bg:  #f1f5f9;
+    }
+
     body {
       font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-      background: #f0f2f5;
-      color: #111827;
+      background: #e8edf3;
+      color: var(--ink);
       -webkit-font-smoothing: antialiased;
-      padding: 2rem 1rem;
+      padding: 2.5rem 1rem 4rem;
+      font-size: 13px;
+      line-height: 1.55;
     }
 
-    /* Print button */
-    .print-bar {
-      max-width: 820px; margin: 0 auto 1.25rem;
-      display: flex; align-items: center; justify-content: space-between;
-      flex-wrap: wrap; gap: .75rem;
+    /* Top action bar */
+    .action-bar {
+      max-width: 860px; margin: 0 auto 1.25rem;
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: .75rem;
     }
-    .print-bar p { font-size: .82rem; color: #6b7280; }
-    .print-btn {
-      background: #4f46e5; color: #fff; border: none; cursor: pointer;
-      padding: .55rem 1.4rem; border-radius: 8px; font-size: .85rem;
-      font-weight: 600; font-family: inherit; display: flex; align-items: center; gap: .45rem;
-      transition: background .2s;
+    .action-bar p { font-size: .78rem; color: #64748b; }
+    .action-bar p strong { color: #334155; }
+    .btn-print {
+      display: inline-flex; align-items: center; gap: .45rem;
+      background: var(--accent); color: #fff; border: none; cursor: pointer;
+      padding: .55rem 1.35rem; border-radius: 8px; font-size: .82rem;
+      font-weight: 600; font-family: inherit; transition: background .2s; white-space: nowrap;
     }
-    .print-btn:hover { background: #4338ca; }
-    @media print { .print-bar { display: none; } }
+    .btn-print:hover { background: var(--accent2); }
+    @media print { .action-bar { display: none !important; } }
 
-    /* ===== PAGE ===== */
-    .page {
-      max-width: 820px; margin: 0 auto;
-      background: #fff; border-radius: 4px;
-      box-shadow: 0 4px 24px rgba(0,0,0,.1);
-      padding: 48px 52px;
-      line-height: 1.5;
+    /* ============================
+       PAPER
+    ============================ */
+    .paper {
+      max-width: 860px; margin: 0 auto;
+      background: #fff;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,.06), 0 8px 32px rgba(0,0,0,.08);
+      /* Left accent bar */
+      border-left: 4px solid var(--accent);
+      padding: 44px 52px 44px 48px;
     }
 
-    /* ===== HEADER ===== */
-    .r-header {
-      display: grid; grid-template-columns: 1fr auto;
-      gap: 1.5rem; align-items: start;
-      border-bottom: 2px solid #4f46e5;
-      padding-bottom: 1.25rem; margin-bottom: 1.5rem;
+    /* ============================
+       HEADER
+    ============================ */
+    .r-head {
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      border-bottom: 1.5px solid var(--rule);
+    }
+    .r-head-top {
+      display: flex; justify-content: space-between; align-items: flex-start; gap: 1.5rem;
+      margin-bottom: 10px;
     }
     .r-name {
-      font-size: 2rem; font-weight: 800; letter-spacing: -1px;
-      color: #111827; line-height: 1.1; margin-bottom: .3rem;
+      font-size: 28px; font-weight: 800; letter-spacing: -1px;
+      color: var(--ink); line-height: 1.1; margin-bottom: 4px;
     }
-    .r-title { font-size: 1rem; font-weight: 600; color: #4f46e5; margin-bottom: .5rem; }
-    .r-contact-right {
-      text-align: right; font-size: .78rem; color: #374151;
-      display: flex; flex-direction: column; gap: .25rem;
+    .r-role {
+      font-size: 13px; font-weight: 600; color: var(--accent);
+      letter-spacing: .2px;
     }
-    .r-contact-right a { color: #4f46e5; }
-    .r-tagline {
-      font-size: .84rem; color: #6b7280; max-width: 540px; line-height: 1.6;
+    .r-contact-block {
+      display: flex; flex-direction: column; align-items: flex-end; gap: 3px;
+      font-size: 11.5px; color: var(--muted); text-align: right; flex-shrink: 0;
+    }
+    .r-contact-block a:hover { color: var(--accent); }
+    .r-contact-row { display: flex; align-items: center; gap: 4px; }
+    .r-contact-sep {
+      display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 11.5px; color: var(--muted);
+      align-items: center;
+    }
+    .r-contact-sep a:hover { color: var(--accent); }
+    .sep { color: var(--muted2); }
+
+    .r-summary {
+      font-size: 12px; color: var(--muted); line-height: 1.65; max-width: 680px;
+    }
+    .r-summary strong { color: var(--ink2); font-weight: 600; }
+
+    /* ============================
+       SECTION
+    ============================ */
+    .r-sec { margin-bottom: 18px; }
+    .r-sec:last-child { margin-bottom: 0; }
+
+    .r-sec-title {
+      font-size: 10px; font-weight: 800; letter-spacing: 2.5px;
+      text-transform: uppercase; color: var(--accent);
+      margin-bottom: 10px;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .r-sec-title::after {
+      content: ''; flex: 1; height: 1px; background: var(--rule);
     }
 
-    /* ===== SECTION ===== */
-    .r-section { margin-bottom: 1.4rem; }
-    .r-section-title {
-      font-size: .65rem; font-weight: 800; letter-spacing: 2.5px;
-      text-transform: uppercase; color: #4f46e5;
-      border-bottom: 1px solid #e5e7eb; padding-bottom: .35rem; margin-bottom: .9rem;
-    }
+    /* ============================
+       EXPERIENCE
+    ============================ */
+    .r-job { margin-bottom: 14px; }
+    .r-job:last-child { margin-bottom: 0; }
 
-    /* ===== EXPERIENCE ===== */
-    .r-job { margin-bottom: 1.15rem; }
-    .r-job-header {
-      display: flex; justify-content: space-between; align-items: flex-start;
-      flex-wrap: wrap; gap: .25rem; margin-bottom: .3rem;
+    .r-job-head {
+      display: flex; justify-content: space-between; align-items: baseline;
+      gap: 1rem; margin-bottom: 2px; flex-wrap: wrap;
     }
-    .r-job-title { font-size: .88rem; font-weight: 700; color: #111827; }
-    .r-job-company { font-size: .82rem; font-weight: 600; color: #4f46e5; }
-    .r-job-meta { font-size: .75rem; color: #6b7280; text-align: right; line-height: 1.5; }
-    .r-bullets { padding-left: 1rem; margin-bottom: .45rem; }
+    .r-job-left { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+    .r-job-title { font-size: 13px; font-weight: 700; color: var(--ink); }
+    .r-job-company {
+      font-size: 12px; font-weight: 600; color: var(--accent2);
+    }
+    .r-job-date {
+      font-size: 11px; color: var(--muted2); white-space: nowrap; font-weight: 500;
+    }
+    .r-job-location { font-size: 11px; color: var(--muted2); }
+
+    .r-bullets { padding-left: 14px; margin: 5px 0 6px; }
     .r-bullets li {
-      font-size: .79rem; color: #374151; margin-bottom: .22rem;
+      font-size: 12px; color: var(--muted); margin-bottom: 3px;
+      list-style: disc; line-height: 1.6;
+    }
+    .r-bullets li::marker { color: var(--accent2); }
+    .r-bullets li strong { color: var(--ink2); font-weight: 600; }
+
+    .r-stack {
+      font-size: 11px; color: var(--muted2); margin-top: 4px;
+    }
+    .r-stack strong { color: var(--muted); font-weight: 600; }
+
+    /* ============================
+       PROJECTS
+    ============================ */
+    .r-projects-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 10px 20px;
+    }
+    .r-proj { padding-bottom: 10px; }
+    .r-proj-head {
+      display: flex; justify-content: space-between; align-items: baseline;
+      flex-wrap: wrap; gap: 4px; margin-bottom: 3px;
+    }
+    .r-proj-name { font-size: 12.5px; font-weight: 700; color: var(--ink); }
+    .r-proj-meta { font-size: 11px; color: var(--muted2); white-space: nowrap; }
+    .r-proj-client { font-size: 11.5px; font-weight: 600; color: var(--accent2); margin-bottom: 3px; }
+    .r-proj-desc { font-size: 11.5px; color: var(--muted); line-height: 1.6; margin-bottom: 4px; }
+    .r-proj-desc strong { color: var(--ink2); font-weight: 600; }
+    .r-proj-feats { padding-left: 12px; }
+    .r-proj-feats li {
+      font-size: 11px; color: var(--muted); margin-bottom: 2px;
       list-style: disc; line-height: 1.55;
     }
-    .r-bullets li strong { color: #111827; font-weight: 600; }
-    .r-tech {
-      font-size: .72rem; color: #6b7280; font-style: italic;
+    .r-proj-feats li::marker { color: var(--accent2); }
+
+    /* full-width project (RTM is a flagship) */
+    .r-proj.full { grid-column: span 2; }
+
+    /* ============================
+       SKILLS
+    ============================ */
+    .r-skills-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 5px 24px;
+    }
+    .r-skill-row { font-size: 12px; color: var(--muted); line-height: 1.6; }
+    .r-skill-row strong { color: var(--ink2); font-weight: 600; }
+
+    /* Tag-style chips (optional, used for highlights) */
+    .r-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; }
+    .r-tag {
+      background: var(--tag-bg); color: var(--ink2); border: 1px solid var(--rule);
+      border-radius: 4px; padding: 1px 7px; font-size: 10.5px; font-weight: 500;
     }
 
-    /* ===== PROJECTS ===== */
-    .r-project { margin-bottom: 1rem; }
-    .r-proj-header {
+    /* ============================
+       EDUCATION
+    ============================ */
+    .r-edu-row {
       display: flex; justify-content: space-between; align-items: baseline;
-      flex-wrap: wrap; gap: .2rem; margin-bottom: .25rem;
+      flex-wrap: wrap; gap: .5rem;
     }
-    .r-proj-name { font-size: .85rem; font-weight: 700; color: #111827; }
-    .r-proj-client { font-size: .75rem; color: #4f46e5; font-weight: 600; }
-    .r-proj-date { font-size: .72rem; color: #6b7280; }
-    .r-proj-desc { font-size: .79rem; color: #374151; margin-bottom: .3rem; line-height: 1.55; }
-    .r-proj-desc strong { color: #111827; font-weight: 600; }
-    .r-proj-feats { padding-left: 1rem; margin-bottom: .3rem; }
-    .r-proj-feats li { font-size: .77rem; color: #374151; margin-bottom: .18rem; list-style: disc; line-height: 1.5; }
+    .r-edu-name { font-size: 13px; font-weight: 700; color: var(--ink); }
+    .r-edu-deg { font-size: 12px; color: var(--accent2); font-weight: 600; margin-top: 2px; }
+    .r-edu-date { font-size: 11px; color: var(--muted2); white-space: nowrap; }
 
-    /* ===== SKILLS ===== */
-    .skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: .6rem; }
-    .skill-row { font-size: .79rem; color: #374151; }
-    .skill-row strong { color: #111827; font-weight: 600; }
-
-    /* ===== EDUCATION ===== */
-    .r-edu { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: .25rem; }
-    .r-edu-name { font-size: .86rem; font-weight: 700; color: #111827; }
-    .r-edu-deg { font-size: .79rem; color: #4f46e5; font-weight: 600; margin-top: .15rem; }
-    .r-edu-date { font-size: .75rem; color: #6b7280; }
-
-    /* ===== PRINT ===== */
-    @page { size: A4; margin: 14mm 16mm; }
+    /* ============================
+       PRINT
+    ============================ */
+    @page { size: A4; margin: 12mm 14mm; }
     @media print {
-      body { background: #fff; padding: 0; }
-      .page {
-        box-shadow: none; border-radius: 0;
-        padding: 0; max-width: none;
+      body { background: #fff; padding: 0; font-size: 12px; }
+      .paper {
+        box-shadow: none; border-radius: 0; max-width: none;
+        padding: 0 40px 0 36px;
+        border-left: 4px solid var(--accent);
       }
-      .r-bullets li, .r-proj-feats li { page-break-inside: avoid; }
-      .r-job, .r-project { page-break-inside: avoid; }
+      .r-job, .r-proj { page-break-inside: avoid; }
     }
   </style>
 </head>
 <body>
 
-<div class="print-bar">
-  <p>Preview of your resume — looks best printed to PDF in Chrome (File → Print → Save as PDF, set margins to "None" or "Minimum")</p>
-  <button class="print-btn" onclick="window.print()">
+<div class="action-bar">
+  <p>Open in <strong>Chrome → File → Print → Save as PDF</strong>. Set margins to <strong>None</strong> for best results.</p>
+  <button class="btn-print" onclick="window.print()">
     <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 8H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zm-3 11H8v-5h8v5zm3-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm-1-9H6v4h12V3z"/></svg>
     Print / Save as PDF
   </button>
 </div>
 
-<div class="page">
+<div class="paper">
 
-  <!-- HEADER -->
-  <div class="r-header">
-    <div>
-      <h1 class="r-name">Abdullah Shafqat</h1>
-      <p class="r-title">Full-Stack Software Engineer</p>
-      <p class="r-tagline">8+ years building production-grade web platforms — MERN stack, geospatial systems, real-time pipelines, Stripe payments, and multi-tenant SaaS. Shipped systems handling 20M+ records across 7 countries.</p>
+  <!-- ===== HEADER ===== -->
+  <div class="r-head">
+    <div class="r-head-top">
+      <div>
+        <h1 class="r-name">Abdullah Shafqat</h1>
+        <p class="r-role">Full-Stack Software Engineer</p>
+      </div>
+      <div class="r-contact-block">
+        <span><a href="mailto:abdullahshafqat1044@gmail.com">abdullahshafqat1044@gmail.com</a></span>
+        <span><a href="mailto:abbasi104.as@gmail.com">abbasi104.as@gmail.com</a></span>
+        <span><a href="tel:+923492090038">+92 349 209 0038</a> · <a href="tel:+923450530781">+92 345 053 0781</a></span>
+        <span><a href="https://linkedin.com/in/abdullahshafqat">linkedin.com/in/abdullahshafqat</a></span>
+        <span><a href="https://github.com/Abdull1044">github.com/Abdull1044</a></span>
+        <span>Lahore, Punjab, Pakistan</span>
+      </div>
     </div>
-    <div class="r-contact-right">
-      <span><a href="mailto:abdullahshafqat1044@gmail.com">abdullahshafqat1044@gmail.com</a></span>
-      <span><a href="mailto:abbasi104.as@gmail.com">abbasi104.as@gmail.com</a></span>
-      <span><a href="tel:+923492090038">+92 349 209 0038</a></span>
-      <span><a href="tel:+923450530781">+92 345 053 0781</a></span>
-      <span><a href="https://linkedin.com/in/abdullahshafqat">linkedin.com/in/abdullahshafqat</a></span>
-      <span><a href="https://github.com/Abdull1044">github.com/Abdull1044</a></span>
-      <span>Lahore, Punjab, Pakistan</span>
-    </div>
+    <p class="r-summary">
+      Full-stack software engineer with <strong>8+ years</strong> shipping production platforms across geospatial intelligence, multi-tenant SaaS, ERP, and field-ops tooling.
+      Built systems handling <strong>20M+ retail shop records across 7 countries</strong> for British American Tobacco and other FMCG enterprise clients.
+      Deep expertise in <strong>MERN/PERN stack, real-time pipelines, geospatial processing (PostGIS, Turf.js), Stripe payments, and AWS cloud deployments</strong>.
+    </p>
   </div>
 
-  <!-- EXPERIENCE -->
-  <div class="r-section">
-    <p class="r-section-title">Professional Experience</p>
+  <!-- ===== EXPERIENCE ===== -->
+  <div class="r-sec">
+    <p class="r-sec-title">Experience</p>
 
     <!-- AET -->
     <div class="r-job">
-      <div class="r-job-header">
-        <div>
-          <p class="r-job-title">Full-Stack Web Platform Developer</p>
-          <p class="r-job-company">Archangel Technology (AET)</p>
+      <div class="r-job-head">
+        <div class="r-job-left">
+          <span class="r-job-title">Full-Stack Web Platform Developer</span>
+          <span class="sep">·</span>
+          <span class="r-job-company">Archangel Technology (AET)</span>
+          <span class="sep">·</span>
+          <span class="r-job-location">Remote</span>
         </div>
-        <div class="r-job-meta">Jan 2024 – Present<br/>Remote</div>
+        <span class="r-job-date">Jan 2024 – Present</span>
       </div>
       <ul class="r-bullets">
-        <li>Built the <strong>AET Management Portal</strong> — an internal ERP system unifying sales, procurement, inventory, accounting, IT ticketing, asset tracking, and reporting.</li>
-        <li>Developed <strong>PixelEDU</strong> — a multi-tenant SaaS procurement portal for educational institutions; 3-tier role approval workflow (Requestor / Approver / Admin), per-campus routing, ERP auto-sync (Sales Quote on submit → Sales Order on approval), and SSO via Google & Microsoft Entra ID.</li>
-        <li>Implemented recurring lease automation, Stripe invoice payment workflows, and real-time WebSocket notifications.</li>
-        <li>Architected and deployed all applications on AWS (S3, RDS, CloudFront) with PostgreSQL, Redis, and NestJS backends.</li>
+        <li>Built <strong>AET Management Portal</strong> — enterprise ERP unifying sales, procurement, inventory, accounting, IT ticketing, asset tracking, and reporting into a single platform; implemented recurring lease automation and Stripe invoice payment workflows with webhook-driven status sync.</li>
+        <li>Developed <strong>PixelEDU</strong> — multi-tenant SaaS procurement portal for educational institutions; 3-tier role approval workflow (Requestor → Approver → Admin) with per-campus routing, price snapshot validation, ERP auto-sync (Sales Quote on submit → Sales Order on approval), SSO via Google &amp; Microsoft Entra ID (NextAuth v5), and streaming batched CSV export.</li>
+        <li>Engineered real-time WebSocket notification systems; deployed all applications on AWS (S3, RDS, CloudFront) with PostgreSQL and Redis caching layers.</li>
       </ul>
-      <p class="r-tech">Stack: React.js · Next.js 16 · TypeScript · NestJS 10 · GraphQL · PostgreSQL · Redis · AWS · Stripe · NextAuth v5 · Tailwind v4</p>
+      <p class="r-stack"><strong>Stack:</strong> React.js · Next.js 16 · TypeScript · NestJS 10 · Apollo GraphQL · PostgreSQL · Redis · AWS · Stripe API · NextAuth v5 · Tailwind v4 · TypeORM</p>
     </div>
 
     <!-- SurveyAuto -->
     <div class="r-job">
-      <div class="r-job-header">
-        <div>
-          <p class="r-job-title">Software Engineer</p>
-          <p class="r-job-company">SurveyAuto</p>
+      <div class="r-job-head">
+        <div class="r-job-left">
+          <span class="r-job-title">Software Engineer</span>
+          <span class="sep">·</span>
+          <span class="r-job-company">SurveyAuto</span>
+          <span class="sep">·</span>
+          <span class="r-job-location">Lahore, Pakistan</span>
         </div>
-        <div class="r-job-meta">Oct 2021 – Present<br/>Lahore, Pakistan</div>
+        <span class="r-job-date">Oct 2021 – Present</span>
       </div>
       <ul class="r-bullets">
-        <li>Led development of the <strong>RTM Retail Territory Management Platform</strong> for British American Tobacco and other FMCG enterprise clients — handling <strong>20M+ shop records</strong> across 7 countries (Malaysia, UK, Switzerland, Bangladesh, US, Pakistan, Tennessee).</li>
-        <li>Built interactive Google Maps dashboards with polygon territory layers, deck.gl heatmaps, custom boundary drawing, dynamic multi-level filtering across 20+ attributes, and store scoring engine (Population, SEC, Channel, Size, Footfall).</li>
-        <li>Engineered real-time MongoDB → PostgreSQL/PostGIS sync pipeline with Socket.IO progress tracking, Bull job queues, and precomputed Redis-cached area aggregations (daily TTL).</li>
-        <li>Built <strong>RTM Tenant Onboarding Backend</strong> — automated pipeline ingesting KML/Excel/CSV/ZIP files to bulk-provision areas, routes, shops, and users; geospatial shop-to-route assignment via Turf.js polygon queries; Socket.IO real-time progress; AWS S3 + Secrets Manager for file storage and secure credential injection.</li>
-        <li>Created <strong>Census Validator</strong> — data quality control platform for field-collected shop data with automated error detection, side-by-side comparison tools, and analytics dashboards.</li>
-        <li>Set up CloudFront CDN per-tenant deployments and AWS S3 / Google Cloud Storage for compressed geospatial data.</li>
+        <li>Led development of the <strong>RTM geospatial field intelligence platform</strong> for British American Tobacco and FMCG enterprise clients — processing <strong>20M+ shop records across 7 countries</strong> (Malaysia, UK, Switzerland, Bangladesh, US, Pakistan, Tennessee) with interactive Google Maps dashboards, polygon territory layers, deck.gl heatmaps, and 20+ dynamic attribute filters.</li>
+        <li>Designed a <strong>real-time MongoDB → PostgreSQL/PostGIS sync pipeline</strong> with Socket.IO progress broadcasting, Bull job queues, and a store scoring engine (Population, SEC, Channel, Size, Footfall); built promoter scheduling, DTD deep-dive analysis, and brand sentiment dashboards; generated Excel/PDF reports with S3 presigned download links.</li>
+        <li>Built <strong>RTM Tenant Onboarding Backend</strong> — automated pipeline ingesting KML/Excel/CSV/ZIP to bulk-provision areas, routes, shops, and users; geospatial shop-to-route assignment via <strong>Turf.js polygon point-in-polygon</strong>; Socket.IO real-time progress; AWS Secrets Manager for runtime credential injection; dual-database MongoDB + PostgreSQL dual-write; multi-format exports (ZIP, CSV, JSON, Excel, XML).</li>
+        <li>Implemented <strong>Redis-cached precomputed area aggregations</strong> (daily TTL), AWS S3 + Google Cloud Storage for compressed geospatial data, and <strong>CloudFront CDN per-tenant</strong> deployments for all country instances.</li>
+        <li>Created <strong>Census Validator</strong> — data quality control platform with automated error detection, side-by-side comparison tools, and analytics for field-collected shop data.</li>
       </ul>
-      <p class="r-tech">Stack: React 18 · NestJS · Node.js · Express · MongoDB Atlas · PostgreSQL+PostGIS · Redis · Google Maps · deck.gl · Turf.js · Socket.io · Bull · AWS S3/Cognito · GCS · Ant Design · Recharts</p>
+      <p class="r-stack"><strong>Stack:</strong> React 18 · NestJS · Node.js · Express · MongoDB Atlas (Mongoose) · PostgreSQL + PostGIS · Redis · Google Maps · deck.gl · Turf.js · Socket.io · Bull · AWS S3/Cognito · Google Cloud Storage · PM2 · Recharts · Ant Design · ExcelJS · JWT + Passport</p>
     </div>
 
     <!-- Fiverr -->
     <div class="r-job">
-      <div class="r-job-header">
-        <div>
-          <p class="r-job-title">Java Software Developer</p>
-          <p class="r-job-company">Fiverr (Freelance)</p>
+      <div class="r-job-head">
+        <div class="r-job-left">
+          <span class="r-job-title">Java Software Developer</span>
+          <span class="sep">·</span>
+          <span class="r-job-company">Fiverr (Freelance)</span>
+          <span class="sep">·</span>
+          <span class="r-job-location">Remote</span>
         </div>
-        <div class="r-job-meta">Jun 2017 – Oct 2021<br/>Remote</div>
+        <span class="r-job-date">Jun 2017 – Oct 2021</span>
       </div>
       <ul class="r-bullets">
-        <li>Delivered custom Java software solutions for international clients over 4+ years, spanning diverse industries.</li>
-        <li>Maintained high client satisfaction with reliable delivery, clear communication, and performant implementations.</li>
+        <li>Delivered custom Java software solutions for international clients across diverse industries over 4+ years; maintained high client satisfaction through reliable delivery and clean implementations.</li>
       </ul>
-      <p class="r-tech">Stack: Java</p>
+      <p class="r-stack"><strong>Stack:</strong> Java</p>
     </div>
   </div>
 
-  <!-- PROJECTS -->
-  <div class="r-section">
-    <p class="r-section-title">Key Projects</p>
+  <!-- ===== PROJECTS ===== -->
+  <div class="r-sec">
+    <p class="r-sec-title">Key Projects</p>
+    <div class="r-projects-grid">
 
-    <!-- RTM Platform -->
-    <div class="r-project">
-      <div class="r-proj-header">
-        <span class="r-proj-name">RTM — Retail Territory Management Platform</span>
-        <span class="r-proj-client">SurveyAuto (BAT &amp; FMCG clients)</span>
-        <span class="r-proj-date">Jun 2022 – Present</span>
+      <!-- RTM Platform — full width flagship -->
+      <div class="r-proj full">
+        <div class="r-proj-head">
+          <span class="r-proj-name">RTM — Retail Territory Management Platform</span>
+          <span class="r-proj-meta">Jun 2022 – Present</span>
+        </div>
+        <p class="r-proj-client">SurveyAuto · British American Tobacco &amp; FMCG enterprise clients · 7 countries</p>
+        <p class="r-proj-desc">Enterprise geospatial field intelligence platform handling <strong>20M+ shop records</strong> for territory planning, outlet validation, brand analysis, and distributor performance tracking at scale.</p>
+        <ul class="r-proj-feats">
+          <li>Google Maps: polygon territory layers, deck.gl heatmaps, custom boundary drawing, 20+ attribute multi-level filters, store scoring engine (Population / SEC / Channel / Size / Footfall)</li>
+          <li>Real-time Mongo → PostGIS sync pipeline · Bull job queues · Socket.IO progress tracking · Excel/PDF report generation with S3 presigned links</li>
+          <li>Redis-cached area aggregations (daily TTL) · AWS S3 + GCS compressed geospatial storage · CloudFront CDN per-tenant · JWT + Passport + AWS Cognito RBAC (Admin / Field / Supervisor / RTM Admin)</li>
+        </ul>
       </div>
-      <p class="r-proj-desc">Geospatial field intelligence platform handling <strong>20M+ shop records across 7 countries</strong> — territory planning, outlet validation, brand analysis, and distributor performance tracking at enterprise scale.</p>
-      <ul class="r-proj-feats">
-        <li>Google Maps dashboard: polygon territory layers, deck.gl heatmaps, custom boundary drawing, 20+ attribute filters</li>
-        <li>Real-time MongoDB → PostGIS sync pipeline · store scoring engine · promoter scheduling · brand sentiment dashboards</li>
-        <li>Redis-cached aggregations · AWS S3 + GCS geospatial storage · CloudFront CDN per-tenant · Excel/PDF report generation</li>
-        <li>Role-based access (Admin / Field / Supervisor / RTM Admin) · JWT + Passport + AWS Cognito auth</li>
-      </ul>
-    </div>
 
-    <!-- RTM Onboarding -->
-    <div class="r-project">
-      <div class="r-proj-header">
-        <span class="r-proj-name">RTM Tenant Onboarding &amp; Automation Backend</span>
-        <span class="r-proj-client">SurveyAuto</span>
-        <span class="r-proj-date">Apr 2024 – May 2026</span>
+      <!-- RTM Onboarding -->
+      <div class="r-proj">
+        <div class="r-proj-head">
+          <span class="r-proj-name">RTM Tenant Onboarding Backend</span>
+          <span class="r-proj-meta">Apr 2024 – May 2026</span>
+        </div>
+        <p class="r-proj-client">SurveyAuto</p>
+        <p class="r-proj-desc">Automation backend for provisioning RTM tenants at scale — bulk geographic &amp; shop ingestion, geospatial route assignment, and multi-role user provisioning.</p>
+        <ul class="r-proj-feats">
+          <li>KML / Excel / CSV / ZIP → areas, routes, shops, users in bulk · Socket.IO real-time progress</li>
+          <li>Turf.js point-in-polygon shop-to-route assignment · dual-database MongoDB + PostgreSQL dual-write</li>
+          <li>AWS S3 exports + Secrets Manager credential injection · ZIP / CSV / JSON / Excel / XML pipeline</li>
+        </ul>
       </div>
-      <p class="r-proj-desc">Backend automation system for provisioning RTM tenants at scale — bulk ingestion of geographic and shop data, geospatial route assignment, and multi-role user provisioning for field sales operations.</p>
-      <ul class="r-proj-feats">
-        <li>Tenant pipeline: KML / Excel / CSV / ZIP → areas, routes, shops, users in bulk with Socket.IO real-time progress</li>
-        <li>Turf.js polygon point-in-polygon for shop-to-route assignment · dual-database MongoDB + PostgreSQL dual-write sync</li>
-        <li>Multi-format export pipeline (ZIP, CSV, JSON, Excel, XML) · AWS S3 storage · AWS Secrets Manager credential injection</li>
-      </ul>
-    </div>
 
-    <!-- AET Portal -->
-    <div class="r-project">
-      <div class="r-proj-header">
-        <span class="r-proj-name">AET Management Portal</span>
-        <span class="r-proj-client">Archangel Technology</span>
-        <span class="r-proj-date">Jan 2024 – Present</span>
+      <!-- PixelEDU -->
+      <div class="r-proj">
+        <div class="r-proj-head">
+          <span class="r-proj-name">PixelEDU — Multi-Tenant Procurement Portal</span>
+          <span class="r-proj-meta">2025</span>
+        </div>
+        <p class="r-proj-client">Archangel Technology (AET)</p>
+        <p class="r-proj-desc">SaaS portal for educational institutions to run hardware procurement workflows with full ERP integration and per-campus isolation.</p>
+        <ul class="r-proj-feats">
+          <li>3-tier approval (Requestor / Approver / Admin) · per-campus auto-routing · price snapshot validation</li>
+          <li>ERP sync: Sales Quote on submit → Sales Order on approval · daily catalog price/stock sync</li>
+          <li>SSO (Google + Microsoft Entra ID via NextAuth v5) · streaming CSV export · isolated cart via localStorage</li>
+        </ul>
       </div>
-      <p class="r-proj-desc">Internal enterprise ERP portal unifying sales, procurement, inventory, accounting, IT ticketing, and asset tracking.</p>
-      <ul class="r-proj-feats">
-        <li>Recurring lease automation · Stripe invoice payments with webhook sync · real-time WebSocket notifications</li>
-        <li>IT ticketing system · asset lifecycle tracking · AWS deployment (S3, RDS, CloudFront)</li>
-      </ul>
-    </div>
 
-    <!-- PixelEDU -->
-    <div class="r-project">
-      <div class="r-proj-header">
-        <span class="r-proj-name">PixelEDU — Multi-Tenant Procurement Portal</span>
-        <span class="r-proj-client">Archangel Technology</span>
-        <span class="r-proj-date">2025</span>
+      <!-- AET Portal -->
+      <div class="r-proj">
+        <div class="r-proj-head">
+          <span class="r-proj-name">AET Management Portal</span>
+          <span class="r-proj-meta">Jan 2024 – Present</span>
+        </div>
+        <p class="r-proj-client">Archangel Technology (AET)</p>
+        <p class="r-proj-desc">Enterprise ERP portal unifying sales, procurement, inventory, accounting, IT ticketing, and asset tracking.</p>
+        <ul class="r-proj-feats">
+          <li>Recurring lease automation · Stripe invoice payments with webhook sync · real-time WebSocket notifications</li>
+          <li>IT ticketing &amp; asset lifecycle tracking · AWS deployment (S3, RDS, CloudFront)</li>
+        </ul>
       </div>
-      <p class="r-proj-desc">Multi-tenant SaaS portal for educational institutions to run hardware procurement approval workflows with full ERP integration.</p>
-      <ul class="r-proj-feats">
-        <li>3-tier role system (Requestor / Approver / Admin) · per-campus routing · price snapshot validation before approval</li>
-        <li>ERP auto-sync: Sales Quote on submit → Sales Order on approval · daily catalog price/stock sync</li>
-        <li>SSO via Google &amp; Microsoft Entra ID (NextAuth v5) · streaming CSV export · isolated per-session cart</li>
-      </ul>
-    </div>
 
-    <!-- Census Validator -->
-    <div class="r-project">
-      <div class="r-proj-header">
-        <span class="r-proj-name">Census Validator</span>
-        <span class="r-proj-client">SurveyAuto</span>
-        <span class="r-proj-date">Feb 2022 – Present</span>
+      <!-- Census Validator -->
+      <div class="r-proj">
+        <div class="r-proj-head">
+          <span class="r-proj-name">Census Validator</span>
+          <span class="r-proj-meta">Feb 2022 – Present</span>
+        </div>
+        <p class="r-proj-client">SurveyAuto</p>
+        <p class="r-proj-desc">Data quality control platform validating field-collected shop data with automated error detection, side-by-side comparison tools, and analytics dashboards.</p>
+        <ul class="r-proj-feats">
+          <li>Custom search &amp; advanced filtering · automated error flagging · data visualization &amp; quality analytics</li>
+        </ul>
       </div>
-      <p class="r-proj-desc">Data quality control platform validating shop data submitted by field users — automated error detection, side-by-side comparison tools, and analytics dashboards.</p>
+
     </div>
   </div>
 
-  <!-- SKILLS -->
-  <div class="r-section">
-    <p class="r-section-title">Skills</p>
-    <div class="skills-grid">
-      <p class="skill-row"><strong>Frontend:</strong> React 18, Next.js 16, TypeScript, JavaScript, Tailwind v4, Ant Design, Recharts, deck.gl, Google Maps</p>
-      <p class="skill-row"><strong>Backend:</strong> Node.js, NestJS, Express, GraphQL (Apollo), REST APIs, WebSocket / Socket.IO, Turf.js, Bull, JWT, Java</p>
-      <p class="skill-row"><strong>Databases:</strong> PostgreSQL + PostGIS, MongoDB Atlas, Redis, TypeORM, Mongoose</p>
-      <p class="skill-row"><strong>Cloud &amp; DevOps:</strong> AWS (S3, RDS, CloudFront, Cognito, Secrets Manager), Google Cloud Storage, PM2, CI/CD, Stripe, NextAuth v5</p>
+  <!-- ===== SKILLS ===== -->
+  <div class="r-sec">
+    <p class="r-sec-title">Technical Skills</p>
+    <div class="r-skills-grid">
+      <p class="r-skill-row"><strong>Frontend:</strong> React 18, Next.js 16, TypeScript, JavaScript (ES6+), Tailwind CSS v4, Ant Design, Recharts, deck.gl, Google Maps API</p>
+      <p class="r-skill-row"><strong>Backend:</strong> Node.js, NestJS, Express.js, Apollo GraphQL, REST APIs, WebSocket / Socket.IO, Turf.js, Bull (job queues), JWT + Passport, Java</p>
+      <p class="r-skill-row"><strong>Databases:</strong> PostgreSQL + PostGIS, MongoDB Atlas, Redis, TypeORM, Mongoose</p>
+      <p class="r-skill-row"><strong>Cloud &amp; DevOps:</strong> AWS (S3, RDS, CloudFront, Cognito, Secrets Manager), Google Cloud Storage, PM2, CI/CD, Stripe API, NextAuth v5, ExcelJS, Multer</p>
     </div>
   </div>
 
-  <!-- EDUCATION -->
-  <div class="r-section">
-    <p class="r-section-title">Education</p>
-    <div class="r-edu">
+  <!-- ===== EDUCATION ===== -->
+  <div class="r-sec">
+    <p class="r-sec-title">Education</p>
+    <div class="r-edu-row">
       <div>
         <p class="r-edu-name">COMSATS Institute of Information and Technology</p>
         <p class="r-edu-deg">Bachelor of Science — Computer Software Engineering</p>
       </div>
-      <p class="r-edu-date">Aug 2016 – Aug 2021</p>
+      <span class="r-edu-date">Aug 2016 – Aug 2021</span>
     </div>
   </div>
 
