@@ -275,17 +275,13 @@
         <span class="r-job-date">Jan 2024 – Present</span>
       </div>
       <ul class="r-bullets">
-        <li>Built and maintained <strong>AET — Archangel Equipment Tracker</strong>, a production B2B ERP with <strong>153 NestJS modules</strong>, <strong>238 PostgreSQL entities</strong>, <strong>832 migrations</strong>, and <strong>815 GraphQL operations</strong> (477 queries + 338 mutations) covering the complete order-to-cash cycle — sales quotes → orders → warehouse fulfillment → invoices → payments — with state machines, inventory locking, and device/serial validation (largest service: 11,823 lines).</li>
-        <li>Implemented <strong>59 REQUEST-scoped DataLoaders</strong> eliminating N+1 across all resolver fields; designed a <strong>distributed Redis cron-lock system</strong> (@RedisCronLock) protecting <strong>49 scheduled jobs</strong> from duplicate execution across multi-instance ECS Fargate deployments — covering billing cycles, bank sync, customer credit monitoring, lease reminders, and AI spec backfill.</li>
-        <li>Engineered a <strong>multi-source weighted-average cost engine</strong> proportionally blending PO costs across partial receipts and supplier adjustments — feeding invoice line items, AR aging, and P&amp;L reporting; implemented a <strong>4-tier tax jurisdiction engine</strong> (city/county/district/state) with shipping taxability flags wired into Stripe checkout and invoice generation.</li>
-        <li>Integrated <strong>Stripe</strong> (374 usage sites — card/ACH, checkout sessions, webhook retry cron) and <strong>Plaid</strong> (294 usage sites — bank linking, daily transaction sync, auto-categorization) with Akoya open-banking as fallback; <strong>ShipEngine</strong> for carrier rate shopping, label generation, and tracking; DocuSign e-sign envelope lifecycle in the quote workflow; QuickBooks OAuth for GL sync.</li>
-        <li>Delivered <strong>equipment leasing</strong> (amortization schedules, principal/interest split, FMV/dollar-buyout, recurring billing engine), <strong>warranty &amp; repairs</strong> (multi-step claim pipeline: CREATED → QA → CLOSED with SOP checklists, parts tracking, QA sign-off), and <strong>customer credit monitoring</strong> (6 cron jobs: over-exposure flagging, payment status checks, year-end account-manager swap).</li>
-        <li>Delivered a <strong>733-file React admin frontend</strong> across 14 lazy-loaded domain roots with 99-constant RBAC enforced at route and component level; built a 1,501-line multi-step sales quote creator with dynamic pricing, multi-discount layering, inline PDF preview, and e-signature integration.</li>
-        <li>Architected <strong>9 GitHub Actions CI/CD workflows</strong> — 3 independently deployable services (NestJS on ECS Fargate, React on S3/CloudFront, Next.js on ECS Fargate) with OIDC auth, per-service semver tagging, manual prod gates, Playwright E2E (9 test suites), and AWS Secrets Manager injection (50+ keys) keeping credentials out of Docker images.</li>
-        <li>Built <strong>GHFS — Green Homes For Sale</strong> (<a href="https://www.greenhomesforsale.com">greenhomesforsale.com</a>) — Next.js 14 App Router green real estate marketplace (40 DB models, 122 components); OpenAI gpt-4o-mini listing moderation pipeline; Stripe recurring billing with cron renewal &amp; auto-downgrade; denormalized 13-table search architecture for sub-100ms queries; dual-CDN image pipeline (Cloudinary → DigitalOcean Spaces).</li>
-        <li>Developed <strong>PixelEDU</strong> — multi-tenant SaaS procurement portal; 3-tier approval workflow, per-campus routing, ERP auto-sync, SSO via Google &amp; Microsoft Entra ID (NextAuth v5), price snapshot validation, and streaming CSV export.</li>
+        <li>Architected and delivered <strong>AAT (Archangel Tablets)</strong> — a production B2B ERP covering the full order-to-cash cycle (quoting, warehouse fulfillment, invoicing, accounting, leasing, warranty &amp; repairs) built as a TypeScript monorepo with <strong>153 NestJS modules, 238 DB entities, 832 migrations, and 815 GraphQL operations</strong> deployed on AWS ECS Fargate.</li>
+        <li>Integrated Stripe, Plaid, ShipEngine, DocuSign, QuickBooks, and OpenAI into core business workflows; engineered a double-entry accounting engine, 4-tier tax jurisdiction system, weighted-average cost engine, and a distributed Redis cron infrastructure running <strong>49 scheduled jobs</strong> without duplicate execution across instances.</li>
+        <li>Delivered a <strong>733-file React admin frontend</strong> across 14 domain modules with 99-constant RBAC; built a complex multi-step quote creator with dynamic pricing, inline PDF preview, and e-signature; set up <strong>9 CI/CD pipelines</strong> with OIDC auth, Playwright E2E, and AWS Secrets Manager credential injection.</li>
+        <li>Built <strong>GHFS — Green Homes For Sale</strong> (<a href="https://www.greenhomesforsale.com">greenhomesforsale.com</a>) — live green real estate marketplace with OpenAI listing moderation, Stripe recurring billing, and dual-CDN image pipeline (Cloudinary → DigitalOcean Spaces).</li>
+        <li>Developed <strong>PixelEDU</strong> — multi-tenant SaaS procurement portal with 3-tier approval workflow, ERP auto-sync, and SSO via Google &amp; Microsoft Entra ID (NextAuth v5).</li>
       </ul>
-      <p class="r-stack"><strong>Stack:</strong> NestJS 10 · Apollo GraphQL · TypeORM 0.2 · PostgreSQL · Redis · BullMQ · React 17 · Redux Toolkit · Ant Design 4 · Next.js 14/16 · TypeScript 5 · AWS ECS Fargate/ECR/RDS/S3/CloudFront/Secrets Manager · Stripe · Plaid · Akoya · ShipEngine · DocuSign · QuickBooks · OpenAI · SendGrid · Sentry · Microsoft Clarity · GitHub Actions OIDC</p>
+      <p class="r-stack"><strong>Stack:</strong> NestJS 10 · Apollo GraphQL · TypeORM · PostgreSQL · Redis · BullMQ · React 17 · Ant Design 4 · Next.js 14/16 · TypeScript · AWS ECS/S3/CloudFront · Stripe · Plaid · ShipEngine · DocuSign · QuickBooks · OpenAI · SendGrid · Sentry · GitHub Actions</p>
     </div>
 
     <!-- SurveyAuto -->
@@ -301,11 +297,9 @@
         <span class="r-job-date">Oct 2021 – Present</span>
       </div>
       <ul class="r-bullets">
-        <li>Led development of the <strong>RTM geospatial field intelligence platform</strong> for British American Tobacco and FMCG enterprise clients — processing <strong>20M+ shop records across 7 countries</strong> (Malaysia, UK, Switzerland, Bangladesh, US, Pakistan, Tennessee) with interactive Google Maps dashboards, polygon territory layers, deck.gl heatmaps, and 20+ dynamic attribute filters.</li>
-        <li>Designed a <strong>real-time MongoDB → PostgreSQL/PostGIS sync pipeline</strong> with Socket.IO progress broadcasting, Bull job queues, and a store scoring engine (Population, SEC, Channel, Size, Footfall); built promoter scheduling, DTD deep-dive analysis, and brand sentiment dashboards; generated Excel/PDF reports with S3 presigned download links.</li>
-        <li>Built <strong>RTM Tenant Onboarding Backend</strong> — automated pipeline ingesting KML/Excel/CSV/ZIP to bulk-provision areas, routes, shops, and users; geospatial shop-to-route assignment via <strong>Turf.js polygon point-in-polygon</strong>; Socket.IO real-time progress; AWS Secrets Manager for runtime credential injection; dual-database MongoDB + PostgreSQL dual-write; multi-format exports (ZIP, CSV, JSON, Excel, XML).</li>
-        <li>Implemented <strong>Redis-cached precomputed area aggregations</strong> (daily TTL), AWS S3 + Google Cloud Storage for compressed geospatial data, and <strong>CloudFront CDN per-tenant</strong> deployments for all country instances.</li>
-        <li>Created <strong>Census Validator</strong> — data quality control platform with automated error detection, side-by-side comparison tools, and analytics for field-collected shop data.</li>
+        <li>Led development of the <strong>RTM platform</strong> — an enterprise geospatial field intelligence system processing <strong>20M+ shop records across 7 countries</strong> for British American Tobacco and other FMCG clients, with interactive Google Maps territory dashboards, real-time sync pipelines, store scoring, and per-tenant CloudFront deployments.</li>
+        <li>Built the <strong>RTM Tenant Onboarding</strong> backend — automated pipeline to bulk-ingest KML/Excel/ZIP geographic data, assign shops to sales routes via Turf.js geospatial queries, and provision multi-role field teams; real-time Socket.IO progress tracking throughout.</li>
+        <li>Created the <strong>Census Validator Portal</strong> — web-based platform for field survey teams to classify and validate shop POI data (matched/unmatched), with Google Maps location review, analytics dashboards, and multi-tenant AWS S3 deployment.</li>
       </ul>
       <p class="r-stack"><strong>Stack:</strong> React 18 · NestJS · Node.js · Express · MongoDB Atlas (Mongoose) · PostgreSQL + PostGIS · Redis · Google Maps · deck.gl · Turf.js · Socket.io · Bull · AWS S3/Cognito · Google Cloud Storage · PM2 · Recharts · Ant Design · ExcelJS · JWT + Passport</p>
     </div>
@@ -341,11 +335,10 @@
           <span class="r-proj-meta">Jun 2022 – Present</span>
         </div>
         <p class="r-proj-client">SurveyAuto · British American Tobacco &amp; FMCG enterprise clients · 7 countries</p>
-        <p class="r-proj-desc">Enterprise geospatial field intelligence platform handling <strong>20M+ shop records</strong> for territory planning, outlet validation, brand analysis, and distributor performance tracking at scale.</p>
+        <p class="r-proj-desc">Enterprise geospatial field intelligence platform processing <strong>20M+ shop records</strong> across 7 countries for territory planning, outlet validation, brand analysis, and distributor performance tracking — with interactive Google Maps dashboards, real-time sync pipelines, and per-tenant CloudFront deployments.</p>
         <ul class="r-proj-feats">
-          <li>Google Maps: polygon territory layers, deck.gl heatmaps, custom boundary drawing, 20+ attribute multi-level filters, store scoring engine (Population / SEC / Channel / Size / Footfall)</li>
-          <li>Real-time Mongo → PostGIS sync pipeline · Bull job queues · Socket.IO progress tracking · Excel/PDF report generation with S3 presigned links</li>
-          <li>Redis-cached area aggregations (daily TTL) · AWS S3 + GCS compressed geospatial storage · CloudFront CDN per-tenant · JWT + Passport + AWS Cognito RBAC (Admin / Field / Supervisor / RTM Admin)</li>
+          <li>Google Maps territory dashboards · deck.gl heatmaps · 20+ dynamic attribute filters · store scoring engine · promoter scheduling · Excel/PDF reports</li>
+          <li>Real-time MongoDB → PostGIS sync · Bull queues · Redis-cached aggregations · AWS S3 + GCS storage · per-tenant CloudFront CDN</li>
         </ul>
       </div>
 
@@ -356,12 +349,7 @@
           <span class="r-proj-meta">Apr 2024 – May 2026</span>
         </div>
         <p class="r-proj-client">SurveyAuto</p>
-        <p class="r-proj-desc">Automation backend for provisioning RTM tenants at scale — bulk geographic &amp; shop ingestion, geospatial route assignment, and multi-role user provisioning.</p>
-        <ul class="r-proj-feats">
-          <li>KML / Excel / CSV / ZIP → areas, routes, shops, users in bulk · Socket.IO real-time progress</li>
-          <li>Turf.js point-in-polygon shop-to-route assignment · dual-database MongoDB + PostgreSQL dual-write</li>
-          <li>AWS S3 exports + Secrets Manager credential injection · ZIP / CSV / JSON / Excel / XML pipeline</li>
-        </ul>
+        <p class="r-proj-desc">Automated pipeline that provisions new RTM client tenants — ingesting bulk geographic data (KML/Excel/ZIP), assigning shops to sales routes via Turf.js geospatial queries, and setting up multi-role field teams with real-time Socket.IO progress tracking.</p>
       </div>
 
       <!-- PixelEDU -->
@@ -370,44 +358,28 @@
           <span class="r-proj-name">PixelEDU — Multi-Tenant Procurement Portal</span>
           <span class="r-proj-meta">2025</span>
         </div>
-        <p class="r-proj-client">Archangel Technology (AET)</p>
-        <p class="r-proj-desc">SaaS portal for educational institutions to run hardware procurement workflows with full ERP integration and per-campus isolation.</p>
-        <ul class="r-proj-feats">
-          <li>3-tier approval (Requestor / Approver / Admin) · per-campus auto-routing · price snapshot validation</li>
-          <li>ERP sync: Sales Quote on submit → Sales Order on approval · daily catalog price/stock sync</li>
-          <li>SSO (Google + Microsoft Entra ID via NextAuth v5) · streaming CSV export · isolated cart via localStorage</li>
-        </ul>
+        <p class="r-proj-client">Archangel Tablets</p>
+        <p class="r-proj-desc">SaaS procurement portal for educational institutions — 3-tier approval workflow (Requestor → Approver → Admin), ERP auto-sync, SSO via Google &amp; Microsoft Entra ID, and per-campus catalog isolation.</p>
       </div>
 
       <!-- GHFS -->
       <div class="r-proj">
         <div class="r-proj-head">
           <span class="r-proj-name">GHFS — Green Homes For Sale</span>
-          <span class="r-proj-meta">AET · Live ↗</span>
+          <span class="r-proj-meta">Archangel Tablets · Live</span>
         </div>
-        <p class="r-proj-client"><a href="https://www.greenhomesforsale.com">greenhomesforsale.com</a> · Archangel Technology · Next.js 14 green real estate marketplace</p>
-        <p class="r-proj-desc">Full-stack marketplace for eco-certified homes with AI moderation, recurring billing, and denormalized search — 40 DB models, 122 React components, 31 App Router pages.</p>
-        <ul class="r-proj-feats">
-          <li>OpenAI gpt-4o-mini pipeline: analyzes listing text + 5 property images → auto-approve/reject eco-certification; admin override queue</li>
-          <li>Stripe recurring billing: cron renewal · failed-payment recovery · auto-downgrade featured→standard · Slack alerts</li>
-          <li>Denormalized search: 13 green-feature join tables mirrored to flat Listing fields → sub-100ms marketplace queries</li>
-          <li>Dual-CDN: Cloudinary primary → DigitalOcean Spaces fallback · per-image progress · HEIC conversion · 6-cron expiry lifecycle</li>
-        </ul>
+        <p class="r-proj-client"><a href="https://www.greenhomesforsale.com">greenhomesforsale.com</a> · Next.js 14 green real estate marketplace</p>
+        <p class="r-proj-desc">Live marketplace for eco-certified homes — AI-powered listing moderation (OpenAI), Stripe subscription billing with automated renewal, dual-CDN image pipeline (Cloudinary → DigitalOcean Spaces), and New Relic APM in production.</p>
       </div>
 
-      <!-- AET Portal -->
+      <!-- AAT Portal -->
       <div class="r-proj">
         <div class="r-proj-head">
-          <span class="r-proj-name">AET — Archangel Equipment Tracker (ERP)</span>
+          <span class="r-proj-name">AAT — Archangel Tablets ERP</span>
           <span class="r-proj-meta">Jan 2024 – Present</span>
         </div>
-        <p class="r-proj-client">Archangel Technology · Full-stack B2B ERP · EdTech hardware reseller</p>
-        <p class="r-proj-desc">Production ERP: <strong>153 NestJS modules · 238 entities · 832 migrations · 815 GraphQL ops · 59 DataLoaders · 49 Redis-locked crons · 733 frontend files · 99-constant RBAC</strong>. Order-to-cash pipeline across sales, warehouse, accounting, leasing, warranty &amp; repairs on AWS ECS Fargate.</p>
-        <ul class="r-proj-feats">
-          <li>Weighted-average cost engine · 4-tier tax jurisdiction · double-entry GL · QuickBooks sync · AR/AP aging · P&amp;L</li>
-          <li>Stripe (374 refs) + Plaid (294 refs) · ShipEngine label gen · DocuSign e-sign · Akoya open-banking · OpenAI spec backfill</li>
-          <li>Distributed Redis cron-lock across 49 jobs · BullMQ async queues · 9 GitHub Actions workflows (OIDC, semver, Playwright E2E)</li>
-        </ul>
+        <p class="r-proj-client">Archangel Tablets · Full-stack B2B ERP · EdTech hardware reseller</p>
+        <p class="r-proj-desc">Production ERP with <strong>153 NestJS modules, 238 DB entities, and 815 GraphQL operations</strong> — covering order-to-cash, warehouse, accounting, leasing, and warranty on AWS ECS Fargate. Integrated with Stripe, Plaid, ShipEngine, DocuSign, and QuickBooks.</p>
       </div>
 
       <!-- Census Validator -->
@@ -417,14 +389,7 @@
           <span class="r-proj-meta">Mar 2022 – Jun 2026</span>
         </div>
         <p class="r-proj-client">SurveyAuto</p>
-        <p class="r-proj-desc">Web-based portal for validating and managing census/field survey data — reconciling matched, partially matched, unmatched, and newly discovered POIs &amp; shop records against existing datasets.</p>
-        <ul class="r-proj-feats">
-          <li>Dashboard with stats panels, Ant Design Charts &amp; React D3 Tree data visualizations</li>
-          <li>Matched / Partially Matched / Not Matched classification workflows · New POI discovery &amp; review · Field Visit tracking</li>
-          <li>Interactive Google Maps for location-based validation · public webview submission previews · tenant-wise client detail pages</li>
-          <li>JWT RBAC · per-tenant image copy to RTM folder · multi-env (dev / staging / prod) deployed on AWS S3</li>
-          <li><strong>Stack:</strong> React 17 · React Router v5 · Ant Design · Ant Design Charts · React D3 Tree · Google Maps React · Firebase Auth · Axios · Bootstrap · AWS S3 · env-cmd</li>
-        </ul>
+        <p class="r-proj-desc">Web portal for field survey teams to classify and validate shop/POI data — reconciling matched, unmatched, and newly discovered locations with Google Maps review, analytics dashboards, and multi-tenant AWS S3 deployment.</p>
       </div>
 
     </div>
