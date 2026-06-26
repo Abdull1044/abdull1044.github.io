@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Abdullah Shafqat — Software Engineer</title>
-  <meta name="description" content="Abdullah Shafqat — Full-Stack Software Engineer specializing in MERN stack, real-time systems, Stripe payments, and AWS cloud deployments." />
+  <meta name="description" content="Abdullah Shafqat — Full-Stack Software Engineer. MERN stack, real-time systems, Stripe payments, AWS cloud. 8+ years building production platforms." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -12,271 +12,326 @@
 </head>
 <body>
 
-  <!-- NAV -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="#hero" class="nav-brand">AS<span class="dot">.</span></a>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact" class="nav-cta">Hire Me</a></li>
-      </ul>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
+<div id="progress-bar"></div>
 
-  <!-- HERO -->
-  <section id="hero" class="hero">
-    <div class="hero-bg">
-      <div class="hero-blob blob-1"></div>
-      <div class="hero-blob blob-2"></div>
-      <div class="grid-overlay"></div>
-    </div>
-    <div class="hero-container">
-      <div class="hero-text">
-        <div class="hero-badge">
-          <span class="badge-dot"></span>
-          Available for opportunities
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="#hero" class="nav-brand">AS.</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact" class="nav-cta">Hire Me</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section id="hero" class="hero">
+  <div class="hero-bg">
+    <div class="mesh-gradient"></div>
+    <div class="grid-lines"></div>
+    <div class="noise-overlay"></div>
+  </div>
+
+  <div class="hero-container">
+    <div class="hero-text">
+      <div class="status-chip">
+        <span class="pulse-dot"></span>
+        Available for new opportunities
+      </div>
+
+      <h1 class="hero-name">
+        Abdullah
+        <span class="line2 gradient-text">Shafqat</span>
+      </h1>
+
+      <p class="hero-typewriter">
+        I build&nbsp;<span class="typewriter-text" id="tw"></span><span class="cursor"></span>
+      </p>
+
+      <p class="hero-desc">
+        Full-stack engineer with <strong>8+ years</strong> shipping production platforms. Specialized in <strong>MERN stack</strong>, real-time systems, Stripe payments &amp; AWS deployments.
+      </p>
+
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">8+</span>
+          <span class="stat-label">Years Exp.</span>
         </div>
-        <h1 class="hero-name">Abdullah<br /><span class="gradient-text">Shafqat</span></h1>
-        <p class="hero-title">Full-Stack Software Engineer</p>
-        <p class="hero-desc">
-          Building scalable web platforms with <strong>MERN stack</strong>, real-time systems, payment integrations &amp; cloud infrastructure. 8+ years of shipping production software.
-        </p>
-        <div class="hero-stats">
-          <div class="stat"><span class="stat-num">8+</span><span class="stat-label">Years Exp.</span></div>
-          <div class="stat-divider"></div>
-          <div class="stat"><span class="stat-num">4</span><span class="stat-label">Major Projects</span></div>
-          <div class="stat-divider"></div>
-          <div class="stat"><span class="stat-num">100+</span><span class="stat-label">Active Users</span></div>
+        <div class="stat">
+          <span class="stat-num">5</span>
+          <span class="stat-label">Projects Built</span>
         </div>
-        <div class="hero-actions">
-          <a href="#projects" class="btn btn-primary">View Projects</a>
-          <a href="Abdullah-Shafqat.pdf" download class="btn btn-outline">Download CV</a>
+        <div class="stat">
+          <span class="stat-num">100+</span>
+          <span class="stat-label">Active Users</span>
         </div>
-        <div class="hero-socials">
-          <a href="https://github.com/Abdull1044" target="_blank" rel="noopener" aria-label="GitHub">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-          </a>
-          <a href="https://linkedin.com/in/abdullahshafqat" target="_blank" rel="noopener" aria-label="LinkedIn">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          </a>
-          <a href="mailto:abdullahshafqat1044@gmail.com" aria-label="Email">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-          </a>
+        <div class="stat">
+          <span class="stat-num">3</span>
+          <span class="stat-label">Companies</span>
         </div>
       </div>
-      <div class="hero-visual">
-        <div class="profile-card">
-          <div class="profile-img-wrap">
-            <div class="profile-img-placeholder">AS</div>
+
+      <div class="hero-ctas">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="Abdullah-Shafqat.pdf" download class="btn btn-ghost">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+          Download CV
+        </a>
+      </div>
+
+      <div class="hero-socials">
+        <a href="https://github.com/Abdull1044" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+        </a>
+        <a href="https://linkedin.com/in/abdullahshafqat" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="mailto:abdullahshafqat1044@gmail.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-card">
+        <div class="avatar-ring">AS</div>
+        <p class="hero-card-name">Abdullah Shafqat</p>
+        <p class="hero-card-role">Full-Stack Software Engineer · Lahore, PK</p>
+        <div class="hero-card-chips">
+          <span>React</span><span>Node.js</span><span>Next.js</span><span>AWS</span>
+        </div>
+        <div class="hero-card-metrics">
+          <div class="metric-pill">
+            <span class="m-val indigo">8+</span>
+            <span class="m-label">Years</span>
           </div>
-          <div class="profile-card-info">
-            <h3>Abdullah Shafqat</h3>
-            <p>Full-Stack Engineer</p>
-            <div class="profile-tags">
-              <span>React</span><span>Node.js</span><span>AWS</span>
+          <div class="metric-pill">
+            <span class="m-val cyan">5</span>
+            <span class="m-label">Projects</span>
+          </div>
+          <div class="metric-pill">
+            <span class="m-val green">100+</span>
+            <span class="m-label">Users</span>
+          </div>
+          <div class="metric-pill">
+            <span class="m-val amber">3</span>
+            <span class="m-label">Companies</span>
+          </div>
+        </div>
+
+        <div class="float-chip fc-1"><span>⚡</span> WebSocket Real-Time</div>
+        <div class="float-chip fc-2"><span>💳</span> Stripe Integrated</div>
+        <div class="float-chip fc-3"><span>☁️</span> AWS Deployed</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-cue">
+    <span>Scroll</span>
+    <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about" class="section about-section">
+  <div class="container">
+    <div class="section-eyebrow">
+      <div class="eyebrow-line"></div>
+      <span class="eyebrow-text">About Me</span>
+    </div>
+    <h2 class="section-title">Building <span class="gradient-text">Scalable</span> Solutions</h2>
+
+    <div class="bento-grid">
+      <div class="bento-card bc-bio" data-animate>
+        <p>I'm a full-stack software engineer with <strong>8+ years</strong> of experience designing and shipping production-grade web applications. I focus on performance, reliability, and clean architecture.</p>
+        <p>Currently building <strong>PixelEDU</strong> — a multi-tenant SaaS procurement portal — and the <strong>AET Management Portal</strong>, a unified ERP system covering sales, procurement, inventory, and real-time asset tracking. Previously at <strong>SurveyAuto</strong>, I led development of platforms serving 100+ concurrent users with WebSocket real-time features and Redis-powered caching.</p>
+        <p>I care deeply about the <strong>developer experience</strong> and building systems that are as maintainable as they are fast.</p>
+      </div>
+
+      <div class="bento-card bc-photo" data-animate>
+        <div class="photo-placeholder">AS</div>
+      </div>
+
+      <div class="bento-card bc-mern" data-animate>
+        <span class="bento-icon">🚀</span>
+        <h4>Full-Stack MERN</h4>
+        <p>React, Next.js, Node.js, NestJS, MongoDB, PostgreSQL — the complete stack for building modern web apps.</p>
+      </div>
+
+      <div class="bento-card bc-real" data-animate>
+        <span class="bento-icon">⚡</span>
+        <h4>Real-Time & Performance</h4>
+        <p>WebSocket implementations, Redis caching, and query optimizations engineered for 100+ concurrent users.</p>
+      </div>
+
+      <div class="bento-card bc-cloud" data-animate>
+        <span class="bento-icon">☁️</span>
+        <h4>Cloud & Integrations</h4>
+        <p>AWS deployments, Stripe payments, Apollo GraphQL, ERP integrations, and automated email workflows.</p>
+      </div>
+
+      <div class="bento-card bc-resume" data-animate>
+        <div>
+          <h4>Want to see the full picture?</h4>
+          <p>Download my resume for the complete experience, skills, and project details.</p>
+        </div>
+        <a href="Abdullah-Shafqat.pdf" download class="btn btn-primary">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+          Download Resume
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EXPERIENCE ===== -->
+<section id="experience" class="section exp-section">
+  <div class="container">
+    <div class="section-eyebrow">
+      <div class="eyebrow-line"></div>
+      <span class="eyebrow-text">Experience</span>
+    </div>
+    <h2 class="section-title">Professional <span class="gradient-text-warm">Journey</span></h2>
+
+    <div class="timeline">
+
+      <div class="tl-item" data-animate>
+        <div class="tl-dot"></div>
+        <div class="tl-box">
+          <div class="tl-top">
+            <div>
+              <h3>Full-Stack Web Platform Developer</h3>
+              <p class="tl-company">Archangel Technology (AET)</p>
+            </div>
+            <div class="tl-right">
+              <span class="badge-current">● Current</span>
+              <span class="tl-date">Jan 2024 – Present · Remote</span>
             </div>
           </div>
-          <div class="floating-badge fb-1">
-            <span class="fb-icon">⚡</span>
-            <div><strong>Real-Time</strong><br/>WebSocket Expert</div>
-          </div>
-          <div class="floating-badge fb-2">
-            <span class="fb-icon">💳</span>
-            <div><strong>Stripe</strong><br/>Payments Integrated</div>
-          </div>
-          <div class="floating-badge fb-3">
-            <span class="fb-icon">☁️</span>
-            <div><strong>AWS</strong><br/>Cloud Deployed</div>
+          <ul class="tl-bullets">
+            <li>Built the AET Management Portal unifying sales, procurement, inventory, accounting, IT ticketing, asset tracking, and reporting into one system.</li>
+            <li>Developed PixelEDU — a multi-tenant SaaS procurement portal for educational institutions with 3-tier role workflow, ERP integration, and SSO.</li>
+            <li>Implemented recurring lease automation, Stripe invoice payments, and real-time WebSocket notifications.</li>
+            <li>Architected and deployed the full application on AWS with PostgreSQL and Redis.</li>
+          </ul>
+          <div class="tl-pills">
+            <span>React.js</span><span>Next.js 16</span><span>Node.js</span><span>NestJS</span><span>PostgreSQL</span><span>AWS</span><span>Stripe</span><span>GraphQL</span>
           </div>
         </div>
       </div>
-    </div>
-    <div class="scroll-indicator">
-      <span>Scroll</span>
-      <div class="scroll-line"></div>
-    </div>
-  </section>
 
-  <!-- ABOUT -->
-  <section id="about" class="section about-section">
-    <div class="container">
-      <div class="section-label">01 / About</div>
-      <h2 class="section-title">Building <span class="gradient-text">Scalable</span> Solutions</h2>
-      <div class="about-grid">
-        <div class="about-text">
-          <p>I'm a full-stack software engineer with 8+ years of experience designing and shipping production-grade web applications. From architecting complex platforms to integrating third-party APIs, I focus on performance, reliability, and clean code.</p>
-          <p>Currently building the <strong>AET Management Portal</strong> — a unified system covering sales, procurement, inventory, accounting, and real-time asset tracking for a remote client. Previously at <strong>SurveyAuto</strong>, I led development of multiple platforms serving 100+ concurrent users.</p>
-          <a href="Abdullah-Shafqat.pdf" download class="btn btn-primary" style="margin-top:1.5rem;display:inline-flex;align-items:center;gap:.5rem;">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
-            Download Resume
-          </a>
-        </div>
-        <div class="about-cards">
-          <div class="about-card ac-1">
-            <div class="ac-icon">🚀</div>
-            <h4>Full-Stack Dev</h4>
-            <p>MERN stack mastery — React, Node.js, MongoDB, PostgreSQL, Express</p>
+      <div class="tl-item" data-animate>
+        <div class="tl-dot"></div>
+        <div class="tl-box">
+          <div class="tl-top">
+            <div>
+              <h3>Software Engineer</h3>
+              <p class="tl-company">SurveyAuto</p>
+            </div>
+            <div class="tl-right">
+              <span class="badge-current">● Current</span>
+              <span class="tl-date">Oct 2021 – Present · Lahore, Pakistan</span>
+            </div>
           </div>
-          <div class="about-card ac-2">
-            <div class="ac-icon">⚡</div>
-            <h4>Real-Time Systems</h4>
-            <p>WebSocket, Redis caching, optimized for 100+ concurrent users</p>
-          </div>
-          <div class="about-card ac-3">
-            <div class="ac-icon">💳</div>
-            <h4>Payments & APIs</h4>
-            <p>Stripe integration, Apollo GraphQL, complex business workflows</p>
-          </div>
-          <div class="about-card ac-4">
-            <div class="ac-icon">☁️</div>
-            <h4>Cloud & DevOps</h4>
-            <p>AWS deployments, modern DevOps practices, scalable infrastructure</p>
+          <ul class="tl-bullets">
+            <li>Built RTM Admin Portal — comprehensive tools for user permission management, report configuration, and multi-tenant data visibility control.</li>
+            <li>Developed RTM User Portal serving 100+ active users with interactive route mapping, sales analytics, and geographic heat maps.</li>
+            <li>Created Census Validator: automated data quality platform for field-collected shop data with custom filtering and comparison tools.</li>
+            <li>Integrated Redis caching and optimized MongoDB queries to handle high-concurrency scenarios reliably.</li>
+          </ul>
+          <div class="tl-pills">
+            <span>React.js</span><span>Node.js</span><span>MongoDB</span><span>Redis</span><span>Ant Design</span><span>AWS</span>
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- EXPERIENCE -->
-  <section id="experience" class="section exp-section">
-    <div class="container">
-      <div class="section-label">02 / Experience</div>
-      <h2 class="section-title">Professional <span class="gradient-text">Journey</span></h2>
-      <div class="timeline">
-
-        <div class="timeline-item" data-animate>
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="tl-header">
-              <div>
-                <h3>Full-Stack Web Platform Developer</h3>
-                <p class="tl-company">AET</p>
-              </div>
-              <div class="tl-meta">
-                <span class="tl-badge current">Current</span>
-                <span class="tl-date">Jan 2024 – Present · Remote</span>
-              </div>
+      <div class="tl-item" data-animate>
+        <div class="tl-dot"></div>
+        <div class="tl-box">
+          <div class="tl-top">
+            <div>
+              <h3>Java Software Developer</h3>
+              <p class="tl-company">Fiverr (Freelance)</p>
             </div>
-            <ul class="tl-list">
-              <li>Built the AET Management Portal unifying sales, procurement, inventory, accounting, IT ticketing, asset tracking, and reporting modules.</li>
-              <li>Implemented recurring lease automation and Stripe invoice payment workflows.</li>
-              <li>Developed real-time notifications system using WebSockets.</li>
-              <li>Architected and deployed the full application on AWS.</li>
-            </ul>
-            <div class="tl-tech">
-              <span>React.js</span><span>Node.js</span><span>PostgreSQL</span><span>AWS</span><span>Stripe API</span>
+            <div class="tl-right">
+              <span class="tl-date">Jun 2017 – Oct 2021 · Remote</span>
             </div>
           </div>
+          <ul class="tl-bullets">
+            <li>Delivered custom Java software solutions for international clients over 4+ years on Fiverr.</li>
+            <li>Built production applications across diverse industries with a focus on correctness and performance.</li>
+          </ul>
+          <div class="tl-pills"><span>Java</span></div>
         </div>
-
-        <div class="timeline-item" data-animate>
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="tl-header">
-              <div>
-                <h3>Software Engineer</h3>
-                <p class="tl-company">SurveyAuto</p>
-              </div>
-              <div class="tl-meta">
-                <span class="tl-badge current">Current</span>
-                <span class="tl-date">Oct 2021 – Present · Lahore, Pakistan</span>
-              </div>
-            </div>
-            <ul class="tl-list">
-              <li>Developed the RTM Admin Portal for comprehensive user permission management and report customization.</li>
-              <li>Built the RTM User Portal — serving 100+ active users — with interactive route mapping, sales analytics, and geographic heat maps.</li>
-              <li>Created Census Validator: a data quality control platform for validating field-collected shop data with automated error detection.</li>
-              <li>Integrated Redis caching and optimized MongoDB queries for high-concurrency scenarios.</li>
-            </ul>
-            <div class="tl-tech">
-              <span>React.js</span><span>Node.js</span><span>MongoDB</span><span>Redis</span><span>Ant Design</span><span>AWS</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="timeline-item" data-animate>
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="tl-header">
-              <div>
-                <h3>Java Software Developer</h3>
-                <p class="tl-company">Fiverr (Freelance)</p>
-              </div>
-              <div class="tl-meta">
-                <span class="tl-date">Jun 2017 – Oct 2021 · Remote</span>
-              </div>
-            </div>
-            <ul class="tl-list">
-              <li>Delivered custom Java software solutions for clients across diverse industries over 4+ years.</li>
-              <li>Built client-focused applications with a focus on correctness, performance, and clear communication.</li>
-            </ul>
-            <div class="tl-tech">
-              <span>Java</span>
-            </div>
-          </div>
-        </div>
-
       </div>
-    </div>
-  </section>
 
-  <!-- PROJECTS -->
-  <section id="projects" class="section projects-section">
-    <div class="container">
-      <div class="section-label">03 / Projects</div>
-      <h2 class="section-title">Featured <span class="gradient-text">Work</span></h2>
-      <p class="section-sub">Production platforms built and shipped at scale</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROJECTS ===== -->
+<section id="projects" class="section projects-section">
+  <div class="container">
+    <div class="section-eyebrow">
+      <div class="eyebrow-line"></div>
+      <span class="eyebrow-text">Projects</span>
+    </div>
+    <h2 class="section-title">Featured <span class="gradient-text">Work</span></h2>
+    <p class="section-sub">Production platforms built and shipped at scale</p>
+
+    <div class="featured-projects">
 
       <!-- AET Management Portal -->
-      <div class="project-card project-featured" data-animate>
-        <div class="project-info">
-          <div class="project-number">01</div>
-          <div class="project-label">Full-Stack Web Platform · Jan 2024 – Present</div>
-          <h3>AET Management Portal</h3>
-          <p>An internal enterprise system that unifies multiple business departments into a single portal — covering sales, procurement, inventory, accounting, IT ticketing, asset tracking, and reporting.</p>
-          <ul class="project-features">
-            <li><span class="feat-icon">🔄</span> Recurring Lease Automation</li>
-            <li><span class="feat-icon">💳</span> Stripe Invoice Payments</li>
-            <li><span class="feat-icon">🔔</span> Real-Time Notifications (WebSocket)</li>
-            <li><span class="feat-icon">🖥️</span> Asset Tracking & IT Support Ticketing</li>
-          </ul>
-          <div class="project-tech">
-            <span>React.js</span><span>Node.js</span><span>PostgreSQL</span><span>AWS</span><span>Stripe API</span>
-          </div>
-        </div>
-        <div class="project-visual pv-aet">
-          <div class="browser-mockup">
-            <div class="browser-bar">
-              <div class="browser-dots"><span></span><span></span><span></span></div>
-              <div class="browser-url">aet-portal.com/dashboard</div>
+      <div class="proj-card" data-animate>
+        <div class="proj-card-top-accent"></div>
+        <div class="proj-inner">
+          <div class="proj-info">
+            <div class="proj-num">01 / FEATURED</div>
+            <div class="proj-label">Full-Stack Web Platform · AET · Jan 2024 – Present</div>
+            <h3>AET Management Portal</h3>
+            <p>An internal enterprise system that unifies multiple business departments — sales, procurement, inventory, accounting, IT ticketing, asset tracking, and reporting — into one cohesive portal.</p>
+            <ul class="proj-feats">
+              <li><span class="fi">🔄</span> Recurring lease automation with complex billing cycles</li>
+              <li><span class="fi">💳</span> Stripe invoice payments with webhook-driven status sync</li>
+              <li><span class="fi">🔔</span> Real-time notifications via WebSocket</li>
+              <li><span class="fi">🖥️</span> IT ticketing system with asset tracking & lifecycle management</li>
+            </ul>
+            <div class="proj-stack">
+              <span>React.js</span><span>Node.js</span><span>PostgreSQL</span><span>AWS</span><span>Stripe API</span><span>Redis</span>
             </div>
-            <div class="browser-content">
-              <div class="mock-dashboard">
-                <div class="mock-sidebar">
-                  <div class="mock-nav-item active"></div>
-                  <div class="mock-nav-item"></div>
-                  <div class="mock-nav-item"></div>
-                  <div class="mock-nav-item"></div>
-                  <div class="mock-nav-item"></div>
-                </div>
-                <div class="mock-main">
-                  <div class="mock-header-bar"></div>
-                  <div class="mock-cards-row">
-                    <div class="mock-stat-card"><div class="msc-num">693</div><div class="msc-label">Completed</div></div>
-                    <div class="mock-stat-card"><div class="msc-num">12</div><div class="msc-label">Processing</div></div>
-                    <div class="mock-stat-card"><div class="msc-num">4</div><div class="msc-label">Failed</div></div>
+          </div>
+          <div class="proj-visual">
+            <div class="browser">
+              <div class="b-bar">
+                <div class="b-dots"><span></span><span></span><span></span></div>
+                <div class="b-url">aet-portal.com/dashboard</div>
+              </div>
+              <div class="b-body">
+                <div class="dash">
+                  <div class="dash-sidebar">
+                    <div class="si active"></div><div class="si"></div><div class="si"></div><div class="si"></div><div class="si"></div>
                   </div>
-                  <div class="mock-chart">
-                    <div class="mock-pie"></div>
-                    <div class="mock-legend">
-                      <div class="mock-legend-item"></div>
-                      <div class="mock-legend-item"></div>
+                  <div class="dash-main">
+                    <div class="d-topbar"></div>
+                    <div class="d-stats">
+                      <div class="d-stat"><div class="d-val i">693</div><div class="d-lbl">Done</div></div>
+                      <div class="d-stat"><div class="d-val a">12</div><div class="d-lbl">Processing</div></div>
+                      <div class="d-stat"><div class="d-val g">98%</div><div class="d-lbl">Uptime</div></div>
+                    </div>
+                    <div class="d-chart">
+                      <div class="d-pie pie-aet"></div>
+                      <div class="d-legend">
+                        <div class="d-leg-row"><div class="d-leg-dot" style="background:var(--accent2)"></div><div class="d-leg-text">Sales 60%</div></div>
+                        <div class="d-leg-row"><div class="d-leg-dot" style="background:var(--cyan)"></div><div class="d-leg-text">Procurement 25%</div></div>
+                        <div class="d-leg-row"><div class="d-leg-dot" style="background:var(--green)"></div><div class="d-leg-text">IT Tickets 15%</div></div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -287,265 +342,330 @@
       </div>
 
       <!-- PixelEDU -->
-      <div class="project-card project-featured" data-animate style="margin-bottom:1.5rem">
-        <div class="project-info">
-          <div class="project-number">02</div>
-          <div class="project-label">Multi-Tenant SaaS · Archangel Technology (AET) · 2025</div>
-          <h3>PixelEDU — Procurement Portal</h3>
-          <p>Multi-tenant SaaS portal that lets educational institutions run their own hardware procurement approval workflows, fully integrated with an internal ERP system. Each campus operates in isolation with custom catalogs, pricing, and approver routing.</p>
-          <ul class="project-features">
-            <li><span class="feat-icon">🏫</span> Three-tier role system: Requestor, Approver, Admin — per-campus routing & auto-assignment</li>
-            <li><span class="feat-icon">🔄</span> Full request lifecycle: Draft → Submitted → Approved / Denied / Returned + automated email notifications</li>
-            <li><span class="feat-icon">🛒</span> Per-tenant product catalog with margin-based pricing, category/brand/spec filtering, real-time stock & price alerts</li>
-            <li><span class="feat-icon">🔗</span> ERP integration: auto-creates Sales Quote on submission, Sales Order on approval; daily catalog sync</li>
-            <li><span class="feat-icon">🔐</span> SSO via Google & Microsoft Entra ID + native email/password auth (NextAuth v5)</li>
-            <li><span class="feat-icon">💰</span> Price snapshot validation — approvers confirm live prices before approving</li>
-            <li><span class="feat-icon">📤</span> Streaming batched CSV export; isolated per-session cart via localStorage</li>
-          </ul>
-          <div class="project-tech">
-            <span>Next.js 16</span><span>TypeScript</span><span>NestJS 10</span><span>GraphQL</span><span>PostgreSQL</span><span>Redis</span><span>TypeORM</span><span>Tailwind v4</span><span>NextAuth v5</span>
-          </div>
-        </div>
-        <div class="project-visual">
-          <div class="browser-mockup">
-            <div class="browser-bar">
-              <div class="browser-dots"><span></span><span></span><span></span></div>
-              <div class="browser-url">pixeledu.app/dashboard</div>
-            </div>
-            <div class="browser-content">
-              <div class="mock-dashboard">
-                <div class="mock-sidebar">
-                  <div class="mock-nav-item active"></div>
-                  <div class="mock-nav-item"></div>
-                  <div class="mock-nav-item"></div>
-                  <div class="mock-nav-item"></div>
-                  <div class="mock-nav-item"></div>
-                </div>
-                <div class="mock-main">
-                  <div class="mock-header-bar"></div>
-                  <div class="mock-cards-row">
-                    <div class="mock-stat-card"><div class="msc-num">Draft</div><div class="msc-label">New Request</div></div>
-                    <div class="mock-stat-card"><div class="msc-num" style="font-size:.65rem;color:#f59e0b">Pending</div><div class="msc-label">Awaiting</div></div>
-                    <div class="mock-stat-card"><div class="msc-num" style="font-size:.65rem;color:#10b981">Approved</div><div class="msc-label">Completed</div></div>
+      <div class="proj-card" data-animate>
+        <div class="proj-card-top-accent" style="background: linear-gradient(90deg, var(--amber), var(--cyan), var(--green))"></div>
+        <div class="proj-inner reverse">
+          <div class="proj-visual">
+            <div class="browser">
+              <div class="b-bar">
+                <div class="b-dots"><span></span><span></span><span></span></div>
+                <div class="b-url">pixeledu.app/requests</div>
+              </div>
+              <div class="b-body">
+                <div class="dash">
+                  <div class="dash-sidebar">
+                    <div class="si active"></div><div class="si"></div><div class="si"></div><div class="si"></div><div class="si"></div>
                   </div>
-                  <div class="mock-chart">
-                    <div style="flex:1;display:flex;flex-direction:column;gap:.4rem">
-                      <div style="height:8px;border-radius:4px;background:rgba(99,102,241,.4);width:90%"></div>
-                      <div style="height:8px;border-radius:4px;background:rgba(245,158,11,.4);width:65%"></div>
-                      <div style="height:8px;border-radius:4px;background:rgba(16,185,129,.4);width:80%"></div>
-                      <div style="height:8px;border-radius:4px;background:rgba(99,102,241,.2);width:45%"></div>
+                  <div class="dash-main">
+                    <div class="d-topbar"></div>
+                    <div class="d-stats">
+                      <div class="d-stat"><div class="d-val i" style="font-size:.6rem">Draft</div><div class="d-lbl">New</div></div>
+                      <div class="d-stat"><div class="d-val a" style="font-size:.6rem">Pending</div><div class="d-lbl">Review</div></div>
+                      <div class="d-stat"><div class="d-val g" style="font-size:.6rem">Approved</div><div class="d-lbl">Done</div></div>
+                    </div>
+                    <div class="d-chart">
+                      <div class="d-pie pie-edu"></div>
+                      <div class="d-legend">
+                        <div class="d-leg-row"><div class="d-leg-dot" style="background:var(--amber)"></div><div class="d-leg-text">Requestor 35%</div></div>
+                        <div class="d-leg-row"><div class="d-leg-dot" style="background:var(--accent2)"></div><div class="d-leg-text">Approver 35%</div></div>
+                        <div class="d-leg-row"><div class="d-leg-dot" style="background:var(--green)"></div><div class="d-leg-text">Admin 20%</div></div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-
-      <div class="projects-grid">
-
-        <!-- RTM Admin Portal -->
-        <div class="project-card" data-animate>
-          <div class="project-number">03</div>
-          <div class="project-label">Admin Portal · Jul 2022 – Present</div>
-          <h3>RTM Admin Portal</h3>
-          <p>Comprehensive admin tools for controlling user access, configuring system settings, and customizing reporting features for end users across multiple tenants.</p>
-          <ul class="project-features">
-            <li><span class="feat-icon">🔐</span> User Permission Management</li>
-            <li><span class="feat-icon">📊</span> Report Configuration & Customization</li>
-            <li><span class="feat-icon">👁️</span> Column & Data Visibility Control</li>
-            <li><span class="feat-icon">🔽</span> Filter Management for User Roles</li>
-          </ul>
-          <div class="project-tech">
-            <span>React.js</span><span>Node.js</span><span>MongoDB</span><span>Redis</span><span>Ant Design</span>
-          </div>
-        </div>
-
-        <!-- RTM User Portal -->
-        <div class="project-card" data-animate>
-          <div class="project-number">04</div>
-          <div class="project-label">User Portal · Jul 2022 – Present · 100+ Users</div>
-          <h3>RTM User Portal</h3>
-          <p>Empowers businesses with intuitive tools to optimize sales routes, visualize outlet locations, and track performance metrics in real-time to maximize sales efficiency.</p>
-          <ul class="project-features">
-            <li><span class="feat-icon">🗺️</span> Interactive Route Mapping</li>
-            <li><span class="feat-icon">📈</span> Sales Performance Analytics</li>
-            <li><span class="feat-icon">🏪</span> Outlet Management & Filtering</li>
-            <li><span class="feat-icon">🌡️</span> Geographic Visualization & Heat Maps</li>
-          </ul>
-          <div class="project-tech">
-            <span>React.js</span><span>Node.js</span><span>MongoDB</span><span>Redis</span><span>Ant Design</span>
-          </div>
-        </div>
-
-        <!-- Census Validator -->
-        <div class="project-card" data-animate>
-          <div class="project-number">05</div>
-          <div class="project-label">Data Platform · Feb 2022 – Present</div>
-          <h3>Census Validator</h3>
-          <p>A data validation platform that ensures field-collected shop data submitted by SurveyAuto field users is accurate, complete, and up-to-date through automated checks and analytics.</p>
-          <ul class="project-features">
-            <li><span class="feat-icon">🔍</span> Custom Search & Filtering</li>
-            <li><span class="feat-icon">⚖️</span> Data Comparison Tools</li>
-            <li><span class="feat-icon">🤖</span> Automated Error Detection</li>
-            <li><span class="feat-icon">📉</span> Data Visualization & Analytics</li>
-          </ul>
-          <div class="project-tech">
-            <span>React.js</span><span>Node.js</span><span>MongoDB</span><span>Ant Design</span><span>AWS</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section id="skills" class="section skills-section">
-    <div class="container">
-      <div class="section-label">04 / Skills</div>
-      <h2 class="section-title">Tech <span class="gradient-text">Stack</span></h2>
-      <div class="skills-layout">
-        <div class="skill-category">
-          <h4>Frontend</h4>
-          <div class="skill-chips">
-            <div class="skill-chip"><span class="sc-icon">⚛️</span> React.js</div>
-            <div class="skill-chip"><span class="sc-icon">▲</span> Next.js</div>
-            <div class="skill-chip"><span class="sc-icon">🎨</span> Tailwind CSS</div>
-            <div class="skill-chip"><span class="sc-icon">🎨</span> Ant Design</div>
-            <div class="skill-chip"><span class="sc-icon">🌐</span> HTML / CSS</div>
-            <div class="skill-chip"><span class="sc-icon">💛</span> JavaScript (ES6+)</div>
-            <div class="skill-chip"><span class="sc-icon">🔷</span> TypeScript</div>
-          </div>
-        </div>
-        <div class="skill-category">
-          <h4>Backend</h4>
-          <div class="skill-chips">
-            <div class="skill-chip"><span class="sc-icon">🟢</span> Node.js</div>
-            <div class="skill-chip"><span class="sc-icon">🚂</span> Express.js</div>
-            <div class="skill-chip"><span class="sc-icon">🐱</span> NestJS</div>
-            <div class="skill-chip"><span class="sc-icon">🔵</span> Apollo GraphQL</div>
-            <div class="skill-chip"><span class="sc-icon">🔌</span> WebSocket</div>
-            <div class="skill-chip"><span class="sc-icon">☕</span> Java</div>
-          </div>
-        </div>
-        <div class="skill-category">
-          <h4>Databases</h4>
-          <div class="skill-chips">
-            <div class="skill-chip"><span class="sc-icon">🐘</span> PostgreSQL</div>
-            <div class="skill-chip"><span class="sc-icon">🍃</span> MongoDB</div>
-            <div class="skill-chip"><span class="sc-icon">🔴</span> Redis</div>
-          </div>
-        </div>
-        <div class="skill-category">
-          <h4>Cloud & Integrations</h4>
-          <div class="skill-chips">
-            <div class="skill-chip"><span class="sc-icon">☁️</span> AWS</div>
-            <div class="skill-chip"><span class="sc-icon">💳</span> Stripe</div>
-            <div class="skill-chip"><span class="sc-icon">🔗</span> REST APIs</div>
-            <div class="skill-chip"><span class="sc-icon">🐙</span> Git / GitHub</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- EDUCATION -->
-  <section class="section edu-section">
-    <div class="container">
-      <div class="section-label">05 / Education</div>
-      <h2 class="section-title">Academic <span class="gradient-text">Background</span></h2>
-      <div class="edu-card" data-animate>
-        <div class="edu-icon">🎓</div>
-        <div class="edu-info">
-          <h3>COMSATS Institute of Information and Technology</h3>
-          <p class="edu-degree">Bachelor of Science — Computer Software Engineering</p>
-          <p class="edu-date">August 2016 – August 2021</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="section contact-section">
-    <div class="container">
-      <div class="section-label">06 / Contact</div>
-      <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
-      <p class="section-sub">Open to discussing new opportunities and exciting projects</p>
-      <div class="contact-grid">
-        <div class="contact-info">
-          <div class="contact-item">
-            <div class="ci-icon">✉️</div>
-            <div>
-              <p class="ci-label">Email</p>
-              <a href="mailto:abbasi104.as@gmail.com">abbasi104.as@gmail.com</a>
-              <a href="mailto:abdullahshafqat1044@gmail.com">abdullahshafqat1044@gmail.com</a>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="ci-icon">📱</div>
-            <div>
-              <p class="ci-label">Phone / WhatsApp</p>
-              <a href="tel:+923492090038">+92 349 209 0038</a>
-              <a href="tel:+923450530781">+92 345 053 0781</a>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="ci-icon">🔗</div>
-            <div>
-              <p class="ci-label">Social</p>
-              <a href="https://linkedin.com/in/abdullahshafqat" target="_blank" rel="noopener">linkedin.com/in/abdullahshafqat</a>
-              <a href="https://github.com/Abdull1044" target="_blank" rel="noopener">github.com/Abdull1044</a>
+          <div class="proj-info">
+            <div class="proj-num">02 / FEATURED</div>
+            <div class="proj-label">Multi-Tenant SaaS · AET · 2025</div>
+            <h3>PixelEDU — Procurement Portal</h3>
+            <p>Multi-tenant SaaS portal for educational institutions to run hardware procurement approval workflows, fully integrated with an internal ERP. Each campus operates in isolation with custom catalogs, pricing, and approver routing.</p>
+            <ul class="proj-feats">
+              <li><span class="fi">🏫</span> Three-tier roles (Requestor / Approver / Admin) with per-campus auto-assignment</li>
+              <li><span class="fi">🔄</span> Full lifecycle: Draft → Submitted → Approved / Denied / Returned + email notifications</li>
+              <li><span class="fi">🛒</span> Per-tenant catalog with margin-based pricing, real-time stock & price-change alerts</li>
+              <li><span class="fi">🔗</span> ERP integration: auto-creates Sales Quote on submit, Sales Order on approval</li>
+              <li><span class="fi">🔐</span> SSO via Google & Microsoft Entra ID + native auth (NextAuth v5)</li>
+              <li><span class="fi">💰</span> Price snapshot validation before approvers can confirm</li>
+              <li><span class="fi">📤</span> Streaming batched CSV export; isolated per-session cart</li>
+            </ul>
+            <div class="proj-stack">
+              <span>Next.js 16</span><span>TypeScript</span><span>NestJS 10</span><span>GraphQL</span><span>PostgreSQL</span><span>Redis</span><span>Tailwind v4</span><span>NextAuth v5</span>
             </div>
           </div>
         </div>
-        <div class="contact-profile">
-          <div class="contact-avatar">AS</div>
-          <h3>Abdullah Shafqat</h3>
-          <p>Software Engineer · Lahore, Pakistan</p>
-          <a href="Abdullah-Shafqat.pdf" download class="btn btn-primary" style="margin-top:1.25rem">Download Resume</a>
+      </div>
+
+    </div>
+
+    <!-- Smaller 3-column grid -->
+    <div class="proj-grid">
+
+      <div class="proj-mini" data-animate>
+        <div class="proj-num">03</div>
+        <div class="proj-label">Admin Portal · SurveyAuto · Jul 2022–Present</div>
+        <h3>RTM Admin Portal</h3>
+        <p>Comprehensive admin tools for controlling user access, configuring system settings, and customizing reporting features across multiple tenants.</p>
+        <ul class="proj-feats">
+          <li><span class="fi">🔐</span> User permission management</li>
+          <li><span class="fi">📊</span> Report configuration & customization</li>
+          <li><span class="fi">👁️</span> Column & data visibility control</li>
+          <li><span class="fi">🔽</span> Filter management for user roles</li>
+        </ul>
+        <div class="proj-stack" style="margin-top:.75rem">
+          <span>React.js</span><span>Node.js</span><span>MongoDB</span><span>Redis</span><span>Ant Design</span>
+        </div>
+      </div>
+
+      <div class="proj-mini" data-animate>
+        <div class="proj-num">04</div>
+        <div class="proj-label">User Portal · SurveyAuto · Jul 2022–Present · 100+ Users</div>
+        <h3>RTM User Portal</h3>
+        <p>Empowers businesses with route optimization, outlet visualization, and real-time sales performance analytics to maximize field efficiency.</p>
+        <ul class="proj-feats">
+          <li><span class="fi">🗺️</span> Interactive route mapping</li>
+          <li><span class="fi">📈</span> Sales performance analytics</li>
+          <li><span class="fi">🏪</span> Outlet management & filtering</li>
+          <li><span class="fi">🌡️</span> Geographic heat maps</li>
+        </ul>
+        <div class="proj-stack" style="margin-top:.75rem">
+          <span>React.js</span><span>Node.js</span><span>MongoDB</span><span>Redis</span><span>Ant Design</span>
+        </div>
+      </div>
+
+      <div class="proj-mini" data-animate>
+        <div class="proj-num">05</div>
+        <div class="proj-label">Data Platform · SurveyAuto · Feb 2022–Present</div>
+        <h3>Census Validator</h3>
+        <p>Data validation platform ensuring field-collected shop data is accurate and complete, with automated error detection and visual analytics.</p>
+        <ul class="proj-feats">
+          <li><span class="fi">🔍</span> Custom search & filtering</li>
+          <li><span class="fi">⚖️</span> Data comparison tools</li>
+          <li><span class="fi">🤖</span> Automated error detection</li>
+          <li><span class="fi">📉</span> Data visualization & analytics</li>
+        </ul>
+        <div class="proj-stack" style="margin-top:.75rem">
+          <span>React.js</span><span>Node.js</span><span>MongoDB</span><span>Ant Design</span><span>AWS</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== SKILLS ===== -->
+<section id="skills" class="section skills-section">
+  <div class="container">
+    <div class="section-eyebrow">
+      <div class="eyebrow-line"></div>
+      <span class="eyebrow-text">Skills</span>
+    </div>
+    <h2 class="section-title">Tech <span class="gradient-text">Stack</span></h2>
+
+    <div class="skills-bento">
+      <div class="skill-group" data-animate>
+        <h4>Frontend</h4>
+        <div class="skill-chips-wrap">
+          <div class="s-chip"><span class="ci">⚛️</span> React.js</div>
+          <div class="s-chip"><span class="ci">▲</span> Next.js</div>
+          <div class="s-chip"><span class="ci">🔷</span> TypeScript</div>
+          <div class="s-chip"><span class="ci">💛</span> JavaScript</div>
+          <div class="s-chip"><span class="ci">🌊</span> Tailwind CSS</div>
+          <div class="s-chip"><span class="ci">🎨</span> Ant Design</div>
+          <div class="s-chip"><span class="ci">🌐</span> HTML / CSS</div>
+        </div>
+      </div>
+      <div class="skill-group" data-animate>
+        <h4>Backend</h4>
+        <div class="skill-chips-wrap">
+          <div class="s-chip"><span class="ci">🟢</span> Node.js</div>
+          <div class="s-chip"><span class="ci">🚂</span> Express.js</div>
+          <div class="s-chip"><span class="ci">🐱</span> NestJS</div>
+          <div class="s-chip"><span class="ci">🔵</span> GraphQL</div>
+          <div class="s-chip"><span class="ci">🌐</span> REST APIs</div>
+          <div class="s-chip"><span class="ci">🔌</span> WebSocket</div>
+          <div class="s-chip"><span class="ci">☕</span> Java</div>
+        </div>
+      </div>
+      <div class="skill-group" data-animate>
+        <h4>Databases</h4>
+        <div class="skill-chips-wrap">
+          <div class="s-chip"><span class="ci">🐘</span> PostgreSQL</div>
+          <div class="s-chip"><span class="ci">🍃</span> MongoDB</div>
+          <div class="s-chip"><span class="ci">🔴</span> Redis</div>
+          <div class="s-chip"><span class="ci">🗂️</span> TypeORM</div>
+        </div>
+      </div>
+      <div class="skill-group" data-animate>
+        <h4>Cloud & Tools</h4>
+        <div class="skill-chips-wrap">
+          <div class="s-chip"><span class="ci">☁️</span> AWS</div>
+          <div class="s-chip"><span class="ci">💳</span> Stripe</div>
+          <div class="s-chip"><span class="ci">🔐</span> NextAuth v5</div>
+          <div class="s-chip"><span class="ci">🐙</span> Git / GitHub</div>
+          <div class="s-chip"><span class="ci">🔄</span> CI/CD</div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <span class="nav-brand">AS<span class="dot">.</span></span>
-      <small>© <span id="year"></span> Abdullah Shafqat — Built with HTML &amp; CSS</small>
-      <div class="footer-links">
-        <a href="https://github.com/Abdull1044" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://linkedin.com/in/abdullahshafqat" target="_blank" rel="noopener">LinkedIn</a>
+<!-- ===== EDUCATION ===== -->
+<section class="section edu-section">
+  <div class="container">
+    <div class="section-eyebrow">
+      <div class="eyebrow-line"></div>
+      <span class="eyebrow-text">Education</span>
+    </div>
+    <h2 class="section-title">Academic <span class="gradient-text-warm">Background</span></h2>
+    <div class="edu-card" data-animate>
+      <div class="edu-icon-wrap">🎓</div>
+      <div>
+        <h3>COMSATS Institute of Information and Technology</h3>
+        <p class="edu-deg">Bachelor of Science — Computer Software Engineering</p>
+        <p class="edu-date">August 2016 – August 2021</p>
       </div>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="section contact-section">
+  <div class="container">
+    <div class="section-eyebrow">
+      <div class="eyebrow-line"></div>
+      <span class="eyebrow-text">Contact</span>
+    </div>
+    <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+    <p class="section-sub">Open to discussing new opportunities and exciting projects</p>
 
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('navLinks');
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
-      hamburger.classList.toggle('active');
+    <div class="contact-grid">
+      <div class="contact-items">
+        <div class="c-item">
+          <div class="c-icon-wrap">✉️</div>
+          <div>
+            <p class="c-label">Email</p>
+            <a href="mailto:abbasi104.as@gmail.com">abbasi104.as@gmail.com</a>
+            <a href="mailto:abdullahshafqat1044@gmail.com">abdullahshafqat1044@gmail.com</a>
+          </div>
+        </div>
+        <div class="c-item">
+          <div class="c-icon-wrap">📱</div>
+          <div>
+            <p class="c-label">Phone / WhatsApp</p>
+            <a href="tel:+923492090038">+92 349 209 0038</a>
+            <a href="tel:+923450530781">+92 345 053 0781</a>
+          </div>
+        </div>
+        <div class="c-item">
+          <div class="c-icon-wrap">🔗</div>
+          <div>
+            <p class="c-label">Social</p>
+            <a href="https://linkedin.com/in/abdullahshafqat" target="_blank" rel="noopener">linkedin.com/in/abdullahshafqat</a>
+            <a href="https://github.com/Abdull1044" target="_blank" rel="noopener">github.com/Abdull1044</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-profile-card">
+        <div class="cp-avatar">AS</div>
+        <h3>Abdullah Shafqat</h3>
+        <p>Software Engineer · Lahore, Pakistan</p>
+        <div class="cp-socials">
+          <a href="https://github.com/Abdull1044" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/abdullahshafqat" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="mailto:abdullahshafqat1044@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </a>
+        </div>
+        <a href="Abdullah-Shafqat.pdf" download class="btn btn-primary" style="width:100%;justify-content:center">Download CV</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <span class="nav-brand">AS.</span>
+    <small>© <span id="year"></span> Abdullah Shafqat — Designed &amp; Built with HTML &amp; CSS</small>
+    <div class="footer-right">
+      <a href="https://github.com/Abdull1044" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://linkedin.com/in/abdullahshafqat" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Progress bar
+  const bar = document.getElementById('progress-bar');
+  window.addEventListener('scroll', () => {
+    const s = document.documentElement.scrollTop;
+    const h = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = (s / h * 100) + '%';
+  });
+
+  // Navbar scroll
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 60));
+
+  // Mobile menu
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+    hamburger.classList.toggle('active');
+  });
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    hamburger.classList.remove('active');
+  }));
+
+  // Intersection observer for animate-in
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('[data-animate], .tl-item, .proj-card, .proj-mini, .edu-card').forEach(el => io.observe(el));
+
+  // Typewriter
+  const words = [
+    'scalable web platforms.',
+    'real-time systems.',
+    'payment integrations.',
+    'cloud-deployed APIs.',
+    'multi-tenant SaaS apps.',
+  ];
+  let wi = 0, ci = 0, deleting = false;
+  const tw = document.getElementById('tw');
+  function type() {
+    const word = words[wi];
+    if (!deleting) {
+      tw.textContent = word.slice(0, ++ci);
+      if (ci === word.length) { deleting = true; setTimeout(type, 1800); return; }
+    } else {
+      tw.textContent = word.slice(0, --ci);
+      if (ci === 0) { deleting = false; wi = (wi + 1) % words.length; }
+    }
+    setTimeout(type, deleting ? 40 : 65);
+  }
+  type();
+
+  // Bento card mouse gradient
+  document.querySelectorAll('.bento-card').forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const r = card.getBoundingClientRect();
+      card.style.setProperty('--mx', ((e.clientX - r.left) / r.width * 100) + '%');
+      card.style.setProperty('--my', ((e.clientY - r.top) / r.height * 100) + '%');
     });
-    navLinks.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        navLinks.classList.remove('open');
-        hamburger.classList.remove('active');
-      });
-    });
-
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      navbar.classList.toggle('scrolled', window.scrollY > 50);
-    });
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
-  </script>
+  });
+</script>
 </body>
 </html>
