@@ -286,11 +286,68 @@
         </div>
       </div>
 
+      <!-- PixelEDU -->
+      <div class="project-card project-featured" data-animate style="margin-bottom:1.5rem">
+        <div class="project-info">
+          <div class="project-number">02</div>
+          <div class="project-label">Multi-Tenant SaaS · Archangel Technology (AET) · 2025</div>
+          <h3>PixelEDU — Procurement Portal</h3>
+          <p>Multi-tenant SaaS portal that lets educational institutions run their own hardware procurement approval workflows, fully integrated with an internal ERP system. Each campus operates in isolation with custom catalogs, pricing, and approver routing.</p>
+          <ul class="project-features">
+            <li><span class="feat-icon">🏫</span> Three-tier role system: Requestor, Approver, Admin — per-campus routing & auto-assignment</li>
+            <li><span class="feat-icon">🔄</span> Full request lifecycle: Draft → Submitted → Approved / Denied / Returned + automated email notifications</li>
+            <li><span class="feat-icon">🛒</span> Per-tenant product catalog with margin-based pricing, category/brand/spec filtering, real-time stock & price alerts</li>
+            <li><span class="feat-icon">🔗</span> ERP integration: auto-creates Sales Quote on submission, Sales Order on approval; daily catalog sync</li>
+            <li><span class="feat-icon">🔐</span> SSO via Google & Microsoft Entra ID + native email/password auth (NextAuth v5)</li>
+            <li><span class="feat-icon">💰</span> Price snapshot validation — approvers confirm live prices before approving</li>
+            <li><span class="feat-icon">📤</span> Streaming batched CSV export; isolated per-session cart via localStorage</li>
+          </ul>
+          <div class="project-tech">
+            <span>Next.js 16</span><span>TypeScript</span><span>NestJS 10</span><span>GraphQL</span><span>PostgreSQL</span><span>Redis</span><span>TypeORM</span><span>Tailwind v4</span><span>NextAuth v5</span>
+          </div>
+        </div>
+        <div class="project-visual">
+          <div class="browser-mockup">
+            <div class="browser-bar">
+              <div class="browser-dots"><span></span><span></span><span></span></div>
+              <div class="browser-url">pixeledu.app/dashboard</div>
+            </div>
+            <div class="browser-content">
+              <div class="mock-dashboard">
+                <div class="mock-sidebar">
+                  <div class="mock-nav-item active"></div>
+                  <div class="mock-nav-item"></div>
+                  <div class="mock-nav-item"></div>
+                  <div class="mock-nav-item"></div>
+                  <div class="mock-nav-item"></div>
+                </div>
+                <div class="mock-main">
+                  <div class="mock-header-bar"></div>
+                  <div class="mock-cards-row">
+                    <div class="mock-stat-card"><div class="msc-num">Draft</div><div class="msc-label">New Request</div></div>
+                    <div class="mock-stat-card"><div class="msc-num" style="font-size:.65rem;color:#f59e0b">Pending</div><div class="msc-label">Awaiting</div></div>
+                    <div class="mock-stat-card"><div class="msc-num" style="font-size:.65rem;color:#10b981">Approved</div><div class="msc-label">Completed</div></div>
+                  </div>
+                  <div class="mock-chart">
+                    <div style="flex:1;display:flex;flex-direction:column;gap:.4rem">
+                      <div style="height:8px;border-radius:4px;background:rgba(99,102,241,.4);width:90%"></div>
+                      <div style="height:8px;border-radius:4px;background:rgba(245,158,11,.4);width:65%"></div>
+                      <div style="height:8px;border-radius:4px;background:rgba(16,185,129,.4);width:80%"></div>
+                      <div style="height:8px;border-radius:4px;background:rgba(99,102,241,.2);width:45%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="projects-grid">
 
         <!-- RTM Admin Portal -->
         <div class="project-card" data-animate>
-          <div class="project-number">02</div>
+          <div class="project-number">03</div>
           <div class="project-label">Admin Portal · Jul 2022 – Present</div>
           <h3>RTM Admin Portal</h3>
           <p>Comprehensive admin tools for controlling user access, configuring system settings, and customizing reporting features for end users across multiple tenants.</p>
@@ -307,7 +364,7 @@
 
         <!-- RTM User Portal -->
         <div class="project-card" data-animate>
-          <div class="project-number">03</div>
+          <div class="project-number">04</div>
           <div class="project-label">User Portal · Jul 2022 – Present · 100+ Users</div>
           <h3>RTM User Portal</h3>
           <p>Empowers businesses with intuitive tools to optimize sales routes, visualize outlet locations, and track performance metrics in real-time to maximize sales efficiency.</p>
@@ -324,7 +381,7 @@
 
         <!-- Census Validator -->
         <div class="project-card" data-animate>
-          <div class="project-number">04</div>
+          <div class="project-number">05</div>
           <div class="project-label">Data Platform · Feb 2022 – Present</div>
           <h3>Census Validator</h3>
           <p>A data validation platform that ensures field-collected shop data submitted by SurveyAuto field users is accurate, complete, and up-to-date through automated checks and analytics.</p>
@@ -353,9 +410,12 @@
           <h4>Frontend</h4>
           <div class="skill-chips">
             <div class="skill-chip"><span class="sc-icon">⚛️</span> React.js</div>
+            <div class="skill-chip"><span class="sc-icon">▲</span> Next.js</div>
+            <div class="skill-chip"><span class="sc-icon">🎨</span> Tailwind CSS</div>
             <div class="skill-chip"><span class="sc-icon">🎨</span> Ant Design</div>
             <div class="skill-chip"><span class="sc-icon">🌐</span> HTML / CSS</div>
             <div class="skill-chip"><span class="sc-icon">💛</span> JavaScript (ES6+)</div>
+            <div class="skill-chip"><span class="sc-icon">🔷</span> TypeScript</div>
           </div>
         </div>
         <div class="skill-category">
@@ -363,6 +423,7 @@
           <div class="skill-chips">
             <div class="skill-chip"><span class="sc-icon">🟢</span> Node.js</div>
             <div class="skill-chip"><span class="sc-icon">🚂</span> Express.js</div>
+            <div class="skill-chip"><span class="sc-icon">🐱</span> NestJS</div>
             <div class="skill-chip"><span class="sc-icon">🔵</span> Apollo GraphQL</div>
             <div class="skill-chip"><span class="sc-icon">🔌</span> WebSocket</div>
             <div class="skill-chip"><span class="sc-icon">☕</span> Java</div>
