@@ -151,7 +151,7 @@
     <div class="bento-grid">
       <div class="bento-card bc-bio" data-animate>
         <p>I'm a full-stack software engineer with <strong>8+ years</strong> of experience designing and shipping production-grade web applications. I focus on performance, reliability, and clean architecture.</p>
-        <p>Currently building <strong>PixelEDU</strong> — a multi-tenant SaaS procurement portal — and the <strong>AET Management Portal</strong>, a unified ERP system. At <strong>SurveyAuto</strong>, I lead development of the <strong>RTM platform</strong> — a geospatial field intelligence system handling <strong>20M+ shop records</strong> across 7 countries for BAT and other FMCG enterprise clients, with real-time sync pipelines, Google Maps dashboards, and CloudFront CDN per-tenant deployments.</p>
+        <p>Currently building <strong>AET</strong> — a production B2B ERP with 153 NestJS modules, 238 DB entities, 815 GraphQL operations, and 49 Redis-locked cron jobs across AWS ECS Fargate — and <strong>GHFS</strong>, a live green real estate marketplace with AI-powered listing moderation. At <strong>SurveyAuto</strong>, I lead development of the <strong>RTM platform</strong> — a geospatial field intelligence system handling <strong>20M+ shop records</strong> across 7 countries for BAT and other FMCG enterprise clients.</p>
         <p>I care deeply about the <strong>developer experience</strong> and building systems that are as maintainable as they are fast.</p>
       </div>
 
@@ -296,22 +296,22 @@
         <div class="proj-card-top-accent"></div>
         <div class="proj-inner">
           <div class="proj-info">
-            <div class="proj-num">01 / FEATURED</div>
-            <div class="proj-label">Full-Stack Internal ERP · Archangel Technology · Jan 2024 – Present</div>
+            <div class="proj-num">01 / FEATURED · ENTERPRISE ERP</div>
+            <div class="proj-label">Full-Stack B2B ERP · Archangel Technology · Jan 2024 – Present</div>
             <h3>AET — Archangel Equipment Tracker</h3>
-            <p>Full-stack B2B ERP for an EdTech hardware reseller covering the complete order-to-cash cycle — quoting, order management, procurement, warehouse fulfillment, invoicing, accounting, leasing, and warranty tracking — managed through a role-based admin interface. TypeScript monorepo with 100+ NestJS modules, 44 DataLoaders, and Redis-locked distributed crons across a multi-pod AWS ECS deployment.</p>
+            <p>Production-grade internal ERP for an EdTech hardware reseller — covering the complete order-to-cash cycle across sales, procurement, warehouse, accounting, leasing, warranty, and repairs. TypeScript monorepo with <strong>153 NestJS modules</strong>, <strong>238 database entities</strong>, <strong>832 migrations</strong>, <strong>815 GraphQL operations</strong> (477 queries + 338 mutations), <strong>59 DataLoaders</strong>, and <strong>49 Redis-locked cron jobs</strong> across multi-instance ECS Fargate. Frontend: <strong>733 .tsx files</strong> across 14 lazy-loaded domain roots, 99-constant RBAC.</p>
             <ul class="proj-feats">
-              <li><span class="fi">🔄</span> Order-to-cash pipeline — Sales quotes → orders → fulfillment → invoices → payments with state machines, locking logic &amp; 100+ GraphQL resolvers</li>
-              <li><span class="fi">📦</span> Warehouse &amp; inventory — bin/rack allocation, greedy box-packing engine, ShipEngine label generation &amp; tracking webhooks, inbound PO batching</li>
-              <li><span class="fi">💰</span> Double-entry accounting — GL, AR/AP aging, Plaid bank sync with auto-matching, Akoya open-banking, Stripe tax &amp; recurring autopay</li>
-              <li><span class="fi">📋</span> Commission engine — tier-snapshot at order time, virtual SO splits, per-user % calculations, hold logic</li>
-              <li><span class="fi">🔑</span> Leasing module — amortization schedules, FMV/dollar-buyout types, Stripe autopay, cron payment reminders</li>
-              <li><span class="fi">🛠️</span> Warranty &amp; repairs — claim lifecycle, labour+parts budgets, coverage reminders, asset depreciation tracker</li>
-              <li><span class="fi">🔗</span> Integrations — Stripe · DocuSign · ShipEngine · Plaid · Akoya · SendGrid · AWS S3 · IngramMicro / D&amp;H / TDSynnex pricing pulls</li>
-              <li><span class="fi">☁️</span> AWS ECS (Fargate) · ECR · RDS · CloudFront/S3 SPA · GitHub Actions CI/CD (path-scoped dev + manual prod)</li>
+              <li><span class="fi">🔄</span> Order state machine — DRAFT → PENDING_APPROVAL → APPROVED → FULFILLMENT → INVOICED with inventory reservation, device/serial validation &amp; 11,823-line SalesOrdersService</li>
+              <li><span class="fi">⚖️</span> Weighted-average cost engine — blends multi-source PO costs across partial receipts, proportional shipping absorption → feeds invoice lines, AR aging &amp; P&amp;L</li>
+              <li><span class="fi">💳</span> Stripe (374 refs) + Plaid (294 refs) — card/ACH invoice collection, checkout sessions, daily bank transaction sync, auto-categorization, Akoya open-banking fallback</li>
+              <li><span class="fi">🏛️</span> Double-entry accounting — GL, P&amp;L, balance sheets, AR/AP aging, 4-tier tax jurisdiction engine (city/county/district/state), QuickBooks OAuth sync</li>
+              <li><span class="fi">⏱️</span> 49 Redis-locked distributed crons — billing cycles, bank sync, customer red-flag credit monitoring, lease reminders, AI spec backfill (OpenAI), weekly revenue email</li>
+              <li><span class="fi">📦</span> Warehouse — picking/packing, bin/rack allocation, greedy box-packing, ShipEngine label generation &amp; rate shopping, inbound PO batching, serial number tracking</li>
+              <li><span class="fi">📋</span> Leasing module — amortization schedules, principal/interest split, FMV/dollar-buyout, recurring billing engine · Warranty &amp; repairs — multi-step claim pipeline, SOP checklists, QA sign-off</li>
+              <li><span class="fi">☁️</span> 9 GitHub Actions workflows — 3 independently deployable services (NestJS ECS, React S3/CloudFront, Next.js ECS), OIDC auth, per-service semver tagging, Playwright E2E, manual prod gates</li>
             </ul>
             <div class="proj-stack">
-              <span>NestJS 10</span><span>GraphQL</span><span>TypeORM</span><span>PostgreSQL</span><span>Redis</span><span>React 17</span><span>Apollo Client</span><span>Redux Toolkit</span><span>Ant Design 4</span><span>TypeScript</span><span>AWS ECS</span><span>Stripe</span><span>DocuSign</span><span>Plaid</span><span>ShipEngine</span>
+              <span>NestJS 10</span><span>Apollo GraphQL</span><span>TypeORM</span><span>PostgreSQL</span><span>Redis</span><span>BullMQ</span><span>React 17</span><span>Apollo Client</span><span>Redux Toolkit</span><span>Ant Design 4</span><span>TypeScript</span><span>AWS ECS Fargate</span><span>Stripe</span><span>Plaid</span><span>ShipEngine</span><span>OpenAI</span><span>DocuSign</span><span>QuickBooks</span><span>SendGrid</span><span>Sentry</span>
             </div>
           </div>
           <div class="proj-visual">
