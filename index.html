@@ -207,7 +207,7 @@
         <div class="tl-box">
           <div class="tl-top">
             <div>
-              <h3>Full-Stack Web Platform Developer</h3>
+              <h3>Full-Stack Software Engineer</h3>
               <p class="tl-company">Archangel Technology (AET)</p>
             </div>
             <div class="tl-right">
@@ -216,13 +216,16 @@
             </div>
           </div>
           <ul class="tl-bullets">
-            <li>Built the AET Management Portal unifying sales, procurement, inventory, accounting, IT ticketing, asset tracking, and reporting into one system.</li>
-            <li>Developed PixelEDU — a multi-tenant SaaS procurement portal for educational institutions with 3-tier role workflow, ERP integration, and SSO.</li>
-            <li>Implemented recurring lease automation, Stripe invoice payments, and real-time WebSocket notifications.</li>
-            <li>Architected and deployed the full application on AWS with PostgreSQL and Redis.</li>
+            <li>Built <strong>AET — Archangel Equipment Tracker</strong>, a production B2B ERP with <strong>153 NestJS modules</strong>, <strong>238 PostgreSQL entities</strong>, <strong>832 migrations</strong>, and <strong>815 GraphQL operations</strong> covering the full order-to-cash cycle — quotes → orders → warehouse fulfillment → invoices → payments — with order state machines, inventory locking, and device/serial validation.</li>
+            <li>Implemented <strong>59 REQUEST-scoped DataLoaders</strong> eliminating N+1 across all resolvers; designed a <strong>distributed Redis cron-lock system</strong> protecting <strong>49 scheduled jobs</strong> (billing, bank sync, credit monitoring, AI spec backfill) from duplicate execution across multi-instance ECS Fargate.</li>
+            <li>Engineered a <strong>multi-source weighted-average cost engine</strong>, a <strong>4-tier tax jurisdiction engine</strong> (city/county/district/state), double-entry GL, AR/AP aging, and QuickBooks OAuth sync; integrated <strong>Stripe</strong> (374 refs) + <strong>Plaid</strong> (294 refs), ShipEngine, DocuSign, Akoya, SendGrid, and OpenAI spec backfill.</li>
+            <li>Delivered leasing (amortization schedules, principal/interest split), warranty &amp; repairs (multi-step claim pipeline with SOP checklists &amp; QA sign-off), and customer credit monitoring (6 cron jobs).</li>
+            <li>Built a <strong>733-file React admin frontend</strong> across 14 lazy-loaded domain roots with 99-constant RBAC; architected <strong>9 GitHub Actions CI/CD workflows</strong> — 3 independently deployable services (NestJS/ECS, React/S3+CloudFront, Next.js/ECS) with OIDC auth, semver tagging, Playwright E2E (9 suites), and AWS Secrets Manager (50+ keys).</li>
+            <li>Built <strong>GHFS — Green Homes For Sale</strong> (<a href="https://www.greenhomesforsale.com" target="_blank" rel="noopener">greenhomesforsale.com ↗</a>) — Next.js 14 green real estate marketplace with OpenAI gpt-4o-mini listing moderation, Stripe recurring billing engine, denormalized 13-table search architecture, and dual-CDN image pipeline.</li>
+            <li>Developed <strong>PixelEDU</strong> — multi-tenant SaaS procurement portal with 3-tier approval workflow, per-campus ERP auto-sync, SSO via Google &amp; Microsoft Entra ID (NextAuth v5), and streaming CSV export.</li>
           </ul>
           <div class="tl-pills">
-            <span>React.js</span><span>Next.js 16</span><span>Node.js</span><span>NestJS</span><span>PostgreSQL</span><span>AWS</span><span>Stripe</span><span>GraphQL</span>
+            <span>NestJS 10</span><span>Apollo GraphQL</span><span>TypeORM</span><span>PostgreSQL</span><span>Redis</span><span>BullMQ</span><span>React 17</span><span>Ant Design 4</span><span>Next.js 14/16</span><span>TypeScript</span><span>AWS ECS Fargate</span><span>Stripe</span><span>Plaid</span><span>ShipEngine</span><span>DocuSign</span><span>OpenAI</span><span>QuickBooks</span><span>Sentry</span>
           </div>
         </div>
       </div>
