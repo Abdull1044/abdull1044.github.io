@@ -266,7 +266,7 @@
     <div class="r-job">
       <div class="r-job-head">
         <div class="r-job-left">
-          <span class="r-job-title">Full-Stack Web Platform Developer</span>
+          <span class="r-job-title">Full-Stack Software Engineer</span>
           <span class="sep">·</span>
           <span class="r-job-company">Archangel Technology (AET)</span>
           <span class="sep">·</span>
@@ -275,11 +275,14 @@
         <span class="r-job-date">Jan 2024 – Present</span>
       </div>
       <ul class="r-bullets">
-        <li>Built <strong>AET Management Portal</strong> — enterprise ERP unifying sales, procurement, inventory, accounting, IT ticketing, asset tracking, and reporting into a single platform; implemented recurring lease automation and Stripe invoice payment workflows with webhook-driven status sync.</li>
-        <li>Developed <strong>PixelEDU</strong> — multi-tenant SaaS procurement portal for educational institutions; 3-tier role approval workflow (Requestor → Approver → Admin) with per-campus routing, price snapshot validation, ERP auto-sync (Sales Quote on submit → Sales Order on approval), SSO via Google &amp; Microsoft Entra ID (NextAuth v5), and streaming batched CSV export.</li>
-        <li>Engineered real-time WebSocket notification systems; deployed all applications on AWS (S3, RDS, CloudFront) with PostgreSQL and Redis caching layers.</li>
+        <li>Built <strong>AET — Archangel Equipment Tracker</strong>, a full-stack B2B ERP for an EdTech hardware reseller covering the complete order-to-cash cycle: sales quotes → orders → warehouse fulfillment → invoices → payments; implemented state machines, locking logic, and grand-total calculation across <strong>100+ GraphQL resolvers</strong> in a TypeScript monorepo (NestJS 10 + React 17 + Apollo).</li>
+        <li>Engineered <strong>warehouse &amp; procurement</strong> modules — bin/rack allocation, greedy box-packing engine, ShipEngine label generation &amp; tracking webhooks, inbound PO batching, serial number generation, and AP aging reports.</li>
+        <li>Built <strong>double-entry accounting</strong> — GL, AR/AP aging, Plaid bank transaction sync with auto-matching (cursor-based), Akoya open-banking OAuth, Stripe tax calculation &amp; recurring autopay; commission engine with tier-snapshot at order time, virtual SO splits, and hold logic.</li>
+        <li>Delivered <strong>leasing</strong> (amortization schedules, FMV/dollar-buyout, cron payment reminders via Stripe autopay) and <strong>warranty &amp; repairs</strong> (claim lifecycle, labour+parts budgets, coverage reminders, asset depreciation tracker).</li>
+        <li>Integrated Stripe · DocuSign · ShipEngine · Plaid · Akoya · SendGrid · AWS S3 · IngramMicro / D&amp;H / TDSynnex supplier pricing pulls; deployed on <strong>AWS ECS (Fargate)</strong> with ECR, RDS, CloudFront/S3 SPA, and GitHub Actions CI/CD (path-scoped dev + manual prod). System runs <strong>44 DataLoaders</strong> and Redis-locked distributed crons across multi-pod deployment.</li>
+        <li>Developed <strong>PixelEDU</strong> — multi-tenant SaaS procurement portal; 3-tier approval workflow, per-campus routing, ERP auto-sync, SSO via Google &amp; Microsoft Entra ID (NextAuth v5), price snapshot validation, and streaming CSV export.</li>
       </ul>
-      <p class="r-stack"><strong>Stack:</strong> React.js · Next.js 16 · TypeScript · NestJS 10 · Apollo GraphQL · PostgreSQL · Redis · AWS · Stripe API · NextAuth v5 · Tailwind v4 · TypeORM</p>
+      <p class="r-stack"><strong>Stack:</strong> NestJS 10 · Apollo GraphQL · TypeORM 0.2 · PostgreSQL · Redis · React 17 · Redux Toolkit · Ant Design 4 · Next.js 16 · TypeScript · AWS ECS/Fargate · Stripe · DocuSign · ShipEngine · Plaid · Akoya · SendGrid · GitHub Actions</p>
     </div>
 
     <!-- SurveyAuto -->
@@ -376,14 +379,16 @@
       <!-- AET Portal -->
       <div class="r-proj">
         <div class="r-proj-head">
-          <span class="r-proj-name">AET Management Portal</span>
+          <span class="r-proj-name">AET — Archangel Equipment Tracker (ERP)</span>
           <span class="r-proj-meta">Jan 2024 – Present</span>
         </div>
-        <p class="r-proj-client">Archangel Technology (AET)</p>
-        <p class="r-proj-desc">Enterprise ERP portal unifying sales, procurement, inventory, accounting, IT ticketing, and asset tracking.</p>
+        <p class="r-proj-client">Archangel Technology · EdTech hardware reseller B2B ERP</p>
+        <p class="r-proj-desc">Full-stack order-to-cash ERP: quoting → orders → warehouse fulfillment → invoicing → accounting → leasing → warranty. TypeScript monorepo with 100+ NestJS modules, 44 DataLoaders, Redis-locked distributed crons on AWS ECS Fargate.</p>
         <ul class="r-proj-feats">
-          <li>Recurring lease automation · Stripe invoice payments with webhook sync · real-time WebSocket notifications</li>
-          <li>IT ticketing &amp; asset lifecycle tracking · AWS deployment (S3, RDS, CloudFront)</li>
+          <li>Warehouse: bin/rack allocation · greedy box-packing · ShipEngine labels &amp; webhooks · inbound PO batching</li>
+          <li>Accounting: double-entry GL · Plaid bank sync · Akoya open-banking · Stripe tax + autopay · commission engine</li>
+          <li>Leasing: amortization · FMV/dollar-buyout · cron reminders · Warranty: claim lifecycle · asset depreciation</li>
+          <li>Integrations: DocuSign · Plaid · Akoya · ShipEngine · SendGrid · IngramMicro / D&amp;H / TDSynnex · GitHub Actions CI/CD</li>
         </ul>
       </div>
 

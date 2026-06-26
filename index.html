@@ -297,17 +297,21 @@
         <div class="proj-inner">
           <div class="proj-info">
             <div class="proj-num">01 / FEATURED</div>
-            <div class="proj-label">Full-Stack Web Platform · AET · Jan 2024 – Present</div>
-            <h3>AET Management Portal</h3>
-            <p>An internal enterprise system that unifies multiple business departments — sales, procurement, inventory, accounting, IT ticketing, asset tracking, and reporting — into one cohesive portal.</p>
+            <div class="proj-label">Full-Stack Internal ERP · Archangel Technology · Jan 2024 – Present</div>
+            <h3>AET — Archangel Equipment Tracker</h3>
+            <p>Full-stack B2B ERP for an EdTech hardware reseller covering the complete order-to-cash cycle — quoting, order management, procurement, warehouse fulfillment, invoicing, accounting, leasing, and warranty tracking — managed through a role-based admin interface. TypeScript monorepo with 100+ NestJS modules, 44 DataLoaders, and Redis-locked distributed crons across a multi-pod AWS ECS deployment.</p>
             <ul class="proj-feats">
-              <li><span class="fi">🔄</span> Recurring lease automation with complex billing cycles</li>
-              <li><span class="fi">💳</span> Stripe invoice payments with webhook-driven status sync</li>
-              <li><span class="fi">🔔</span> Real-time notifications via WebSocket</li>
-              <li><span class="fi">🖥️</span> IT ticketing system with asset tracking & lifecycle management</li>
+              <li><span class="fi">🔄</span> Order-to-cash pipeline — Sales quotes → orders → fulfillment → invoices → payments with state machines, locking logic &amp; 100+ GraphQL resolvers</li>
+              <li><span class="fi">📦</span> Warehouse &amp; inventory — bin/rack allocation, greedy box-packing engine, ShipEngine label generation &amp; tracking webhooks, inbound PO batching</li>
+              <li><span class="fi">💰</span> Double-entry accounting — GL, AR/AP aging, Plaid bank sync with auto-matching, Akoya open-banking, Stripe tax &amp; recurring autopay</li>
+              <li><span class="fi">📋</span> Commission engine — tier-snapshot at order time, virtual SO splits, per-user % calculations, hold logic</li>
+              <li><span class="fi">🔑</span> Leasing module — amortization schedules, FMV/dollar-buyout types, Stripe autopay, cron payment reminders</li>
+              <li><span class="fi">🛠️</span> Warranty &amp; repairs — claim lifecycle, labour+parts budgets, coverage reminders, asset depreciation tracker</li>
+              <li><span class="fi">🔗</span> Integrations — Stripe · DocuSign · ShipEngine · Plaid · Akoya · SendGrid · AWS S3 · IngramMicro / D&amp;H / TDSynnex pricing pulls</li>
+              <li><span class="fi">☁️</span> AWS ECS (Fargate) · ECR · RDS · CloudFront/S3 SPA · GitHub Actions CI/CD (path-scoped dev + manual prod)</li>
             </ul>
             <div class="proj-stack">
-              <span>React.js</span><span>Node.js</span><span>PostgreSQL</span><span>AWS</span><span>Stripe API</span><span>Redis</span>
+              <span>NestJS 10</span><span>GraphQL</span><span>TypeORM</span><span>PostgreSQL</span><span>Redis</span><span>React 17</span><span>Apollo Client</span><span>Redux Toolkit</span><span>Ant Design 4</span><span>TypeScript</span><span>AWS ECS</span><span>Stripe</span><span>DocuSign</span><span>Plaid</span><span>ShipEngine</span>
             </div>
           </div>
           <div class="proj-visual">
