@@ -65,7 +65,7 @@
           <span class="stat-label">Years Exp.</span>
         </div>
         <div class="stat">
-          <span class="stat-num">6</span>
+          <span class="stat-num">7</span>
           <span class="stat-label">Projects Built</span>
         </div>
         <div class="stat">
@@ -113,7 +113,7 @@
             <span class="m-label">Years</span>
           </div>
           <div class="metric-pill">
-            <span class="m-val cyan">6</span>
+            <span class="m-val cyan">7</span>
             <span class="m-label">Projects</span>
           </div>
           <div class="metric-pill">
@@ -246,6 +246,7 @@
             <li>Designed a real-time MongoDB → PostgreSQL sync pipeline with live WebSocket progress tracking and Bull job queues for async processing.</li>
             <li>Built a store scoring engine (Population, SEC, Channel, Size, Footfall weights), promoter scheduling, DTD deep-dive analysis, and brand sentiment dashboards.</li>
             <li>Implemented Redis-cached precomputed area aggregations (daily TTL), AWS S3 + GCS bulk geospatial data transfer, and CloudFront CDN per-tenant deployments.</li>
+            <li>Built RTM Tenant Onboarding backend — automated pipeline to ingest KML/Excel/ZIP data, assign shops to routes via Turf.js polygon queries, and provision multi-role users at scale using Socket.IO for real-time progress.</li>
             <li>Created Census Validator — automated data quality platform for field-collected shop data with comparison tools, error detection, and analytics.</li>
           </ul>
           <div class="tl-pills">
@@ -467,10 +468,30 @@
       </div>
     </div>
 
-    <!-- Census mini -->
-    <div class="proj-grid" style="grid-template-columns:1fr;margin-top:1rem">
+    <!-- RTM Onboarding + Census mini grid -->
+    <div class="proj-grid" style="grid-template-columns:1fr 1fr;margin-top:1rem">
+
+      <!-- RTM Tenant Onboarding -->
       <div class="proj-mini" data-animate>
         <div class="proj-num">04</div>
+        <div class="proj-label">Backend Automation · SurveyAuto · Apr 2024 – May 2026</div>
+        <h3>RTM Tenant Onboarding Backend</h3>
+        <p>Backend automation system for provisioning RTM tenants at scale — ingesting bulk geographic &amp; shop data, assigning sales routes via geospatial processing, and provisioning multi-role users for field sales operations.</p>
+        <ul class="proj-feats">
+          <li><span class="fi">📦</span> Tenant pipeline: Excel / CSV / KML / ZIP → areas, routes, shops &amp; users in bulk</li>
+          <li><span class="fi">📍</span> Geospatial shop-to-route assignment via Turf.js polygon point-in-polygon queries</li>
+          <li><span class="fi">⚡</span> Real-time Socket.IO progress broadcasting during long-running ingestion jobs</li>
+          <li><span class="fi">🗄️</span> Dual-database: primary MongoDB (operational) + secondary (survey/validation) + PostgreSQL dual-write sync</li>
+          <li><span class="fi">📤</span> File export pipeline — ZIP, CSV, JSON, Excel, XML formats via AWS S3</li>
+          <li><span class="fi">🔐</span> AWS Secrets Manager for secure runtime credential injection + JWT role enforcement</li>
+        </ul>
+        <div class="proj-stack" style="margin-top:.75rem">
+          <span>Node.js</span><span>Express</span><span>MongoDB</span><span>PostgreSQL</span><span>Socket.IO</span><span>Turf.js</span><span>AWS S3</span><span>Secrets Manager</span><span>ExcelJS</span><span>JWT</span>
+        </div>
+      </div>
+
+      <div class="proj-mini" data-animate>
+        <div class="proj-num">05</div>
         <div class="proj-label">Data Quality Platform · SurveyAuto · Feb 2022 – Present</div>
         <h3>Census Validator</h3>
         <p>Validates shop data submitted by SurveyAuto field users — ensuring accuracy and completeness of field-collected records with automated checks, comparison tools, and analytics dashboards.</p>
@@ -541,6 +562,7 @@
           <div class="s-chip"><span class="ci">🐙</span> Git / GitHub</div>
           <div class="s-chip"><span class="ci">🗺️</span> Google Maps</div>
           <div class="s-chip"><span class="ci">🌐</span> deck.gl</div>
+          <div class="s-chip"><span class="ci">📐</span> Turf.js</div>
           <div class="s-chip"><span class="ci">☁️</span> Google Cloud</div>
           <div class="s-chip"><span class="ci">🔄</span> CI/CD</div>
         </div>
