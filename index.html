@@ -216,16 +216,13 @@
             </div>
           </div>
           <ul class="tl-bullets">
-            <li>Built <strong>AET — Archangel Equipment Tracker</strong>, a production B2B ERP with <strong>153 NestJS modules</strong>, <strong>238 PostgreSQL entities</strong>, <strong>832 migrations</strong>, and <strong>815 GraphQL operations</strong> covering the full order-to-cash cycle — quotes → orders → warehouse fulfillment → invoices → payments — with order state machines, inventory locking, and device/serial validation.</li>
-            <li>Implemented <strong>59 REQUEST-scoped DataLoaders</strong> eliminating N+1 across all resolvers; designed a <strong>distributed Redis cron-lock system</strong> protecting <strong>49 scheduled jobs</strong> (billing, bank sync, credit monitoring, AI spec backfill) from duplicate execution across multi-instance ECS Fargate.</li>
-            <li>Engineered a <strong>multi-source weighted-average cost engine</strong>, a <strong>4-tier tax jurisdiction engine</strong> (city/county/district/state), double-entry GL, AR/AP aging, and QuickBooks OAuth sync; integrated <strong>Stripe</strong> (374 refs) + <strong>Plaid</strong> (294 refs), ShipEngine, DocuSign, Akoya, SendGrid, and OpenAI spec backfill.</li>
-            <li>Delivered leasing (amortization schedules, principal/interest split), warranty &amp; repairs (multi-step claim pipeline with SOP checklists &amp; QA sign-off), and customer credit monitoring (6 cron jobs).</li>
-            <li>Built a <strong>733-file React admin frontend</strong> across 14 lazy-loaded domain roots with 99-constant RBAC; architected <strong>9 GitHub Actions CI/CD workflows</strong> — 3 independently deployable services (NestJS/ECS, React/S3+CloudFront, Next.js/ECS) with OIDC auth, semver tagging, Playwright E2E (9 suites), and AWS Secrets Manager (50+ keys).</li>
-            <li>Built <strong>GHFS — Green Homes For Sale</strong> (<a href="https://www.greenhomesforsale.com" target="_blank" rel="noopener">greenhomesforsale.com ↗</a>) — Next.js 14 green real estate marketplace with OpenAI gpt-4o-mini listing moderation, Stripe recurring billing engine, denormalized 13-table search architecture, and dual-CDN image pipeline.</li>
-            <li>Developed <strong>PixelEDU</strong> — multi-tenant SaaS procurement portal with 3-tier approval workflow, per-campus ERP auto-sync, SSO via Google &amp; Microsoft Entra ID (NextAuth v5), and streaming CSV export.</li>
+            <li>Architected and delivered <strong>AAT (Archangel Tablets)</strong> — a production B2B ERP spanning the full order-to-cash cycle (quoting, warehouse fulfillment, invoicing, leasing, warranty &amp; repairs) built as a TypeScript monorepo with <strong>153 NestJS modules, 238 DB entities, and 815 GraphQL operations</strong> on AWS ECS Fargate.</li>
+            <li>Integrated Stripe, Plaid, ShipEngine, DocuSign, QuickBooks, and OpenAI into core business workflows; built a double-entry accounting engine, 4-tier tax jurisdiction system, and distributed Redis cron infrastructure running <strong>49 scheduled jobs</strong> across multi-instance deployments.</li>
+            <li>Built <strong>GHFS — Green Homes For Sale</strong> (<a href="https://www.greenhomesforsale.com" target="_blank" rel="noopener">greenhomesforsale.com ↗</a>) — a live green real estate marketplace with AI-powered listing moderation (OpenAI), Stripe recurring billing, and a 40-model database.</li>
+            <li>Developed <strong>PixelEDU</strong> — multi-tenant SaaS procurement portal for educational institutions with 3-tier approval workflow, ERP integration, and SSO via Google &amp; Microsoft Entra ID.</li>
           </ul>
           <div class="tl-pills">
-            <span>NestJS 10</span><span>Apollo GraphQL</span><span>TypeORM</span><span>PostgreSQL</span><span>Redis</span><span>BullMQ</span><span>React 17</span><span>Ant Design 4</span><span>Next.js 14/16</span><span>TypeScript</span><span>AWS ECS Fargate</span><span>Stripe</span><span>Plaid</span><span>ShipEngine</span><span>DocuSign</span><span>OpenAI</span><span>QuickBooks</span><span>Sentry</span>
+            <span>NestJS 10</span><span>GraphQL</span><span>PostgreSQL</span><span>Redis</span><span>React 17</span><span>Next.js 14/16</span><span>TypeScript</span><span>AWS ECS</span><span>Stripe</span><span>Plaid</span><span>OpenAI</span><span>DocuSign</span><span>ShipEngine</span>
           </div>
         </div>
       </div>
@@ -244,13 +241,9 @@
             </div>
           </div>
           <ul class="tl-bullets">
-            <li>Built the RTM geospatial field intelligence platform for BAT and other FMCG enterprise clients — handling <strong>20M+ shop records</strong> across 7 countries (Malaysia, UK, Switzerland, Bangladesh, US, Pakistan, Tennessee).</li>
-            <li>Engineered interactive Google Maps dashboards with polygon territory layers, heatmaps, custom boundary drawing, and deck.gl overlays for outlet and census data visualization.</li>
-            <li>Designed a real-time MongoDB → PostgreSQL sync pipeline with live WebSocket progress tracking and Bull job queues for async processing.</li>
-            <li>Built a store scoring engine (Population, SEC, Channel, Size, Footfall weights), promoter scheduling, DTD deep-dive analysis, and brand sentiment dashboards.</li>
-            <li>Implemented Redis-cached precomputed area aggregations (daily TTL), AWS S3 + GCS bulk geospatial data transfer, and CloudFront CDN per-tenant deployments.</li>
-            <li>Built RTM Tenant Onboarding backend — automated pipeline to ingest KML/Excel/ZIP data, assign shops to routes via Turf.js polygon queries, and provision multi-role users at scale using Socket.IO for real-time progress.</li>
-            <li>Created Census Validator — automated data quality platform for field-collected shop data with comparison tools, error detection, and analytics.</li>
+            <li>Led development of the <strong>RTM platform</strong> — a geospatial field intelligence system processing <strong>20M+ shop records across 7 countries</strong> for British American Tobacco and other FMCG enterprise clients, featuring interactive Google Maps territory dashboards, real-time sync pipelines, and per-tenant CloudFront deployments.</li>
+            <li>Built the <strong>RTM Tenant Onboarding</strong> backend — automated pipeline to bulk-ingest geographic and shop data (KML/Excel/ZIP), assign shops to sales routes via geospatial processing, and provision multi-role field teams at scale.</li>
+            <li>Created the <strong>Census Validator Portal</strong> — a web-based validation platform for field-collected survey data with classification workflows (matched/unmatched POIs), interactive maps, and analytics dashboards.</li>
           </ul>
           <div class="tl-pills">
             <span>React 18</span><span>NestJS</span><span>MongoDB</span><span>PostgreSQL+PostGIS</span><span>Redis</span><span>Google Maps</span><span>deck.gl</span><span>AWS S3</span><span>GCS</span><span>Socket.io</span><span>Bull</span>
@@ -300,18 +293,14 @@
         <div class="proj-inner">
           <div class="proj-info">
             <div class="proj-num">01 / FEATURED · ENTERPRISE ERP</div>
-            <div class="proj-label">Full-Stack B2B ERP · Archangel Technology · Jan 2024 – Present</div>
-            <h3>AET — Archangel Equipment Tracker</h3>
-            <p>Production-grade internal ERP for an EdTech hardware reseller — covering the complete order-to-cash cycle across sales, procurement, warehouse, accounting, leasing, warranty, and repairs. TypeScript monorepo with <strong>153 NestJS modules</strong>, <strong>238 database entities</strong>, <strong>832 migrations</strong>, <strong>815 GraphQL operations</strong> (477 queries + 338 mutations), <strong>59 DataLoaders</strong>, and <strong>49 Redis-locked cron jobs</strong> across multi-instance ECS Fargate. Frontend: <strong>733 .tsx files</strong> across 14 lazy-loaded domain roots, 99-constant RBAC.</p>
+            <div class="proj-label">Full-Stack B2B ERP · Archangel Tablets · Jan 2024 – Present</div>
+            <h3>AAT — Archangel Tablets ERP</h3>
+            <p>Production internal ERP for an EdTech hardware reseller covering the full business cycle — quoting, order management, warehouse fulfillment, invoicing, accounting, leasing, warranty, and repairs. Built as a TypeScript monorepo with <strong>153 NestJS modules</strong>, <strong>238 DB entities</strong>, <strong>815 GraphQL operations</strong>, and a <strong>733-file React admin frontend</strong> deployed on AWS ECS Fargate.</p>
             <ul class="proj-feats">
-              <li><span class="fi">🔄</span> Order state machine — DRAFT → PENDING_APPROVAL → APPROVED → FULFILLMENT → INVOICED with inventory reservation, device/serial validation &amp; 11,823-line SalesOrdersService</li>
-              <li><span class="fi">⚖️</span> Weighted-average cost engine — blends multi-source PO costs across partial receipts, proportional shipping absorption → feeds invoice lines, AR aging &amp; P&amp;L</li>
-              <li><span class="fi">💳</span> Stripe (374 refs) + Plaid (294 refs) — card/ACH invoice collection, checkout sessions, daily bank transaction sync, auto-categorization, Akoya open-banking fallback</li>
-              <li><span class="fi">🏛️</span> Double-entry accounting — GL, P&amp;L, balance sheets, AR/AP aging, 4-tier tax jurisdiction engine (city/county/district/state), QuickBooks OAuth sync</li>
-              <li><span class="fi">⏱️</span> 49 Redis-locked distributed crons — billing cycles, bank sync, customer red-flag credit monitoring, lease reminders, AI spec backfill (OpenAI), weekly revenue email</li>
-              <li><span class="fi">📦</span> Warehouse — picking/packing, bin/rack allocation, greedy box-packing, ShipEngine label generation &amp; rate shopping, inbound PO batching, serial number tracking</li>
-              <li><span class="fi">📋</span> Leasing module — amortization schedules, principal/interest split, FMV/dollar-buyout, recurring billing engine · Warranty &amp; repairs — multi-step claim pipeline, SOP checklists, QA sign-off</li>
-              <li><span class="fi">☁️</span> 9 GitHub Actions workflows — 3 independently deployable services (NestJS ECS, React S3/CloudFront, Next.js ECS), OIDC auth, per-service semver tagging, Playwright E2E, manual prod gates</li>
+              <li><span class="fi">🔄</span> Complete order-to-cash pipeline with state machines, inventory reservation, device/serial tracking, and automated invoicing</li>
+              <li><span class="fi">💳</span> Stripe + Plaid + ShipEngine + DocuSign + QuickBooks — payments, bank sync, shipping, e-signatures, and accounting all integrated</li>
+              <li><span class="fi">🏛️</span> Double-entry accounting engine with GL, AR/AP aging, 4-tier tax jurisdiction, and OpenAI-powered product catalog enrichment</li>
+              <li><span class="fi">☁️</span> 3 independently deployable services on AWS with 9 CI/CD pipelines, Playwright E2E tests, and Redis-locked distributed cron infrastructure</li>
             </ul>
             <div class="proj-stack">
               <span>NestJS 10</span><span>Apollo GraphQL</span><span>TypeORM</span><span>PostgreSQL</span><span>Redis</span><span>BullMQ</span><span>React 17</span><span>Apollo Client</span><span>Redux Toolkit</span><span>Ant Design 4</span><span>TypeScript</span><span>AWS ECS Fargate</span><span>Stripe</span><span>Plaid</span><span>ShipEngine</span><span>OpenAI</span><span>DocuSign</span><span>QuickBooks</span><span>SendGrid</span><span>Sentry</span>
@@ -446,16 +435,12 @@
             <div class="proj-num">03 / FEATURED · LIVE</div>
             <div class="proj-label">Green Real Estate Marketplace · AET · Next.js 14 · <a href="https://www.greenhomesforsale.com/" target="_blank" rel="noopener" style="color:var(--cyan)">greenhomesforsale.com ↗</a></div>
             <h3>GHFS — Green Homes For Sale</h3>
-            <p>Full-stack green real estate marketplace built with Next.js 14 App Router — 40 database models, 122 components, and 31 routes serving listing discovery, AI-powered eco-certification moderation, agent onboarding, and subscription billing. Captures 13 specialized eco-feature types (energy sources, insulation, certifications, materials, heating/cooling) with per-feature image galleries.</p>
+            <p>Live green real estate marketplace where sellers list eco-certified homes and buyers discover them by green feature type. Built with Next.js 14 App Router across 40 database models and 31 routes — handling listing creation, AI-powered moderation, subscription billing, and agent onboarding.</p>
             <ul class="proj-feats">
-              <li><span class="fi">🤖</span> AI moderation pipeline — OpenAI gpt-4o-mini analyzes listing text + up to 5 property images for green compliance; auto-approves/rejects with admin override</li>
-              <li><span class="fi">💳</span> Stripe recurring billing engine — cron-triggered renewal, failed-payment recovery, auto-downgrade featured→standard, Slack failure alerts</li>
-              <li><span class="fi">⚡</span> Denormalized search architecture — 13 green-feature join tables mirrored into flat fields on Listing model for sub-100ms marketplace queries</li>
-              <li><span class="fi">🖼️</span> Dual-CDN image pipeline — Cloudinary primary → DigitalOcean Spaces fallback with per-image progress tracking &amp; HEIC conversion</li>
-              <li><span class="fi">🔍</span> SEO slug routing — <code>country_state_city_zip_id</code> URLs with reverse-parsing helpers; no raw IDs exposed</li>
-              <li><span class="fi">📋</span> Multi-step listing form — Zustand-backed 6-tab flow with cross-tab dependencies, currency auto-format &amp; tab enable/disable logic</li>
-              <li><span class="fi">🗂️</span> 6 coordinated cron endpoints — 7-day warning → 1-day warning → expire → renew → downgrade lifecycle</li>
-              <li><span class="fi">📊</span> New Relic APM — CLS, LCP, TTFB, INP Core Web Vitals tracking in production</li>
+              <li><span class="fi">🤖</span> AI moderation — OpenAI analyzes listing text and property photos for eco-certification compliance, auto-approving valid listings</li>
+              <li><span class="fi">💳</span> Stripe subscription billing with automated renewal, failed-payment recovery, and listing tier downgrade</li>
+              <li><span class="fi">🖼️</span> Dual-CDN image pipeline — Cloudinary primary with DigitalOcean Spaces fallback and real-time upload progress</li>
+              <li><span class="fi">📊</span> New Relic APM monitoring Core Web Vitals (LCP, CLS, TTFB) in production</li>
             </ul>
             <div class="proj-stack">
               <span>Next.js 14</span><span>React 18</span><span>TypeScript</span><span>Sequelize</span><span>MySQL</span><span>OpenAI GPT-4o</span><span>Stripe</span><span>Cloudinary</span><span>DigitalOcean Spaces</span><span>NextAuth v4</span><span>Zustand</span><span>SendGrid</span><span>New Relic</span><span>AWS SDK</span><span>Zod</span>
@@ -474,16 +459,12 @@
           <div class="proj-num">04 / FEATURED · ENTERPRISE</div>
           <div class="proj-label">Geospatial Field Intelligence Platform · SurveyAuto · Jun 2022 – Present · Built for BAT &amp; FMCG clients</div>
           <h3>RTM — Retail Territory Management</h3>
-          <p>An enterprise-grade geospatial intelligence platform used by retail territory managers, field agents, and supervisors across <strong>7 countries</strong> to visualize, filter, and analyze <strong>20M+ shop records</strong>. Enables territory planning, outlet validation, brand analysis, and distributor performance tracking at scale for British American Tobacco and other FMCG clients.</p>
+          <p>Enterprise geospatial field intelligence platform used by British American Tobacco and FMCG clients across <strong>7 countries</strong> to plan sales territories, validate retail outlets, and track distributor performance against <strong>20M+ shop records</strong>.</p>
           <ul class="proj-feats">
-            <li><span class="fi">🗺️</span> Interactive Google Maps dashboard — polygon territory layers, heatmaps, deck.gl overlays, custom boundary drawing</li>
-            <li><span class="fi">🔍</span> Dynamic multi-level filtering across 20+ attributes — territory, distributor, area type, SEC, channel</li>
-            <li><span class="fi">🔄</span> Real-time MongoDB → PostgreSQL/PostGIS sync pipeline with live WebSocket progress tracking &amp; Bull job queues</li>
-            <li><span class="fi">🏪</span> Store scoring engine — weighted Population, SEC, Channel, Size &amp; Footfall scores</li>
-            <li><span class="fi">📊</span> Promoter scheduling, DTD deep-dive analysis, brand sentiment dashboards, Excel/PDF report generation</li>
-            <li><span class="fi">🌍</span> Multi-tenant CloudFront CDN per deployment (Malaysia, UK, Switzerland, Bangladesh, US, Pakistan)</li>
-            <li><span class="fi">⚡</span> Redis-cached precomputed area aggregations (daily TTL) + AWS S3 / GCS compressed geospatial data</li>
-            <li><span class="fi">🔐</span> Role-based access (Admin / Field / Supervisor / RTM Admin) with JWT + Passport + AWS Cognito</li>
+            <li><span class="fi">🗺️</span> Interactive Google Maps territory dashboards with polygon layers, heatmaps, deck.gl overlays, and 20+ dynamic attribute filters</li>
+            <li><span class="fi">🔄</span> Real-time MongoDB → PostGIS sync pipeline with WebSocket progress, Bull job queues, and Redis-cached area aggregations</li>
+            <li><span class="fi">📊</span> Store scoring engine, promoter scheduling, brand sentiment dashboards, and Excel/PDF report generation</li>
+            <li><span class="fi">🌍</span> Per-tenant CloudFront CDN deployments across Malaysia, UK, Switzerland, Bangladesh, US &amp; Pakistan</li>
           </ul>
           <div class="proj-stack">
             <span>React 18</span><span>NestJS</span><span>TypeScript</span><span>Google Maps</span><span>deck.gl</span><span>MongoDB Atlas</span><span>PostgreSQL+PostGIS</span><span>Redis</span><span>Socket.io</span><span>Bull</span><span>AWS S3</span><span>CloudFront</span><span>GCS</span><span>Ant Design</span>
@@ -540,14 +521,11 @@
         <div class="proj-num">05</div>
         <div class="proj-label">Backend Automation · SurveyAuto · Apr 2024 – May 2026</div>
         <h3>RTM Tenant Onboarding Backend</h3>
-        <p>Backend automation system for provisioning RTM tenants at scale — ingesting bulk geographic &amp; shop data, assigning sales routes via geospatial processing, and provisioning multi-role users for field sales operations.</p>
+        <p>Automated backend system that provisions new RTM client tenants at scale — ingesting bulk geographic data (KML/Excel/ZIP), assigning shops to sales routes via geospatial processing, and setting up multi-role field teams in a single pipeline run.</p>
         <ul class="proj-feats">
-          <li><span class="fi">📦</span> Tenant pipeline: Excel / CSV / KML / ZIP → areas, routes, shops &amp; users in bulk</li>
-          <li><span class="fi">📍</span> Geospatial shop-to-route assignment via Turf.js polygon point-in-polygon queries</li>
-          <li><span class="fi">⚡</span> Real-time Socket.IO progress broadcasting during long-running ingestion jobs</li>
-          <li><span class="fi">🗄️</span> Dual-database: primary MongoDB (operational) + secondary (survey/validation) + PostgreSQL dual-write sync</li>
-          <li><span class="fi">📤</span> File export pipeline — ZIP, CSV, JSON, Excel, XML formats via AWS S3</li>
-          <li><span class="fi">🔐</span> AWS Secrets Manager for secure runtime credential injection + JWT role enforcement</li>
+          <li><span class="fi">📦</span> Bulk data ingestion — KML, Excel, CSV, ZIP → areas, routes, shops &amp; users provisioned automatically</li>
+          <li><span class="fi">📍</span> Geospatial shop-to-route assignment using Turf.js point-in-polygon queries</li>
+          <li><span class="fi">⚡</span> Real-time Socket.IO progress updates during long-running ingestion jobs</li>
         </ul>
         <div class="proj-stack" style="margin-top:.75rem">
           <span>Node.js</span><span>Express</span><span>MongoDB</span><span>PostgreSQL</span><span>Socket.IO</span><span>Turf.js</span><span>AWS S3</span><span>Secrets Manager</span><span>ExcelJS</span><span>JWT</span>
@@ -558,15 +536,11 @@
         <div class="proj-num">06</div>
         <div class="proj-label">Field Survey Validation Portal · SurveyAuto · Mar 2022 – Jun 2026</div>
         <h3>Census Validator Portal</h3>
-        <p>Web-based portal for validating and managing census/field survey data — enabling teams to review, verify, and categorize POIs and shop data collected from field surveys. Reconciles matched, partially matched, unmatched, and newly discovered locations against existing records.</p>
+        <p>Web portal for field survey teams to review and validate shop and POI data collected during census campaigns — classifying records as matched, partially matched, or unmatched against existing datasets.</p>
         <ul class="proj-feats">
-          <li><span class="fi">📊</span> Dashboard with stats panels, Ant Design Charts &amp; React D3 Tree views</li>
-          <li><span class="fi">🗂️</span> Matched / Partially Matched / Not Matched shop classification workflows</li>
-          <li><span class="fi">📍</span> New POI discovery &amp; review · Field Visit management &amp; tracking</li>
-          <li><span class="fi">🗺️</span> Interactive Google Maps integration for location-based validation</li>
-          <li><span class="fi">🔗</span> Submission preview with public webview answer review links</li>
-          <li><span class="fi">🏢</span> Customer/client detail pages with tenant-wise views &amp; per-tenant image copy to RTM folder</li>
-          <li><span class="fi">🔐</span> JWT auth with role-based access · Multi-env (dev / staging / prod) on AWS S3</li>
+          <li><span class="fi">🗂️</span> Classification workflows for matched / unmatched / new POI discovery with Google Maps location validation</li>
+          <li><span class="fi">📊</span> Analytics dashboards with D3 tree views, stats panels, and field visit tracking</li>
+          <li><span class="fi">🏢</span> Tenant-wise client views with submission previews and multi-environment AWS S3 deployment</li>
         </ul>
         <div class="proj-stack" style="margin-top:.75rem">
           <span>React 17</span><span>React Router v5</span><span>Ant Design</span><span>Ant Design Charts</span><span>React D3 Tree</span><span>Google Maps React</span><span>Firebase Auth</span><span>Axios</span><span>Bootstrap</span><span>AWS S3</span>
