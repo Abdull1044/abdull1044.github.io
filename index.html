@@ -219,7 +219,7 @@
             <li>Architected and delivered <strong>AAT (Archangel Tablets)</strong> — a production B2B ERP spanning the full order-to-cash cycle (quoting, warehouse fulfillment, invoicing, leasing, warranty &amp; repairs) built as a TypeScript monorepo with <strong>153 NestJS modules, 238 DB entities, and 815 GraphQL operations</strong> on AWS ECS Fargate.</li>
             <li>Integrated Stripe, Plaid, ShipEngine, DocuSign, QuickBooks, and OpenAI into core business workflows; built a double-entry accounting engine, 4-tier tax jurisdiction system, and distributed Redis cron infrastructure running <strong>49 scheduled jobs</strong> across multi-instance deployments.</li>
             <li>Built <strong>GHFS — Green Homes For Sale</strong> (<a href="https://www.greenhomesforsale.com" target="_blank" rel="noopener">greenhomesforsale.com ↗</a>) — a live green real estate marketplace with AI-powered listing moderation (OpenAI), Stripe recurring billing, and a 40-model database.</li>
-            <li>Developed <strong>PixelEDU</strong> — multi-tenant SaaS procurement portal for educational institutions with 3-tier approval workflow, ERP integration, and SSO via Google &amp; Microsoft Entra ID.</li>
+            <li>Developed <strong>PixelEDU</strong> — a digital signage management platform for schools; IT admins design canvas layouts (Fabric.js), schedule content to device groups with timezone-aware delivery, and broadcast campus-wide emergency alerts via Radix MDM — with an AI chat assistant that can query stats and trigger actions through conversation.</li>
           </ul>
           <div class="tl-pills">
             <span>NestJS 10</span><span>GraphQL</span><span>PostgreSQL</span><span>Redis</span><span>React 17</span><span>Next.js 14/16</span><span>TypeScript</span><span>AWS ECS</span><span>Stripe</span><span>Plaid</span><span>OpenAI</span><span>DocuSign</span><span>ShipEngine</span>
@@ -376,16 +376,17 @@
           </div>
           <div class="proj-info">
             <div class="proj-num">02 / FEATURED</div>
-            <div class="proj-label">Multi-Tenant SaaS · AET · 2025</div>
-            <h3>PixelEDU — Procurement Portal</h3>
-            <p>School campuses were raising hardware purchase requests over email, causing delays, lost approvals, and no visibility into order status. I built PixelEDU — a multi-tenant SaaS portal where each campus manages its own procurement workflow, fully wired into the internal ERP so approved orders flow automatically into the sales system.</p>
+            <div class="proj-label">Digital Signage Platform · Archangel Tablets · 2025</div>
+            <h3>PixelEDU — Digital Signage Management</h3>
+            <p>Schools running digital signage across multiple buildings had no way to manage content, schedules, or emergency alerts from one place — everything was done device-by-device through a third-party MDM console. I built PixelEDU, a platform that wraps their Radix device fleet and gives IT admins a single dashboard to design layouts, schedule playlists, and broadcast campus-wide emergency alerts instantly.</p>
             <ul class="proj-feats">
-              <li><span class="fi">🏫</span> Requestors browse the catalog and submit orders; Approvers review and sign off; Admins manage campus settings — each role sees only what they need</li>
-              <li><span class="fi">🔗</span> Approved requests auto-create Sales Quotes and Orders in the ERP — no manual re-entry</li>
-              <li><span class="fi">🔐</span> Staff sign in with their existing Google or Microsoft accounts via SSO — no new passwords to manage</li>
+              <li><span class="fi">🎨</span> Canvas layout editor built on Fabric.js — design signage screens visually, save as templates, and push to any device or group of devices</li>
+              <li><span class="fi">📅</span> Schedule playlists with date/time windows targeting specific devices — the platform resolves each device's local timezone so content plays at the right time everywhere</li>
+              <li><span class="fi">🤖</span> AI chat assistant with 15 tools — query device stats, build schedules, and trigger emergency alerts through conversation, with hard confirmation gates before any action is taken</li>
+              <li><span class="fi">🚨</span> One-click emergency alerts broadcast instantly to every screen on campus via Radix MDM commands</li>
             </ul>
             <div class="proj-stack">
-              <span>Next.js 16</span><span>TypeScript</span><span>NestJS 10</span><span>GraphQL</span><span>PostgreSQL</span><span>Redis</span><span>Tailwind v4</span><span>NextAuth v5</span>
+              <span>Next.js 16</span><span>React 19</span><span>TypeScript</span><span>Drizzle ORM</span><span>PostgreSQL</span><span>Tailwind v4</span><span>NextAuth v5</span><span>OpenAI</span><span>Vercel AI SDK</span><span>Fabric.js</span><span>AWS S3</span><span>Radix MDM</span><span>SendGrid</span>
             </div>
           </div>
         </div>
